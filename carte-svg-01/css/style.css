@@ -1,0 +1,81 @@
+body{background: #5f9185;}
+
+
+.container{
+	
+	
+	width: 960px;
+	
+	
+	 margin: auto;
+	
+	
+
+
+}
+
+
+
+
+
+
+
+.carte{
+	
+	width: 394px;
+	
+	
+	 height: 394px;
+	
+	
+	 background: url(../img/images/tout.jpg) no-repeat center;
+	
+	
+	 position: relative;
+
+	 margin: auto;
+
+	 margin-top: 60px;
+	
+	
+}
+
+
+
+
+
+
+
+.ville{
+	
+	
+	width: 316px;
+	
+	
+	 height: 316px;
+	
+	
+	 background: url(../img/images/ville.png) no-repeat center;
+	
+	
+	 position: absolute;
+	
+	
+     top: 42px;
+	
+	
+    left: 41px;
+	
+	
+}
+
+
+.nuages-svg{position: absolute;}
+
+#nuage_1, #nuage_2{position: absolute;}
+
+
+.button{background: #f1f1f1; color: #343434; font-family: arial; text-align: center; width: 120px; height: 60px; line-height: 60px; margin: auto; margin-top: 60px; cursor: pointer;}
+.button:hover, button:active{background: #fff;};
+
+
