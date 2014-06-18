@@ -1,3 +1,71 @@
+html, body{height: 100%;}
+
+body{margin: 0 auto;}
+
 .container{
-	background: #;
+	background: #343434;
+	width: 99%;
+	height: 99%;
+	padding-top: 0.5%;
+}
+
+.carte{
+	background: #598B80;
+	border-radius: 15px;
+	width: 99%;
+	height: 99%;
+	margin: auto;
+
+}
+
+.carte-content{
+    max-width: 800px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    background: url(../img/carte-fond.png) no-repeat center;
+}
+
+.nuage01{
+width: 163px;
+height: 132px;
+background: url(../img/nuage01.png) no-repeat;
+position: absolute;
+cursor: pointer;
+}
+
+.nuage02{
+width: 108px;
+height: 170px;
+background: url(../img/nuage02.png) no-repeat;
+position: absolute;
+left: 173px;
+}
+
+.nuage03{
+width: 264px;
+height: 195px;
+background: url(../img/nuage03.png) no-repeat;
+position: absolute;
+left: 375px;
+}
+
+.nuage04{
+width: 124px;
+height: 107px;
+background: url(../img/nuage04.png) no-repeat;
+position: absolute;
+left: 575px;
+}
+
+.nuage05{
+width: 198px;
+height: 541px;
+background: url(../img/nuage05.png) no-repeat;
+position: absolute;
+left: 75px;
+}
+
+.test{
+	height: 300px;
 }

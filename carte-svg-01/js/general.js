@@ -36,22 +36,6 @@ tl3.pause();
   tl.staggerTo($('.label'), 0.3, {opacity: 1, scale:0.4, ease:Bounce.easeOut});	
 
 
-
-
-  
-  
-
-
-
-  
-  
-
-
-
-
-
-
-  
   
 $('.button').click(function(){
  
