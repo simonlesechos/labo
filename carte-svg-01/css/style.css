@@ -123,7 +123,15 @@ body{background: #343434;}
 
 }
 
-.nuages-svg{position: absolute; display: none;}
+.close{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 15px; 
+	right: 15px;
+	background: url(../img/images/close.png);
+	cursor: pointer;
+}
 
 #nuage_1, #nuage_2{position: absolute;}
 
