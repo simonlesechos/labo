@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$('.container').hide();
+
 //Définition de trois timelines
 var tl = new TimelineMax();
 var tl2 = new TimelineMax();
