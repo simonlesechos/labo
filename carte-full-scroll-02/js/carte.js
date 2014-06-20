@@ -5,6 +5,7 @@ $(document).ready(function(){
 	// build tween
 	var horloge = TweenMax.from("#horloge", 0.5, {scale: 0, top: 0,});
 	var ville = TweenMax.from("#ville", 0.5, {scale: 0, ease:Bounce.easeOut});
+	var decoTourne = TweenMax.to("#deco-objects", 2.5, {rotation: 360, ease:Quad.easeOut});
 	var deco = TweenMax.from("#deco-objects", 0.5, {scale: 0, ease:Bounce.easeOut});
 	var texteperso = TweenMax.from("#contenu-perso", 1, {opacity: 0, ease:Quad.easeIn});
 
@@ -72,6 +73,8 @@ $(document).ready(function(){
 								.setPin("#contenu-perso")
 								.addTo(controller);
 
-							
-
+	var animNuages5 = new ScrollScene({triggerElement: "#trigger6"})
+								
+								.setTween(decoTourne)
+								.addTo(controller);	
 });
