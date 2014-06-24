@@ -6,7 +6,7 @@ padding:0;
 box-sizing:border-box;
 }
 body{
-background: url(../img/wood1.png) repeat;
+background: url(../img/wood3.png) repeat;
 overflow:hidden;
 font-family: arial;
 }
@@ -43,8 +43,8 @@ overflow-x:hidden;
 background: #fff;
 }
 #iframe-container.mobile{
-width:378px;
-height:540px;
+width:320px;
+height:554px;
 /*border-radius*/
 -webkit-border-radius:10px;
    -moz-border-radius:10px;
@@ -53,11 +53,13 @@ background:#dee0e3;
 overflow:hidden;
 position:relative;
 border: 29px solid #343434;
+border-top: 49px solid #343434 ;
+border-bottom: 49px solid #343434 ;
 top:140px;
 /*box-shadow*/
--webkit-box-shadow: 0px 0px 5px 3px #000;
-   -moz-box-shadow: 0px 0px 5px 3px #000;
-        box-shadow:0px 0px 5px 3px #000;
+-webkit-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
+   -moz-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
+           box-shadow:0px 0px 0px 2px #686868,0px 0px 10px 3px rgba(0,0,0,0.4);
 }
 #iframe-container.tablette{
 width:858px;
@@ -72,9 +74,9 @@ position:relative;
 border: 29px solid #343434;
 top:140px;
 /*box-shadow*/
--webkit-box-shadow: 0px 0px 5px 3px #000;
-   -moz-box-shadow: 0px 0px 5px 3px #000;
-        box-shadow:0px 0px 5px 3px #000;
+-webkit-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
+   -moz-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
+           box-shadow:0px 0px 0px 2px #686868,0px 0px 10px 3px rgba(0,0,0,0.4);
 }
 #iframe-container.tPortrait{
 width: 658px;
@@ -89,12 +91,12 @@ position:relative;
 border: 29px solid #343434;
 top:100px;
 /*box-shadow*/
--webkit-box-shadow: 0px 0px 5px 3px #000;
-   -moz-box-shadow: 0px 0px 5px 3px #000;
-        box-shadow:0px 0px 5px 3px #000;
+-webkit-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
+   -moz-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
+           box-shadow:0px 0px 0px 2px #686868,0px 0px 10px 3px rgba(0,0,0,0.4);
 }
 #iframe-container.mPaysage{
-width:540px;
+width:598px;
 height:326px;
 /*border-radius*/
 -webkit-border-radius:10px;
@@ -104,18 +106,20 @@ background:#dee0e3;
 overflow:hidden;
 position:relative;
 border: 29px solid #343434;
+border-left: 49px solid #343434;
+border-right: 49px solid #343434;
 top:140px;
 /*box-shadow*/
--webkit-box-shadow: 0px 0px 5px 3px #000;
-   -moz-box-shadow: 0px 0px 5px 3px #000;
-        box-shadow:0px 0px 5px 3px #000;
+-webkit-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
+   -moz-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
+           box-shadow:0px 0px 0px 2px #686868,0px 0px 10px 3px rgba(0,0,0,0.4);
 }
 #iframe-container.mobile #iframe01{
 margin-bottom:0px !important;
 background:#bbb;
 border:2px solid #f1f2f3;
-width:320px;
-height:500px;
+width:100%;
+height:490px;
 top:2px;
 left:2px;
 z-index:9999999;
@@ -151,7 +155,7 @@ background: #fff;
 margin-bottom:0px !important;
 background:#bbb;
 border:2px solid #f1f2f3;
-width:480px;
+width:100%;
 height:324px;
 top:2px;
 left:2px;
@@ -448,16 +452,16 @@ top: -13px;
 }
 
 #menu-trigger{
-	background: #1abc9c;
+	background: url(../img/logo.png) no-repeat 0px 5px;
+	background-color: #1abc9c;
 	color: #fff;
 	padding: 1%;
 	height: 60px;
 	text-transform: uppercase;
 	font-family: arial;
-	text-align: left;
-	padding-left: 10px;
+	text-align: center;
 	line-height: 50px;
-	cursor: pointer;
+	
 }
 
 #menu-trigger2{
