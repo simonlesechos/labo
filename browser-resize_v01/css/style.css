@@ -62,8 +62,8 @@ top:140px;
            box-shadow:0px 0px 0px 2px #686868,0px 0px 10px 3px rgba(0,0,0,0.4);
 }
 #iframe-container.tablette{
-width:858px;
-height:658px;
+width:1082px;
+height:768px;
 /*border-radius*/
 -webkit-border-radius:10px !important;
    -moz-border-radius:10px !important;
@@ -72,7 +72,7 @@ background:#dee0e3;
 overflow-x:hidden;
 position:relative;
 border: 29px solid #343434;
-top:140px;
+top:60px;
 /*box-shadow*/
 -webkit-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
    -moz-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
@@ -89,7 +89,7 @@ background:#dee0e3;
 overflow-x:hidden;
 position:relative;
 border: 29px solid #343434;
-top:100px;
+top:60px;
 /*box-shadow*/
 -webkit-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
    -moz-box-shadow:0px 0px 0px 2px #686868,0px 0px 5px 3px rgba(0,0,0,0.4);
@@ -128,8 +128,8 @@ background: #fff;
 #iframe-container.tablette #iframe01{
 margin-bottom:0px !important;
 background:#bbb;
-width:800px;
-height:654px;
+width:100%;
+height:766px;
 top:0px;
 left:0px;
 z-index:9999999;
