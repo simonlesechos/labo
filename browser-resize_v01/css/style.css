@@ -439,7 +439,7 @@ top: -13px;
 .top-menu-container{
 	position: fixed;
 	top: 10px; 
-	left: 5px;
+	left: 0px;
 	width: 300px;
 	height: 234px;
 	z-index: 999999999;
@@ -452,7 +452,7 @@ top: -13px;
 }
 
 #menu-trigger{
-	background: url(../img/logo.png) no-repeat 0px 5px;
+	background: url(../img/logo.png) no-repeat 5px 5px;
 	background-color: #1abc9c;
 	color: #fff;
 	padding: 1%;
@@ -465,19 +465,20 @@ top: -13px;
 }
 
 #menu-trigger2{
-	background:#1abc9c;
+	background: url(../img/logo.png) no-repeat 5px 5px;
+	background-color:#1abc9c;
 	color: #fff;
-	padding: 1%;
 	height: 60px;
 	width: 120px;
 	text-transform: uppercase;
 	font-family: arial;
-	text-align: center;
-	line-height: 20px;
+	text-align: right;
+	line-height: 60px;
+	padding-right: 10px;
 	cursor: pointer;
 	position: fixed;
 	top: 10px;
-	left: 5px;
+	left: 0px;
 	z-index: 9999999999;
 	display: none;
 	-webkit-box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.1);
