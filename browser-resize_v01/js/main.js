@@ -1,6 +1,11 @@
 $(document).ready(function(){
-		$('#iframe-container').addClass('tablette');
+
+		// Définition du premier format dans lequel le site s'affiche
+		// Changer la classe de #iframe-container pour 'mobile', 'mPaysage' (mobile paysage), 'tPortrait' (tablette portrait) 
+		// ou 'full' suivant le premier affichage souhaité.
 		$('#tablette').addClass('active');
+		$('#iframe-container').addClass('tablette'); 
+		
 		$('nav ul li a').mouseenter(function(){
 
 			$(this).find('span').fadeIn(50);
@@ -19,11 +24,7 @@ $(document).ready(function(){
     			$(this).toggleClass('active');
     			$('#iframe-container').removeClass().addClass(format);
     			
-    			/*var sizelog = $('#iframe01').width();
-    			$('.sizelog').remove();
-    			$('body').append('<div class="sizelog">' + sizelog + '</div>');*/
-
-				
+    			
 			});
 
 				$('#full').click(function(){
@@ -37,6 +38,7 @@ $(document).ready(function(){
 		.keyup(function() {
 		var value = $( this ).val();
 		$('#validation').click(function(){
+			$( "#iframe01" ).removeData();
 			$( "#iframe01" ).attr('src', value);
 		})
 		
