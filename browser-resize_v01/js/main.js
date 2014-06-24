@@ -1,5 +1,8 @@
 $(document).ready(function(){
-
+		
+		$('.top-menu-container').delay(500).animate({left: '0px'},'fast').fadeIn('fast');
+		$('#menu-trigger2').fadeOut('fast').animate({left: '-1000px'},'fast');
+		
 		// Définition du premier format d'écran dans lequel le site s'affiche
 		// Changer la classe de #iframe-container pour 'mobile', 'mPaysage' (mobile paysage), 'tPortrait' (tablette portrait) 
 		// ou 'full' suivant le premier affichage souhaité.
@@ -63,14 +66,14 @@ $(document).ready(function(){
 			
 		$('.top-menu-container').animate({left: '-1000px'}).fadeOut('fast');
 
-		 	$('#menu-trigger2').fadeIn('fast');
+		 	$('#menu-trigger2').fadeIn('fast').animate({left: '0px'},'fast');
 		});
 
-
+		// Au clic sur le bouton 'MENU' on fait l'inverse : on fait revenir le menu et disparaitre le bouton
 		$('#menu-trigger2').click(function(){
-			$('.top-menu-container').css({left: '0px'}).fadeIn('fast');
+			$('.top-menu-container').fadeIn('fast').animate({left: '0px'},'fast');
 				
-			$('#menu-trigger2').fadeOut('fast');
+			$('#menu-trigger2').animate({left: '-1000px'}).fadeOut('fast');
 		});
 
 
