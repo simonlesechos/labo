@@ -1,0 +1,605 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+*{
+  -webkit-font-smoothing: antialiased;
+}
+
+/*html, body{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}*/
+
+.carte-wrapper{
+  width: 680px;
+  height: 680px;
+  position: relative;
+  margin: 5% auto;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.carte-bg{
+  width: 680px;
+  height: 680px;
+  position: absolute;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: url(../img/fond.jpg) no-repeat center;
+  overflow: hidden;
+}
+
+.carte{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto; 
+  z-index: 90;
+  font-family: 'Roboto', sans-serif;
+}
+
+.perso-face{
+  position: absolute;
+  color: #FFF;
+  font-family: "Roboto",sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 32px;
+  top: 100px;
+  left: 70px;
+  max-width: 524px;
+}
+
+.perso-cabinet{
+  position: absolute;
+  top: 120%;
+  left:0;
+  right:0;
+  width: 100%;
+  background: url(../img/bg-papier.png) repeat;
+  height: 82.35294117647059%;
+  z-index: 99;
+  text-align: center;
+  font-family: arial;
+  font-style: italic;
+  padding-top: 17.64705882352941%;
+  line-height: 30px;
+}
+
+.couleur-bas{
+  background: url(../img/fond.jpg) no-repeat center;
+  position: absolute;
+  left:0;
+  right:0;
+  /*top: 560px;*/
+  bottom: -110%;
+  height: 120px;
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
+  z-index: 99;
+ }
+
+.perso-cabinet h3{
+  font-size: 24px;
+  color: rgba(0,0,0, 0.7);
+  font-weight: bold;
+  position: relative;
+}
+
+.perso-cabinet p{
+color: rgba(0,0,0,0.5);
+position: relative;
+}
+
+.perso-cabinet p strong{
+  color: rgba(0,0,0,0.7);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.perso-cab-4{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/******************************************************LES MOTS*/
+
+.carte div{
+  position: absolute;
+  border: 2px solid #fff;
+}
+
+.vous{
+width: 88px;
+height: 34px;
+top: 148px;
+left: 70px;
+}
+
+.souhaite{
+width: 171px;
+height: 36px;
+top: 147px;
+left: 170px;
+}
+
+.une{
+width: 69px;
+height: 28px;
+top: 207px;
+left: 70px;
+}
+
+.annee{
+width: 191px;
+height: 39px;
+top: 197px;
+left: 143px;
+}
+
+.y2015{
+width: 256px;
+height: 90px;
+top: 147px;
+left: 340px;
+}
+
+.innovante{
+width: 266px;
+height: 53px;
+top: 244px;
+left: 70px;
+}
+
+.agreable{
+width: 243px;
+height: 49px;
+top: 247px;
+left: 351px;
+}
+
+.foisonnante{
+width: 299px;
+height: 34px;
+top: 316px;
+left: 75px;
+}
+
+.palpitante{
+width: 218px;
+height: 46px;
+top: 313px;
+left: 379px;
+}
+
+.gratifiante{
+width: 167px;
+height: 53px;
+top: 365px;
+left: 122px;
+}
+
+.exaltante{
+width: 244px;
+height: 47px;
+top: 362px;
+left: 305px;
+}
+
+.triomphante{
+width: 263px;
+height: 42px;
+top: 427px;
+left: 122px;
+}
+
+.petillante{
+width: 154px;
+height: 32px;
+top: 426px;
+left: 399px;
+}
+
+.brillante{
+width: 34px;
+height: 229px;
+top: 375px;
+left: 75px;
+}
+
+.epatante{
+width: 53px;
+height: 195px;
+top: 358px;
+left: 557px;
+}
+
+.performante{
+width: 222px;
+height: 26px;
+top: 483px;
+left: 124px;
+}
+
+.etincelante{
+width: 199px;
+height: 33px;
+top: 476px;
+left: 354px;
+}
+
+.poetique{
+width: 224px;
+height: 37px;
+top: 529px;
+left: 121px;
+}
+
+.attrayante{
+width: 195px;
+height: 36px;
+top: 525px;
+left: 355px;
+}
+
+.passionnante{
+width: 224px;
+height: 30px;
+top: 573px;
+left: 121px;
+}
+
+.merveilleuse{
+width: 237px;
+height: 36px;
+top: 568px;
+left: 357px;
+}
+
+/**************************************************Fin des mots*/
+
+
+/*Back*/
+
+.carte-back{
+  position: absolute;
+  top: 100%;
+  left:0;
+  right:0;
+  background: url(../img/fond.jpg) no-repeat center;
+  height: 100%;
+  z-index: 100;
+  background-size: cover;
+}
+
+.fdf-container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 440px;
+}
+
+.fdf{
+width:80px;
+height:80px;
+background:none repeat scroll 0% 0% #1860AC;
+position:relative;
+margin: auto;
+color: #fff;
+font-family: arial;
+}
+.fdf-text{
+font-size:14px;
+text-transform:none;
+font-weight:400;
+width:60px;
+position: absolute;
+left: 5px;
+top: 5px;
+}
+
+
+.fdf-desc{
+  text-transform: none;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+  position: relative;
+  top:20px;
+  left:0;
+  right:0;
+  font-family: arial;
+  text-align: center;
+}
+
+.fdf-desc a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.fdf-desc a:hover{
+  color: #1860AC;
+}
+
+
+/*Les mots sur la 4eme*/
+/* --> groupe-mots-back*/
+.groupe-mots-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 0;
+}
+
+
+/*BOUTONS*/
+
+.restart-btn, .reverse-btn, .pause-btn, .play-btn{
+border: 2px solid #e74c3c;
+color: #e74c3c;
+background: transparent;
+padding: 15px 40px;
+cursor: pointer;
+border-radius: 5px;
+width: 180px;
+transition: all 300ms ease;
+margin: 10px auto;
+}
+
+.restart-btn:hover, .reverse-btn:hover, .pause-btn:hover, .play-btn:hover{
+  border-color: #f4aaa3;
+  color: #f4aaa3;
+}
+
+
+#control-menu{
+position: fixed;
+left:0;
+top: 20px;
+width: 240px;
+height: 800px;
+background: #ffffff;
+border-right: 2px solid #e74c3c;
+border-top: 2px solid #e74c3c;
+border-bottom: 2px solid #e74c3c;
+padding: 10px;
+overflow-x: hidden;
+z-index: 999;
+font-family: arial;
+color: #e74c3c;
+overflow-y: auto !important;
+-webkit-transition: all 400ms ease-out;
+-moz-transition: all 400ms ease-out;
+-ms-transition: all 400ms ease-out;
+-o-transition: all 400ms ease-out;
+transition: all 400ms ease-out;
+}
+
+#control-menu form{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #e74c3c;
+}
+
+#control-menu form fieldset{
+  border-top: 1px dotted #e74c3c;
+  margin-top: 10px;
+}
+
+#control-menu form textarea{
+  border: 2px solid #e74c3c;
+  width: 224px;
+  max-width: 224px;
+}
+
+#control-menu form h2{
+  font-size: 20px;
+  color: #e74c3c;
+  border: 1px dotted #e74c3c;
+  padding: 5px 0px;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#control-menu form h3{
+  font-size: 16px;
+  color: #fff;
+  background: #e74c3c;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#control-menu form p{
+  font-size: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#control-menu label{
+  clear: both;
+  float: none;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+#control-menu select{
+  border: 2px solid #e74c3c;
+  height: 30px;
+  width: 180px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+#control-menu.hidden{
+  left:-200px;
+  height: 40px;
+}
+
+#control-menu.hidden button, #control-menu.hidden form{
+  display: none;
+}
+
+#control-menu .close{
+  width: 40px;
+  height: 40px;
+  float: right;
+  position: relative;
+  right: 0;
+  cursor: pointer;
+}
+
+.close span{
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: #e74c3c;
+  position: absolute;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-ouitransition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.cl-1{
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 20px;
+}
+
+.cl-2{
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  left: 20px;
+  top: 0px;
+}
+
+#control-menu .close:hover >span{
+background: #f4aaa3;
+}
+
+#control-menu .close.menu >span{
+  display: none;
+}
+
+#control-menu .close.menu:before{
+  content: 'ME';
+  color: #e74c3c;
+  text-align: center;
+  font-family: arial;
+  width: 40px;
+  position: absolute;
+  left: -1px;
+  top: 0px;
+  font-size: 20px;
+}
+
+#control-menu .close.menu:after{
+  content: 'NU';
+  color: #e74c3c;
+  text-align: center;
+  font-family: arial;
+  width: 40px;
+  position: absolute;
+  left: -1px;
+  top: 17px;
+  font-size: 20px;
+}
+
+#control-menu .close.menu:hover, #control-menu .close.menu:hover{
+color: #f4aaa3;
+}
+
+#control-menu .close.menu:hover:before, #control-menu .close.menu:hover:after{
+color: #f4aaa3;
+}
+
+/*VERSION MOBILE*/
+
+@media all and (max-width:679px){
+
+html, body{
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  min-width: 280px;
+}
+
+
+#control-menu{
+  display: none;
+}
+
+.carte-wrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carte-bg{
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carte{
+  width: 480px;
+  height: 480px;
+  position: relative;
+  margin: auto;
+}
+
+}
+
+
+@media all and (max-width:500px){
+
+
+}
+
+
+@media all and (max-width:400px){
+
+.carte{
+  width: 380px;
+  height: 380px;
+  position: relative;
+}
+
+}
+
+@media all and (max-width:380px){
+
+.perso-cabinet{
+
+padding-top: 10px;
+line-height: 20px;
+
+}
+
+}
+
+
