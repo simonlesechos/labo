@@ -105,8 +105,10 @@ tl.from($('.attrayante'), 1.4, {opacity: 0, scale: 0, top: "100%", ease: Power2.
 tl.from($('.passionnante'), 1.7, {opacity: 0, ease: Quad.easeOut}, 7.6);
 tl.from($('.merveilleuse'), 1.2, {opacity: 0, left: "100%", ease: Quad.easeOut}, 8);
 
-$('.groupe-mots div').each(function(){
-	tl.to($(this), 2.4, {rotation: 260, opacity: 0, scale: 2, top: "-100%", ease: Quad.easeOut}, 14);
+$('.carte div').each(function(){
+	var rotation = Math.floor(Math.random() * 180) + 180;
+	console.log(rotation);
+	tl.to($(this), 2, {rotation: rotation, opacity: 0, scale: 2, top: "-100%", ease: Quad.easeOut}, 14);
 });
 tl.to($('.perso-face'), 2.4, {rotation: 260, opacity: 0, scale: 2, top: "-100%", ease: Quad.easeOut}, 14);
 
