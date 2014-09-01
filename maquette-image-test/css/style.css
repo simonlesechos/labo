@@ -28,26 +28,89 @@ p{
 }
 
 form{
-  border: 1px solid #000;
   max-width: 640px;
   margin: auto;
+  background: #1C1C33;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 60px;
+  font-family: 'Roboto Slab', serif;
+}
+
+form h2{
+  text-align: center;
+  font-size: 300;
+}
+
+label{
+  display: block;
+  margin-left: 5%;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 input{
   display: block;
   width:90%;
   margin: auto;
+  height: 40px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: #eee;
+}
+
+input:focus, textarea:focus{
+  background: #fff;
+}
+
+.pagebody.contact{
+  background: url(../img/background-contact.jpg) center fixed; 
+  background-size: cover;
+}
+
+.pagebody.contact .content{
+  padding-bottom: 150px;
+}
+
+.contact-header{
+  background: #fff !important;
+}
+
+.text-area-container{
+  width: 90%;
+  margin: 20px auto;
+}
+
+.textarea{
+  width: 100%;
+  max-width: 100%;
+  min-height: 160px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  background: #eee;
 }
 
 .button_text{
   display: block;
   max-width: 180px;
+  height: auto;
   margin: auto;
-  background: #f1bf25;
+  background: transparent;
+  box-shadow: inset 0px 0px 0px 2px #f1bf25;
   border-radius: 5px;
   border: none;
   padding: 20px 5px;
   font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.button_text:hover{
+ background: #f1bf25;
+ color: #1C1C33;
 }
 
 .wrapper{
@@ -185,6 +248,7 @@ background-size: cover;
   float: left;
   position: relative;
   overflow: hidden;
+  margin: 10px;
   transform: scale(0) translateY(200px);
   transition: all 700ms ease;
 }
@@ -203,8 +267,8 @@ transform: scale(1) translateY(0);
 }
 
 .bigbox{
-  width: 60%;
-  max-width:60%;
+  width: 50%;
+  max-width:50%;
   height:560px;
   background: #448AC5;
   border: 1px solid #fff;
@@ -237,30 +301,20 @@ transform: scale(1) translateY(0);
 }
 
 .littlebox{
-  width:40%;
-  max-width: 40%;
+  width: 45%; 
+  max-width: 45%;
   height: 280px;
-  background-color: rgba(28, 28, 51, 1) !important;
-  background-size: cover !important;
+  background-color: rgba(28, 28, 51, 1);
+  background-size: cover;
   border: 1px solid #fff;
 }
 
-.accueil-2 .bigbox{
-  width: 50%;
-}
-.accueil-2 .littlebox{
- width: 45%; 
- max-width: 45%;
-}
-.accueil-2 .box{
-  margin: 10px;
-}
-.accueil-2 .content .max-width .littlebox:nth-last-child(2){
+.content .max-width .littlebox:nth-last-child(2){
 width: 50%;
 max-width: 50%; 
 }
 
-.accueil-2 .content .max-width .littlebox:nth-last-child(3){
+.content .max-width .littlebox:nth-last-child(3){
 width: 45%;
 max-width: 45%;
 }
@@ -286,7 +340,11 @@ max-width: 45%;
 }
 
 .littlebox2{
-  background: #fff !important;
+  background: #fff;
+}
+
+.pratique .littlebox2{
+  background: #eee;
 }
 
 .littlebox2 h3{
@@ -314,10 +372,6 @@ max-width: 45%;
   background: url(http://lorempixel.com/460/340/city) no-repeat center;
 }
 
-.content .max-width .littlebox:nth-last-child(2), .content .max-width .littlebox:nth-last-child(3){
-width: 50%;
-max-width: 50%; 
-}
 
 .boxoverlay{
   position: absolute;
@@ -685,11 +739,17 @@ transition: all 300ms ease;
   color: #1c1c33;
 }
 
-.box-actu-container{
+
+.actu-page-widget-inner{
   max-width: 1200px;
-  margin:40px auto;
-  text-align: center;
+  margin: auto;
 }
+
+.box-actu-container{
+  text-align: center;
+  margin: 0 auto;
+}
+
 
 .box-actu{
   width: 30%;
