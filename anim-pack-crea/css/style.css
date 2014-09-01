@@ -1,0 +1,267 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,300);
+
+*{
+  -webkit-font-smoothing: antialiased;
+}
+
+.anim-wrapper{
+  width: 100%;
+  max-width: 1170px;
+  height: 390px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  background: #3A4651;
+}
+
+.resizebox{
+  width: 100%;
+  height:100%;
+  text-align: center;
+  position: relative;
+}
+
+/*LES "BOITES"*/
+.c-box{
+  width: 12.649572649572649%;
+  height: 38.94736842105263%;
+  background-position: center center !important;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin-top: -6.32478632478632%;
+  margin-left: -6.32478632478632%;
+  z-index: 100;
+}
+
+.c-box.hover-box{
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.c-box.hover-box:hover{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  top: 40%;
+}
+
+.aides{
+background: url(../img/aides.png) no-repeat;
+background-color:#568db3;
+}
+
+.business-plan{
+background: url(../img/business-plan.png) no-repeat;
+background-color:#79bbb2;
+}
+
+.financement{
+background: url(../img/financement.png) no-repeat;
+background-color:#c48e5d;
+}
+
+.formalite{
+background: url(../img/formalite.png) no-repeat;
+background-color:#977c6a;
+}
+
+.forme-juridique{
+background: url(../img/forme-juridique.png) no-repeat;
+background-color:#8eab60;
+}
+
+.locaux-pro{
+background: url(../img/locaux-professionels.png) no-repeat;
+background-color:#e8b246;
+}
+
+.partenaire{
+background: url(../img/partenaire.png) no-repeat;
+background-color:#bbc466;
+}
+
+.projet{
+background: url(../img/projet.png) no-repeat;
+background-color: #84bbe9;
+}
+
+.regime-fiscal{
+background: url(../img/regime-fiscal.png) no-repeat;
+background-color:#9797c5;
+}
+
+.regime-social{
+background: url(../img/regime-social.png) no-repeat;
+background-color:#d76a26;
+}
+
+.secteur{
+background: url(../img/secteur.png) no-repeat;
+background-color:#e97383;
+}
+
+/*LES TEXTES*/
+
+.t-box{
+  background: #fff;
+  color: #fff;
+  position: absolute;
+  bottom: 7%;
+  left: 20%;
+  display: block;
+  min-width:17.09401709401709%;
+  height:10.25641025641026%;
+  line-height:40px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  white-space: nowrap;
+  padding-left: 2%;
+  padding-right:2%;
+  overflow: hidden;
+}
+
+.t-aides{
+left: 39%;
+background-color:#568db3;
+}
+
+.t-business-plan{
+left:39%;
+background-color:#79bbb2;
+}
+
+.t-financement{
+  left: 39.7%;
+  background-color:#c48e5d;
+}
+
+.t-formalite{
+  left: 39%;
+  background-color:#977c6a;
+}
+
+.t-forme-juridique{
+  left: 37.7%;
+  background-color:#8eab60;
+}
+
+.t-locaux-pro{
+left: 34%;
+background-color:#e8b246;
+}
+
+.t-partenaire{
+  left: 36%;
+  background-color:#bbc466;
+}
+
+.t-projet{
+  left: 39%;
+  background-color: #84bbe9;
+}
+
+.t-regime-fiscal{
+left: 39%;
+background-color:#9797c5;
+}
+
+.t-regime-social{
+  left:39%;
+  background-color:#d76a26;
+}
+
+.t-secteur{
+  left:37%;
+  background-color:#e97383;
+}
+
+.heading-text{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.overlay{
+  position: absolute;
+  bottom:70%;
+  left:0;
+  right:0;
+  top:0;
+  width: 100%;
+  z-index: 1;
+  opacity:1;
+  background: #4CC8EC;
+}
+
+.cab-text{
+  display: block;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 9%;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.cab-text.lasttext.textanim{
+  animation: wow 1s infinite ease;
+}
+
+@keyframes wow{
+  0%{transform: scale(1);}
+  50%{transform: scale(1.02);}
+  100%{transform: scale(1);}
+}
+
+.cab-contact-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -13.5%;
+  margin-top: -4%;
+  color: #fff;
+  font-weight: 300;
+  text-decoration: none;
+  background: #e97383;
+  line-height: 40px;
+  font-size: 40px;
+  text-align: center;
+  padding: 1.7%;
+  opacity:0;
+  -moz-transition: background 300ms ease;
+  -webkit-transition: background 300ms ease;
+  -ms-transition: background 300ms ease;
+  -o-transition: background 300ms ease;
+  transition: background 300ms ease;
+}
+
+.cab-contact-btn:hover{
+  background: transparent;
+  box-shadow: inset 0px 0px 0px 4px #e97383;
+}
+
+
+
+
+@media all and (max-width: 680px){
+.c-box{
+  background-size: 50%;
+}
+
+}
