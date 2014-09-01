@@ -16,14 +16,14 @@ tl.staggerFrom($('.bras'), 1.7, {top: "100%", scale: 4, opacity:0, ease: Strong.
 tl.to($('.carte-bg'), 20, {scale: 1.1, ease: Power2.easeOut},0);
 
 tl.from($('.halo'), 8, {rotation: 120, opacity: 0, ease: Strong.easeOut}, 0.5),
-tl.to($('.halo'), 5, {scale: 1.5, top: 120}, 7.5);
+tl.to($('.halo'), 5, {scale: 1.5}, 7.5);
 tl.from( $('.cit-1'), 1.4, {opacity:0, scale: 0.8, ease: Strong.easeOut}, 4);
 tl.from( $('.cit-2'), 1.4, {opacity:0, scale: 0.8, ease: Strong.easeOut}, 5.2);
 
 tl.from( $('.leonard'), 1.4, {opacity:0, scale: 0.8, ease: Strong.easeOut}, 6);
 
 
-
+tl.from($('.y2015-res'), 2.7, {rotation: 180, opacity:0, scale:0, ease: Strong.easeOut},2);
 tl.from($('.big-2'), 1, {rotation: 180, opacity: 0, scale: 0, ease: Strong.easeOut}, 2);
 tl.from($('.big-1'), 1, {rotation: 180, opacity: 0, scale: 0, ease: Strong.easeOut}, 2.3);
 tl.from($('.big-5'), 1, {rotation: 180, opacity: 0, scale: 0, ease: Strong.easeOut}, 2.6);

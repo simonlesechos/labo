@@ -5,10 +5,9 @@ animateUpdate();
 
 
 function updateProgress(percentage) {
-    //$('#loading-bar').css("width", percentage + "%");
     $('#loader-text').text(percentage + "%");
-     $('.spinner-bars div').addClass('animated').removeClass('animated-over');
-     $('.carte').addClass('encours');
+    $('.spinner-bars div').addClass('animated').removeClass('animated-over');
+    $('.carte').addClass('encours');
 }
 
 function animateUpdate() {

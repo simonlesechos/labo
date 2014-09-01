@@ -46,10 +46,12 @@
   font-family: "Roboto",sans-serif;
   text-align: left;
   text-transform: uppercase;
-  font-size: 32px;
-  top: 100px;
-  left: 70px;
-  max-width: 524px;
+  font-size: 32px; /*TAILLE DE LA POLICE A CHANGER DANS "carte-typo.js", dans la variable "fontsize" (changer le nombre en fonction de la taille désirée) */
+  top:50%;
+  left:50%;
+  margin-top: -35%;
+  margin-left: -40%;
+  width: 80%;
 }
 
 .perso-cabinet{
@@ -571,6 +573,13 @@ html, body{
   margin: auto;
 }
 
+.perso-cabinet{
+
+padding-top: 40px;
+line-height: 20px;
+
+}
+
 }
 
 
@@ -610,13 +619,6 @@ html, body{
 
 @media all and (max-width:380px){
 
-.perso-cabinet{
-
-padding-top: 10px;
-line-height: 20px;
-
-}
-
 .carte{
   width: 300px;
   height: 300px;
@@ -637,7 +639,13 @@ line-height: 20px;
 
 }
 
+@media all and (max-height:600px){
+.fdf-container{
+top: auto;
+bottom: 40px;
+}
 
+}
 
 @media all and (max-height:340px){
 

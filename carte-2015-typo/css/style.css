@@ -572,6 +572,14 @@ html, body{
   margin: auto;
 }
 
+
+.perso-cabinet{
+
+padding-top: 10px;
+line-height: 20px;
+
+}
+
 }
 
 
@@ -593,12 +601,6 @@ html, body{
 
 @media all and (max-width:380px){
 
-.perso-cabinet{
-
-padding-top: 10px;
-line-height: 20px;
-
-}
 
 }
 

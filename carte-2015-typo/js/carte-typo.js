@@ -1,33 +1,3 @@
-//Fonction pour redimensionner dinamyquement les elements
-
-/*function resizer(){
-
-	$('.carte div').each(function(){
-		var widthorigin = parseInt($(this).width());
-		var heightorigin = parseInt($(this).height());
- 
-	    var offsetTop = parseInt($(this).css('top'));
-		var offsetLeft = parseInt($(this).css('left'));
-		var container = $('.carte').width();
-
-		var newx = (offsetLeft / container )* 100 + '%';
-		var newy = (offsetTop / container ) * 100 + '%';
-
-		console.log(container + ' - ' + newx + " / " + newy);
-
-			
-
-			$(this).width(widthorigin / container * 100 + '%');
-			$(this).height(heightorigin / container * 100 + '%');
-			
-			$(this).css("top", newy);
-			$(this).css("left", newx);
-		
-	});
-		  tl.play(); // À changer pour "tl.play();" une fois le placement des éléments terminé.
-}
-*/
-
 function resizer(){
 
 
@@ -64,7 +34,7 @@ function resizer(){
         '}'
         );
 
-        
+     
         }); 
 
 
@@ -126,7 +96,7 @@ tl.from($('.fdf-desc'), 2, {opacity: 0, ease: Quad.easeOut}, 27.2);
 
 
 
-tl.timeScale(1.1);
+tl.timeScale(5);
 
 tl.pause();
 
@@ -173,18 +143,24 @@ function timelineDone() {
 
 $(document).ready(function(){
 
-
+  //calculer la taille de police sur la face 1 en fonction de la largeur de la carte
+  //(ici pour environ 32px -> 680/32 = 21.25, donc pour avoir 32px on divise la largeur de la carte par 21.25)
+  var fontsize = $('.carte').width()/21.25 + "px";
+  $('.perso-face').css('font-size', fontsize);
+  
+  //lancer la timeline
   tl.play();
 
 
 });
 
-
+//au redimensionnement de la fenêtre
+$(window).resize(function(){
+   //calculer la taille de police sur la face 1 en fonction de la largeur de la carte
+          var fontsize = $('.carte').width()/21.25 + "px";
+        $('.perso-face').css('font-size', fontsize);
+});
  
-
-
-
-
 
 ///////////////////////////////////////////////////////////////////////////
 
