@@ -47,7 +47,7 @@ tl.from($('.fdf-desc'), 2, {opacity: 0, ease: Quad.easeOut}, 24.2);
 
 
 
-tl.timeScale(1.1);
+tl.timeScale(3);//!!!remettre à 1.1!!!
 
 tl.pause();
 
