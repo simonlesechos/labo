@@ -51,6 +51,7 @@ function animateUpdate() {
 
         //Face 3 :
         tl.to($('.carte-back'), 0.5, {top:0, ease: Quad.easeOut},10);
+        tl.to($('.logo-cabinet'),0.7,{opacity:1, top: '10%', ease: Quad.easeOut}, 10);
         tl.staggerFrom($('.fdf'), 0.2, {scale: 0, opacity: 0, rotation: -90, ease:Quad.easeOut}) 
         .staggerTo($('.fdf'), 0.2, { opacity: 1, scale:1, rotation : 0});
 
@@ -65,8 +66,8 @@ function animateUpdate() {
 $('.colorspot').click(function(){
   var bgimage = $(this).data('bg');
   var bgnew = 'url(' + bgimage + ') repeat';
-  console.log(bgimage);
-  console.log(bgnew);
+  $('.colorspot').not(this).removeClass('active');
+  $(this).addClass('active');
   $('.carte').css('background', bgnew);
   $('.carte-back').css('background', bgnew);
   $('.couleur-bas').css('background', bgnew);

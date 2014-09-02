@@ -51,8 +51,9 @@ var tl = new TimelineMax({onComplete:timelineDone});
 
 
 //Face 1 :
+tl.to($('.perso-face'),0.1, {rotation:0});
 tl.to($('.carte-bg'), 20, {scale: 1.3, ease: Power2.easeOut},0);
-tl.from($('.perso-face'), 1.2, {opacity: 0, top: "-100%", ease: Power2.easeOut}, 0.2);
+tl.from($('.perso-face'), 1.2, {opacity: 0, rotation:0, top: "-100%", ease: Power2.easeOut}, 0.2);
 tl.from($('.vous'), 1.2, {opacity: 0, scale: 0, left: "-100%", ease: Power2.easeOut}, 0.5);
 tl.from($('.souhaite'), 1.2, {opacity: 0, left: "100%", ease: Power2.easeOut}, 1.5);
 tl.from($('.une'), 1.4, {opacity: 0, top: "-100%", ease: Power2.easeOut}, 1.8);
@@ -80,10 +81,10 @@ $('.carte div').each(function(){
 	console.log(rotation);
 	tl.to($(this), 2, {rotation: rotation, opacity: 0, scale: 2, top: "-100%", ease: Quad.easeOut}, 14);
 });
-tl.to($('.perso-face'), 2.4, {rotation: 260, opacity: 0, scale: 2, top: "-100%", ease: Quad.easeOut}, 14);
 
 //Face 2 :
 tl.to($('.couleur-bas'), 0.7, {bottom:0, ease: Strong.easeOut}, 15);
+tl.to($('.y2015-bas'), 1.2, {right: '10px', opacity:1, ease: Power2.easeOut},15.1);
 tl.to($('.perso-cabinet'), 0.7, {top: 0, ease: Strong.easeOut}, 15.2);
 
 tl.from($('.perso-cabinet h3'), 1.7, {top: "40px", opacity:0, ease: Power2.easeOut}, 15.5);
@@ -91,12 +92,14 @@ tl.from($('.perso-cabinet p'), 1.7, {top: "40px", opacity:0, ease: Power2.easeOu
 
 //Face 3 :
 tl.to($('.carte-back'), 0.7, {top:0, ease: Quad.easeOut}, 25);
-tl.from($('.fdf'), 1.2, {scale: 0, rotation: 120, opacity: 0, ease: Quad.easeOut}, 26.7);
-tl.from($('.fdf-desc'), 2, {opacity: 0, ease: Quad.easeOut}, 27.2);
+tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 25);
+tl.from($('.mots-back'),1.7, {opacity:0, scaleY:0, ease: Bounce.easeOut},25.5);
+tl.from($('.fdf'), 0.7, {scale: 0, rotation: 120, opacity: 0, ease: Quad.easeOut}, 26.7);
+tl.from($('.fdf-desc'), 1.2, {opacity: 0, ease: Quad.easeOut}, 27.2);
 
 
 
-tl.timeScale(1.1);
+tl.timeScale(1.2);
 
 tl.pause();
 
@@ -111,7 +114,6 @@ $('.restart-btn').click(function(){
 $('.reverse-btn').click(function(){
 
   tl.reverse();
-
 
 
 });
@@ -153,16 +155,35 @@ $(document).ready(function(){
 
 
 });
-/*
+
 //au redimensionnement de la fenêtre
 $(window).resize(function(){
    //calculer la taille de police sur la face 1 en fonction de la largeur de la carte
           var fontsize = $('.carte').width()/21.25 + "px";
         $('.perso-face').css('font-size', fontsize);
-});*/
+});
  
 
-///////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////// MENUS PERMETTANT DE TESTER (texte et couleurs) 
+
+
+//Menu de choix des couleurs
+
+$('.colorspot').click(function(){
+  var bgimage = $(this).data('bg');
+  var bgnew = 'url(' + bgimage + ') repeat';
+  $('.colorspot').not(this).removeClass('active');
+  $(this).addClass('active');
+  $('.carte-bg').css('background', bgnew);
+  $('.carte-back').css('background', bgnew);
+  $('.couleur-bas').css('background', bgnew);
+});
+
+//menu pour le dev
+
+$('.colmenu').click(function(){
+   $('#control-menu').toggleClass('show');
+});
 
 
 //Fermer et ouvrir le menu

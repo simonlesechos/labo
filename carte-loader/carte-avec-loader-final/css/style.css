@@ -85,6 +85,11 @@ display: block;
 opacity:0;
 }
 
+.y2015-bas img{
+  max-width: 100%;
+  height: auto;
+}
+
 .fdf{
 width:80px;
 height:80px;
@@ -217,6 +222,20 @@ opacity:0.05;
   background: url(../img/fond.png) repeat;
   height: 100%;
   z-index: 100;
+}
+
+.logo-cabinet{
+  max-width: 480px;
+  margin: auto;
+  margin-top: 10%;
+  position: relative;
+  top: -100%;
+  opacity:0;
+}
+
+.logo-cabinet img{
+  max-width: 100%;
+  height: auto;
 }
 
 .fdf-container{
@@ -795,6 +814,16 @@ opacity:1 !important;
   display: inline-block;
   margin: 10px;
   cursor: pointer;
+  border: 4px solid transparent;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.colorspot.active{
+  border: 4px solid #fff;
 }
 
 .col1{
