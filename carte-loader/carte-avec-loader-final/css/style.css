@@ -78,10 +78,11 @@ color:#ccff00;
 font-size:130px;
 text-align:center;
 position:absolute;
-right:10px;
-bottom:20px;
+right:-100%;
+bottom:0;
 font-weight:100;
 display: block;
+opacity:0;
 }
 
 .fdf{
@@ -134,27 +135,57 @@ top: 75%;
 font-size:40px;
 color:#ccff00;
 position:absolute;
-top: 80%;
+opacity:0;
+top: 76%;
+-webkit-animation: 2s tremble infinite ease;
+-moz-animation: 2s tremble infinite ease;
+-ms-animation: 2s tremble infinite ease;
+-o-animation: 2s tremble infinite ease;
+animation: 2s tremble infinite ease;
 }
 
 .wait{
-opacity:0;
 font-size:30px;
 color:#ccff00;
 top: 80%;
+-webkit-animation: 2s tremble infinite ease;
+-moz-animation: 2s tremble infinite ease;
+-ms-animation: 2s tremble infinite ease;
+-o-animation: 2s tremble infinite ease;
+animation: 2s tremble infinite ease;
 }
 
-.encours .wait{
-font-size:30px;
-color:#ccff00;
-opacity:1;
+@-webkit-keyframes tremble{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-4px);}
+  100%{transform: translateY(0);}
 }
 
-.encours .waitcomplete{
-opacity:0;
-font-size:30px;
-color:#ccff00;
+@-moz-keyframes tremble{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-4px);}
+  100%{transform: translateY(0);}
 }
+
+@-ms-keyframes tremble{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-4px);}
+  100%{transform: translateY(0);}
+}
+
+@-o-keyframes tremble{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-4px);}
+  100%{transform: translateY(0);}
+}
+
+
+@keyframes tremble{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-4px);}
+  100%{transform: translateY(0);}
+}
+
 
 .spinner-bars{
 position:absolute;
@@ -261,7 +292,7 @@ top: 5px;
 }
 
 .couleur-bas{
-  background: #491139;
+  background: url(../img/fond.png) repeat;
   position: absolute;
   left:0;
   right:0;
@@ -747,12 +778,42 @@ opacity:1 !important;
 }
 
 
-@keyframes brille{
-0%{ color: #ccff00; }
-  50%{ color: #fff;}
-  100%{ color: #ccff00;}
+
+/******************************************Le menu de choix des couleurs*/
+.controls{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #eee;
+  text-align: center;
 }
 
+.colorspot{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.col1{
+  background: #491139;
+}
+
+.col2{
+  background: #072f6b;
+}
+
+.col3{
+  background: #3a3a3a;
+}
+
+.col4{
+  background: #761230;
+}
+
+/***********************************************************************/
 
 @media all and (max-width: 679px){
 
@@ -761,6 +822,10 @@ html, body{
   width: 100%;
   min-height: 100%;
   height: 100%;
+}
+
+.controls{
+  display: none;
 }
 
 .carte-wrapper{
