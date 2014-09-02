@@ -96,7 +96,7 @@ tl.from($('.fdf-desc'), 2, {opacity: 0, ease: Quad.easeOut}, 27.2);
 
 
 
-tl.timeScale(5);
+tl.timeScale(1.1);
 
 tl.pause();
 
@@ -153,13 +153,13 @@ $(document).ready(function(){
 
 
 });
-
+/*
 //au redimensionnement de la fenêtre
 $(window).resize(function(){
    //calculer la taille de police sur la face 1 en fonction de la largeur de la carte
           var fontsize = $('.carte').width()/21.25 + "px";
         $('.perso-face').css('font-size', fontsize);
-});
+});*/
  
 
 ///////////////////////////////////////////////////////////////////////////
