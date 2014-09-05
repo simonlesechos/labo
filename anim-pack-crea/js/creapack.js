@@ -120,9 +120,9 @@ tl3.to($('.cab-text.lasttext'), 0, {opacity:1, scale:1});
 tl3.to($('.cab-contact-btn'), 1.2, {opacity: 1, ease: Power2.easeOut});
 
 
-tl.timeScale(4);
-tl2.timeScale(4);
-tl3.timeScale(2);
+tl.timeScale(2);
+tl2.timeScale(2);
+tl3.timeScale(1);
 
 tl.pause();
 tl2.pause();

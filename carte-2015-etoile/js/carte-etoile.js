@@ -45,9 +45,12 @@ tl.from($('.y2015-back .blackstar-bas'), 0.7, {rotation: 320, scale: 0, opacity:
 tl.from($('.fdf'), 1.2, {scale: 0, rotation: 120, opacity: 0, ease: Quad.easeOut}, 23.7);
 tl.from($('.fdf-desc'), 2, {opacity: 0, ease: Quad.easeOut}, 24.2);
 
+tl.to($('.couleur-bas2'), 0.7, {bottom:0, ease: Strong.easeOut},30);
+tl.to($('.perso-cabinet2'), 0.7, {top: 0, ease: Strong.easeOut},30.1);
+tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 30.2);
 
 
-tl.timeScale(3);//!!!remettre à 1.1!!!
+tl.timeScale(1.1);//!!!remettre à 1.1!!!
 
 tl.pause();
 
@@ -59,6 +62,15 @@ $(document).ready(function(){
  
 
 });
+
+
+$('.colreplay').click(function(){
+
+  tl.restart();
+
+
+});
+
 
 $('.restart-btn').click(function(){
 
@@ -98,5 +110,9 @@ function timelineDone() {
    }, 7000);
      
 }
-//var tl = new TimelineMax({repeat:3, yoyo:true, repeatDelay:1, onComplete:timelineDone, onCompleteParams:["test1", "test2"]});
 
+//fermer le menu
+
+$('.colclose').click(function(){
+  $('.controls').fadeOut('fast');
+});

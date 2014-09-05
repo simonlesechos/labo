@@ -37,8 +37,6 @@ function resizer(){
      
         }); 
 
-
-
 }
 
 resizer();
@@ -93,9 +91,14 @@ tl.from($('.perso-cabinet p'), 1.7, {top: "40px", opacity:0, ease: Power2.easeOu
 //Face 3 :
 tl.to($('.carte-back'), 0.7, {top:0, ease: Quad.easeOut}, 25);
 tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 25);
-tl.from($('.mots-back'),1.7, {opacity:0, scaleY:0, ease: Bounce.easeOut},25.5);
+tl.from($('.mots-back'),2.2, {opacity:0, scaleY:0, ease: Bounce.easeOut},25.5);
 tl.from($('.fdf'), 0.7, {scale: 0, rotation: 120, opacity: 0, ease: Quad.easeOut}, 26.7);
 tl.from($('.fdf-desc'), 1.2, {opacity: 0, ease: Quad.easeOut}, 27.2);
+
+tl.to($('.couleur-bas2'), 0.7, {bottom:0, ease: Strong.easeOut},33);
+tl.to($('.perso-cabinet2'), 0.7, {top: 0, ease: Strong.easeOut},33.1);
+tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 33.2);
+tl.to($('.bandeau-texte'), 7.7,{right: 0, opacity: 1, ease:Quad.easeOut},33.2);
 
 
 
@@ -105,6 +108,14 @@ tl.pause();
 
 
 $('.restart-btn').click(function(){
+
+  tl.restart();
+
+
+});
+
+
+$('.colreplay').click(function(){
 
   tl.restart();
 
@@ -176,7 +187,13 @@ $('.colorspot').click(function(){
   $(this).addClass('active');
   $('.carte-bg').css('background', bgnew);
   $('.carte-back').css('background', bgnew);
-  $('.couleur-bas').css('background', bgnew);
+  $('.couleur-bas, .couleur-bas2').css('background', bgnew);
+});
+
+//fermer le menu des couleurs
+
+$('.colclose').click(function(){
+  $('.controls').fadeOut('fast');
 });
 
 //menu pour le dev

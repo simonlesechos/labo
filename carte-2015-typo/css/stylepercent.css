@@ -4,17 +4,20 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/*html, body{
-  position: relative;
-  height: 100%;
-  width: 100%;
-}*/
+body{
+  background: url(../img/bg-papier.png) repeat;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
 
 .carte-wrapper{
   width: 680px;
   height: 680px;
   position: relative;
-  margin: 5% auto;
+  margin: 3% auto;
   box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
@@ -54,13 +57,13 @@
   width: 80%;
 }
 
-.perso-cabinet{
+.perso-cabinet, .perso-cabinet2{
   position: absolute;
   top: 120%;
   left:0;
   right:0;
   width: 100%;
-  background: url(../img/bg-papier.png) repeat;
+  background: #fff;
   height: 82.35294117647059%;
   z-index: 99;
   text-align: center;
@@ -68,9 +71,24 @@
   font-style: italic;
   padding-top: 17.64705882352941%;
   line-height: 30px;
+  text-transform: none;
 }
 
-.couleur-bas{
+.perso-cabinet2 h4, .perso-cabinet2 p{
+  color: #343434;
+  font-style: normal;
+}
+
+.perso-cabinet2{
+  z-index: 101;
+  padding-top: 10%;
+}
+.perso-cabinet2 h4{
+  font-weight: bold;
+}
+
+
+.couleur-bas, .couleur-bas2{
   background: url(../img/fond.jpg) no-repeat center;
   position: absolute;
   left:0;
@@ -81,7 +99,20 @@
   box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
   z-index: 99;
  }
+.couleur-bas2{
+  z-index: 102;
+  overflow: hidden;
+}
 
+.bandeau-texte{
+  position: relative;
+  right:50%;
+}
+
+.bandeau-texte img{
+  max-width: 1360px;
+  height: 120px;
+}
 
 .y2015-bas{
 position:absolute;
@@ -291,10 +322,11 @@ height: 5.294117647058823%;
 }
 
 .logo-cabinet{
-  max-width: 380px;
+  max-width: 320px;
   margin: auto;
-  margin-top: 10%;
+  margin: 5% auto;
   position: relative;
+  top: -100%;
   opacity:0;
 }
 
@@ -306,7 +338,7 @@ height: 5.294117647058823%;
 .mots-back{
   max-width: 380px;
   margin: auto;
-  margin-top:20px;
+  margin-top:10%;
 }
 
 .fdf-container{
@@ -359,16 +391,6 @@ top: 5px;
   color: #1860AC;
 }
 
-
-/*Les mots sur la 4eme*/
-/* --> groupe-mots-back*/
-.groupe-mots-back{
-  position: absolute;
-  top: 0;
-  left: 0;
-  right:0;
-  bottom: 0;
-}
 
 
 /*BOUTONS*/
@@ -574,9 +596,10 @@ color: #f4aaa3;
   bottom: 0;
   background: #eee;
   text-align: center;
+  z-index: 1000;
 }
 
-.colorspot, .colmenu{
+.colorspot, .colmenu, .colreplay{
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -642,10 +665,74 @@ color: #f4aaa3;
   left:8px;
  
 }
+
+.colclose{
+  width:40px;
+  height:40px;
+  float: right;
+  margin:10px;
+  margin-top: 15px;
+  position: relative;
+  cursor: pointer;
+  background: url(../img/icon-close.svg) no-repeat center;
+  background-size: cover;
+}
+
+.colreplay{
+  background: url(../img/icon-replay.svg) no-repeat center;
+  background-color: #bbb;
+  background-size: cover;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.colreplay:hover{
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  background-color: #343434;
+}
+
 /***********************************************************************/
 
 
 /*VERSION MOBILE*/
+
+@media all and (max-width:820px){
+  .carte-wrapper{
+    width: 540px;
+    height: 540px;
+  }
+
+  .fdf-container{
+top: auto;
+bottom: 40px;
+padding-left:10px;
+padding-right:10px;
+}
+.logo-cabinet{
+  max-width: 260px;
+}
+
+.mots-back{
+  max-width: 260px;
+}
+
+.perso-cabinet{
+
+padding-top: 60px;
+
+
+}
+
+
+}
+
 
 @media all and (max-width:679px){
 
@@ -691,9 +778,10 @@ html, body{
 .perso-cabinet{
 
 padding-top: 40px;
-line-height: 20px;
+
 
 }
+
 
 }
 
@@ -739,6 +827,11 @@ line-height: 20px;
   height: 300px;
   position: relative;
   margin: auto;
+}
+
+.perso-cabinet{
+    line-height: 20px;
+    padding-top: 10px;
 }
 
 }
@@ -789,4 +882,32 @@ bottom: 40px;
 
 }
 
+@media all and (max-height: 600px) and (max-width: 320px){
+  .perso-cabinet{
+    line-height: 20px;
+    padding-top: 10px;
+  }
+}
 
+@media all and (max-height: 410px){
+  .perso-cabinet{
+    line-height: 17px;
+    padding-top: 20px;
+  }
+
+  .logo-cabinet2{
+    max-width: 200px;
+  }
+
+  .fdf-container{
+    bottom: 30%;
+  }
+
+  .logo-cabinet{
+    margin-top: 2%;
+  }
+
+  .wait{
+    top: 86%;
+  }
+}
