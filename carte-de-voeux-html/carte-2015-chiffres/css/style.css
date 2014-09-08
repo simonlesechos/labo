@@ -1,0 +1,794 @@
+*{
+  -webkit-font-smoothing: antialiased;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background: url(../img/texture.png) repeat;
+}
+
+.carte-wrapper{
+  width: 680px;
+  height: 680px;
+  position: relative;
+  margin: 3% auto;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.carte-bg{
+  width: 680px;
+  height: 680px;
+  position: absolute;
+  top: 0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: url(../img/fond.jpg) no-repeat center;
+  overflow: hidden;
+}
+
+.carte{
+  position: absolute;
+  left: 0;
+  right:0;
+  bottom: 0;
+  top:0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #574639;
+  z-index: 90;
+}
+
+
+.perso-cabinet, .perso-cabinet2{
+  position: absolute;
+  top: 120%;
+  left:0;
+  right:0;
+  width: 100%;
+  background: #fff;
+  height: 82.35294117647059%;
+  z-index: 99;
+  text-align: center;
+  font-family: arial;
+  font-style: italic;
+  padding-top: 17.64705882352941%;
+  line-height: 30px;
+  text-transform: none;
+}
+
+.perso-cabinet2 h4, .perso-cabinet2 p{
+  color: #343434;
+  font-style: normal;
+}
+
+.perso-cabinet2{
+  z-index: 101;
+  padding-top: 10%;
+}
+.perso-cabinet2 h4{
+  font-weight: bold;
+}
+
+.couleur-bas, .couleur-bas2{
+  background: url(../img/fond.jpg) no-repeat center;
+  position: absolute;
+  left:0;
+  right:0;
+  /*top: 560px;*/
+  bottom: -110%;
+  height: 120px;
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
+  z-index: 99;
+ }
+
+.couleur-bas2{
+  z-index: 102;
+  overflow: hidden;
+}
+
+
+img{
+  max-width:100%;
+  height: auto;
+}
+
+.perso-cabinet h3{
+  font-size: 24px;
+  color: rgba(0,0,0, 0.7);
+  font-weight: bold;
+  position: relative;
+}
+
+.perso-cabinet p{
+color: rgba(0,0,0,0.5);
+position: relative;
+}
+
+.perso-cabinet p strong{
+  color: rgba(0,0,0,0.7);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*Back*/
+
+.carte-back{
+  position: absolute;
+  top: 100%;
+  left:0;
+  right:0;
+  background: url(../img/fond.jpg) no-repeat center;
+  height: 100%;
+  z-index: 100;
+  background-size: cover;
+}
+
+.fdf-container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 440px;
+}
+
+.fdf{
+width:80px;
+height:80px;
+background:none repeat scroll 0% 0% #1860AC;
+position:relative;
+margin: auto;
+color: #fff;
+font-family: arial;
+}
+.fdf-text{
+font-size:14px;
+text-transform:none;
+font-weight:400;
+width:60px;
+position: absolute;
+left: 5px;
+top: 5px;
+}
+
+
+.fdf-desc{
+  text-transform: none;
+  font-size: 14px;
+  color: #574639;
+  position: relative;
+  top:20px;
+  left:0;
+  right:0;
+  font-family: arial;
+  text-align: center;
+  overflow: hidden;
+}
+
+.fdf-desc a{
+  color: #C83C2B;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+.fdf-desc a:hover{
+  color: #574639;
+}
+
+.logo-cabinet, .logo-cabinbet2{
+  max-width: 380px;
+  margin: auto;
+  margin-top: 10%;
+  position: relative;
+  opacity:0;
+}
+
+.logo-cabinet2{
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 240px;
+}
+
+.logo-cabinet img, .logo-cabinet2 img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/*BOUTONS*/
+
+.restart-btn, .reverse-btn, .pause-btn, .play-btn{
+border: 2px solid #4a9894;
+color: #4a9894;
+background: transparent;
+position: absolute;
+left: 5px;
+padding: 15px 40px;
+cursor: pointer;
+border-radius: 5px;
+width: 200px;
+transition: all 300ms ease;
+}
+
+.restart-btn:hover, .reverse-btn:hover{
+  border-color: #54d6d2;
+  color: #54d6d2;
+}
+
+.restart-btn{
+  bottom: 10px;
+}
+
+.reverse-btn{
+  bottom: 100px;
+}
+
+.pause-btn{
+  bottom: 200px;
+}
+.play-btn{
+  bottom: 300px;
+}
+
+/******************************************Le menu de choix des couleurs*/
+.controls{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #eee;
+  text-align: center;
+  z-index: 1000;
+}
+
+.colorspot, .colmenu, .colreplay{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.colclose{
+  width:40px;
+  height:40px;
+  float: right;
+  margin:10px;
+  margin-top: 15px;
+  position: relative;
+  cursor: pointer;
+  background: url(../img/icon-close.svg) no-repeat center;
+  background-size: cover;
+}
+
+.colreplay{
+  background: url(../img/icon-replay.svg) no-repeat center;
+  background-color: #bbb;
+  background-size: cover;
+  margin-left: 50px; /*Juste pour cette carte , car sinon la croix pour fermer le menu décale l'icone replay*/
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.colreplay:hover{
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  background-color: #343434;
+}
+
+
+
+/**STYLES PROPRES À LA CARTE**/
+
+.y2015, .ombre, .y20152, .ombre2{
+  position: absolute;
+  bottom: 15%;
+  width: 31.32352941176471%;
+  height: 15.88235294117647%;
+  left: 50%;
+  margin-left: -15.66176470588236%;
+}
+
+.couleur-bas .y20152, .couleur-bas .ombre2{
+  left: 90%;
+  bottom:50%;
+  width: 20%;
+}
+
+.y2015, .y20152{
+  -moz-animation: 2s flotte infinite linear;
+  -webkit-animation: 2s flotte infinite linear;
+  -ms-animation: 2s flotte infinite linear;
+  -o-animation: 2s flotte infinite linear;
+  animation: 2s flotte infinite linear;
+}
+
+.ombre, .ombre2{
+  -webkit-animation: 2s ombre infinite linear;
+  -moz-animation: 2s ombre infinite linear;
+  -ms-animation: 2s ombre infinite linear;
+  -o-animation: 2s ombre infinite linear;
+  animation: 2s ombre infinite linear;
+}
+
+.chiffres{
+  position: relative;
+  width: 93.97058823529412%;
+  height: 78.82352941176471%;
+  top: -2.941176470588235%;
+  -moz-animation: 1s flotte infinite linear;
+  -webkit-animation: 1s flotte infinite linear;
+  -ms-animation: 1s flotte infinite linear;
+  -o-animation: 1s flotte infinite linear;
+  animation: 1s flotte infinite linear;
+}
+
+
+.chiffres .chiffre{
+  position: absolute;
+  opacity:0.9;
+}
+
+.chiffre1{
+top: -1.1194029850746268%;
+left: 2.8169014084507045%;
+width: 10.172143974960877%;
+height: 17.723880597014926%;
+}
+.chiffre2{
+top: 12.87313432835821%;
+left: -0.1564945226917058%;
+width: 15.64945226917058%;
+height: 24.44029850746269%;
+}
+.chiffre3{
+top: -1.3059701492537312%;
+left: 10.954616588419405%;
+width: 18.779342723004692%;
+height: 21.26865671641791%;
+}
+.chiffre4{
+top: 34.88805970149254%;
+left: 3.912363067292645%;
+width: 7.198748043818466%;
+height: 13.059701492537313%;
+}
+.chiffre5{
+top: 13.246268656716417%;
+left: 12.363067292644757%;
+width: 15.96244131455399%;
+height: 22.01492537313433%;
+}
+.chiffre6{
+top: 48.507462686567166%;
+left: 8.763693270735525%;
+width: 7.042253521126761%;
+height: 8.768656716417912%;
+}
+.chiffre7{
+top: 31.343283582089555%;
+left: 12.050078247261347%;
+width: 11.89358372456964%;
+height: 21.641791044776117%;
+}
+.chiffre8{
+top: 34.32835820895522%;
+left: 14.241001564945227%;
+width: 15.336463223787167%;
+height: 22.574626865671643%;
+}
+.chiffre9{
+top: 0%;
+left: 25.821596244131456%;
+width: 15.805946791862285%;
+height: 23.88059701492537%;
+}
+.chiffre10{
+top: 16.791044776119403%;
+left: 22.69170579029734%;
+width: 13.928012519561817%;
+height: 26.492537313432834%;
+}
+.chiffre11{
+top: 44.40298507462687%;
+left: 22.69170579029734%;
+width: 15.336463223787167%;
+height: 14.55223880597015%;
+}
+.chiffre12{
+top: 0%;
+left: 20.344287949921753%;
+width: 8.607198748043817%;
+height: 15.671641791044777%;
+}
+.chiffre13{
+top: -3.3582089552238807%;
+left: 38.810641627543035%;
+width: 16.431924882629108%;
+height: 22.388059701492537%;
+}
+.chiffre14{
+top: -1.3059701492537312%;
+left: 38.18466353677621%;
+width: 13.77151799687011%;
+height: 18.470149253731343%;
+}
+.chiffre15{
+top: 27.985074626865668%;
+left: 29.7339593114241%;
+width: 14.710485133020345%;
+height: 21.455223880597014%;
+}
+ .chiffre16{
+top: 9.328358208955224%;
+left: 31.142410015649453%;
+width: 12.676056338028168%;
+height: 24.62686567164179%;
+}
+.chiffre17{
+top: 5.970149253731343%;
+left: 38.18466353677621%;
+width: 12.206572769953052%;
+height: 15.671641791044777%;
+}
+.chiffre18{
+top: 15.298507462686567%;
+left: 45.22691705790297%;
+width: 5.790297339593114%;
+height: 17.16417910447761%;
+}
+.chiffre19{
+top: 37.87313432835821%;
+left: 37.558685446009385%;
+width: 14.084507042253522%;
+height: 16.6044776119403%;
+}
+.chiffre20{
+top: -6.529850746268656%;
+left: 46.948356807511736%;
+width: 14.86697965571205%;
+height: 16.6044776119403%;
+}
+.chiffre21{
+top: 29.291044776119403%;
+left: 45.38341158059468%;
+width: 17.683881064162755%;
+height: 22.574626865671643%;
+}
+.chiffre22{
+top: 7.835820895522389%;
+left: 47.26134585289515%;
+width: 15.64945226917058%;
+height: 24.62686567164179%;
+}
+.chiffre23{
+top: -6.7164179104477615%;
+left: 58.68544600938967%;
+width: 13.458528951486699%;
+height: 14.925373134328357%;
+}
+.chiffre24{
+top: 2.798507462686567%;
+left: 57.90297339593115%;
+width: 13.458528951486699%;
+height: 13.059701492537313%;
+}
+.chiffre25{
+top: 11.194029850746269%;
+left: 63.38028169014085%;
+width: 14.397496087636933%;
+height: 19.58955223880597%;
+}
+.chiffre26{
+top: 28.91791044776119%;
+left: 59.780907668231606%;
+width: 12.050078247261347%;
+height: 19.962686567164177%;
+}
+.chiffre27{
+top: 19.029850746268657%;
+left: 58.84194053208138%;
+width: 18.153364632237874%;
+height: 24.62686567164179%;
+}
+.chiffre28{
+top: -1.8656716417910446%;
+left: 71.20500782472612%;
+width: 9.859154929577464%;
+height: 12.87313432835821%;
+}
+.chiffre29{
+top: 6.529850746268656%;
+left: 76.99530516431925%;
+width: 5.94679186228482%;
+height: 17.537313432835823%;
+}
+.chiffre30{
+top: 13.246268656716417%;
+left: 79.81220657276995%;
+width: 7.511737089201878%;
+height: 13.992537313432834%;
+}
+.chiffre31{
+top: 34.51492537313433%;
+left: 72.76995305164318%;
+width: 16.901408450704224%;
+height: 21.828358208955223%;
+}
+.chiffre32{
+top: 20.522388059701495%;
+left: 77.46478873239437%;
+width: 16.118935837245697%;
+height: 18.65671641791045%;
+}
+.chiffre33{
+top: 37.3134328358209%;
+left: 86.2284820031299%;
+width: 10.954616588419405%;
+height: 17.723880597014926%;
+}
+.chiffre34{
+top: 59.32835820895522%;
+left: 82.94209702660407%;
+width: 6.259780907668231%;
+height: 14.925373134328357%;
+}
+.chiffre35{
+top: 50.74626865671642%;
+left: 88.41940532081377%;
+width: 11.580594679186229%;
+height: 17.537313432835823%;
+}
+.chiffre36{
+top: 64.36567164179104%;
+left: 91.54929577464789%;
+width: 8.137715179968701%;
+height: 9.514925373134329%;
+}
+.chiffre37{
+top: 73.88059701492537%;
+left: 86.697965571205%;
+width: 8.137715179968701%;
+height: 10.261194029850747%;
+}
+.chiffre38{
+top: 77.42537313432835%;
+left: 86.3849765258216%;
+width: 4.225352112676056%;
+height: 14.17910447761194%;
+}
+.chiffre39{
+top: 86.19402985074626%;
+left: 82.15962441314554%;
+width: 5.790297339593114%;
+height: 9.888059701492537%;
+}
+.chiffre40{
+top: 93.28358208955224%;
+left: 78.24726134585289%;
+width: 2.97339593114241%;
+height: 6.156716417910448%;
+}
+.chiffre41{
+top: 96.64179104477611%;
+left: 73.23943661971832%;
+width: 2.8169014084507045%;
+height: 3.9179104477611943%;
+}
+
+.votre-expert{
+  position: absolute;
+  left: 15%;
+  top: 50%;
+}
+
+/*Style propre à la face 3 de cette carte*/
+
+.carte-back{
+  background: url(../img/fond2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+
+
+/********************************************************************Anim de l'ombre*/
+
+@-webkit-keyframes ombre{
+    0%{transform: scale(1)}
+  50%{transform: scale(0.7) translateY(20px);}
+  100%{transform: translateY(1);}
+}
+
+@-moz-keyframes ombre{
+    0%{transform: scale(1)}
+  50%{transform: scale(0.7) translateY(20px);}
+  100%{transform: translateY(1);}
+}
+
+@-ms-keyframes ombre{
+    0%{transform: scale(1)}
+  50%{transform: scale(0.7) translateY(20px);}
+  100%{transform: translateY(1);}
+}
+
+
+@-o-keyframes ombre{
+    0%{transform: scale(1)}
+  50%{transform: scale(0.7) translateY(20px);}
+  100%{transform: translateY(1);}
+}
+
+
+@keyframes ombre{
+    0%{transform: scale(1)}
+  50%{transform: scale(0.7) translateY(20px);}
+  100%{transform: translateY(1);}
+}
+
+
+/*******************************************************************Anim du "2015"*/
+
+@-webkit-keyframes flotte{
+  0%{transform: translateY(0)}
+  50%{transform: translateY(-10px);}
+  100%{transform: translateY(0px);}
+}
+
+@-moz-keyframes flotte{
+  0%{transform: translateY(0)}
+  50%{transform: translateY(-10px);}
+  100%{transform: translateY(0px);}
+}
+
+@-ms-keyframes flotte{
+  0%{transform: translateY(0)}
+  50%{transform: translateY(-10px);}
+  100%{transform: translateY(0px);}
+}
+
+@-o-keyframes flotte{
+  0%{transform: translateY(0)}
+  50%{transform: translateY(-10px);}
+  100%{transform: translateY(0px);}
+}
+
+@keyframes flotte{
+  0%{transform: translateY(0)}
+  50%{transform: translateY(-10px);}
+  100%{transform: translateY(0px);}
+}
+
+/*VERSION MOBILE*/
+
+@media all and (max-width: 820px){
+.carte-wrapper{
+width:580px;
+height:580px;
+margin: 20px auto;
+margin-bottom: 10px;
+}
+
+
+.fdf-container{
+top: auto;
+bottom: 10%;
+}
+
+
+}
+
+@media all and (max-width:679px){
+
+html, body{
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  min-width: 280px;
+}
+
+button{
+  display: none;
+}
+
+.carte-wrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carte-bg{
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.fdf-desc{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+}
+
+
+
+/***********************************************************************/
+
+
+@media all and (max-width:500px){
+
+.carte{
+  font-size: 18px;
+}
+
+}
+
+
+@media all and (max-width:400px){
+
+
+}
+
+@media all and (max-width:380px){
+
+.carte{
+  font-size: 16px;
+}
+
+.perso-cabinet{
+
+padding-top: 20px;
+line-height: 20px;
+
+}
+
+
+}
+
+
+@media all and (max-width:240px){
+  .carte-wrapper{
+    max-width: 240px;
+  }
+}
+
+@media all and (max-height:620px){
+.fdf-container{
+top: auto;
+bottom: 5%;
+}
+
+}
+
+
+@media all and (max-height:470px){
+.perso-cabinet p{
+  line-height: 20px;
+}
+
+
+}
+
+

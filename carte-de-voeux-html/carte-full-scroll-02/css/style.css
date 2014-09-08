@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Loved+by+the+King);
+
+body{
+	margin: 0;
+	background: #343434;
+	color: #fff;
+	font-family: 'Loved by the King', cursive;
+	font-size: 42px;
+}
+
+h1{margin: 0; padding: 0;}
+
+.container{
+	background: #598B80;
+	min-height: 4500px;
+	margin: 0 auto;
+	border-radius: 15px;
+}
+
+#carte-content{
+ max-width: 800px;
+ margin: auto;
+}
+
+#title{
+	max-width: 620px;
+	margin: 0px auto;
+	position: fixed;
+	text-align: center;
+	left: 30%;
+	right: 30%;
+}
+
+#title h1{text-align: center;}
+
+#nuages-container{
+	margin: auto;
+	max-width: 800px;
+	position: fixed;
+	left: 30%;
+	right: 30%;
+}
+
+#nuage01{
+width: 163px;
+height: 132px;
+background: url(../img/nuage01.png) no-repeat;
+position: absolute;
+}
+
+#nuage02{
+width: 108px;
+height: 170px;
+background: url(../img/nuage02.png) no-repeat;
+position: absolute;
+left: 173px;
+}
+
+#nuage03{
+width: 264px;
+height: 195px;
+background: url(../img/nuage03.png) no-repeat;
+position: absolute;
+left: 375px;
+}
+
+#nuage04{
+width: 124px;
+height: 107px;
+background: url(../img/nuage04.png) no-repeat;
+position: absolute;
+left: 575px;
+}
+
+#nuage05{
+width: 198px;
+height: 541px;
+background: url(../img/nuage05.png) no-repeat;
+position: absolute;
+left: 75px;
+}
+
+#deco-objects{
+	width: 520px;
+	height: 520px;
+	background: url(../img/deco-objects.png) no-repeat center;
+	margin: auto;
+	position: relative;
+	top: 120px;
+}
+
+#ville{
+	width: 506px;
+	height: 506px;
+	background: url(../img/ville.png) no-repeat center;
+	margin: auto;
+	position: relative;
+}
+
+#horloge{
+	width: 305px;
+	height: 305px;
+	background: url(../img/horloge.png) no-repeat center;
+	margin: auto;
+	position: relative;
+	top: 106px;
+	left: 2px;
+}
+
+#contenu-perso{
+	max-width: 720px;
+	margin: auto;
+}
+
+#voeux{
+	text-align: center;
+}
+
+.spacer{
+	margin-top: 0px;
+}
+
+#trigger4{
+	margin-top: 0px;
+}
+
+#trigger6{
+	width: 50px;
+	height: 50px;
+	background: red;
+	margin-top: 2400px;
+}

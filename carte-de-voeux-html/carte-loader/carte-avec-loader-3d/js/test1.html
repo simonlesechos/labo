@@ -1,0 +1,93 @@
+<style> 
+.panel {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+    font-size: 0.8em;
+    perspective: 600px;
+}
+
+.panel .back {
+    float: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #CCC;
+    background: none repeat scroll 0% 0% #333;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    transform: rotateY(-179deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.swing:hover {
+    background-color: #555;
+    transform: rotateY(-180deg) translateX(198px) translateZ(2px);
+}
+.swing .front, .swing .back {
+    width: 140px;
+    backface-visibility: visible;
+    transition-duration: 1s;
+    transform-origin: 170px 0px 0px;
+}
+.click .back {
+    cursor: pointer;
+    transform: rotateX(-180deg);
+}
+
+.panel .pad {
+    padding: 0px 15px;
+}
+
+
+.swing .front {
+    transform: rotateY(0deg);
+}
+.swing .front, .swing .back {
+    width: 140px;
+    backface-visibility: visible;
+    transition-duration: 1s;
+    transform-origin: 170px 0px 0px;
+}
+.click .front {
+    cursor: pointer;
+    transform: rotateX(0deg);
+}
+.panel .front {
+    float: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 900;
+    width: inherit;
+    height: inherit;
+    border: 1px solid #CCC;
+    background: none repeat scroll 0% 0% #6B7077;
+    text-align: center;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.9);
+    transform: rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+</style>
+
+<div class="click swing panel">
+
+    <div class="front">
+        <h2>Prout</h2>
+    </div>
+    <div class="back">
+        <div class="pad">
+            <h2>Yeah !</h2>
+        </div>
+    </div>
+
+</div>

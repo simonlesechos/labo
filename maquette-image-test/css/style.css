@@ -499,53 +499,29 @@ button:hover, .button:hover{
 }
 
 .scrollbtn{
-  width: 30px;
-  height: 50px;
-  border: 2px solid #aaa;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 25px 15px 0 15px;
+border-color: #fff transparent transparent transparent;
+
   margin: auto;
+  margin-top: 30px;
   position: relative;
-  top: 10px;
-  background: #fff;
-  -webkit-animation: mouse 1s infinite ease;
-  -ms-animation: mouse 1s infinite ease;
-  -o-animation: mouse 1s infinite ease;
-  animation: mouse 1s infinite ease;
+
+  -webkit-animation: mouse 2s infinite ease;
+  -ms-animation: mouse 2s infinite ease;
+  -o-animation: mouse 2s infinite ease;
+  animation: mouse 2s infinite ease;
   transition: background 300ms ease;
   z-index: 7;
   cursor: pointer;
 }
 
 .scrollbtn:hover{
-  background:rgba(28, 28, 51, 0.9);
-  border-color: #ccc;
+
 }
 
-.scrollbtn:before{
-  content: '';
-  width: 8px;
-  height: 15px;
-  border: 1px solid #aaa;
-  position: absolute;
-  top:2px;
-  left:2px;
-  background: #eee;
-}
-
-.scrollbtn:after{
-  content: '';
-  width: 8px;
-  height: 15px;
-  border: 1px solid #aaa;
-  position: absolute;
-  top:2px;
-  right:2px;
-  background: #eee;
-}
-
-.scrollbtn:hover:before{
-  background: #F1BF25;
-  border-color: #ccc;
-}
 
 .scrollshadow{
   margin: auto;
@@ -553,13 +529,13 @@ button:hover, .button:hover{
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #eee;
+  background: #f7f7f7;
   z-index: 0;
   top: -27px;
-  -webkit-animation:1s shadow infinite ease;
+  /*-webkit-animation:1s shadow infinite ease;
   -ms-animation:1s shadow infinite ease;
   -o-animation:1s shadow infinite ease;
-  animation:1s shadow infinite ease;
+  animation:1s shadow infinite ease;*/
 }
 
 .bigh1{
@@ -871,25 +847,25 @@ footer .max-width{
 
 @-webkit-keyframes mouse{
   0%{top:10px;}
-  50%{top:30px;}
+  50%{top:15px;}
   100%{top:10px;}
 }
 
 @-webkit-keyframes shadow{
   0%{transform: scale(1);}
-  50%{transform: scale(1.2);}
+  50%{transform: scale(1.1);}
   100%{transform: scale(1);}
 }
 
 @keyframes mouse{
   0%{top:10px;}
-  50%{top:30px;}
+  50%{top:15px;}
   100%{top:10px;}
 }
 
 @keyframes shadow{
   0%{transform: scale(1);}
-  50%{transform: scale(1.2);}
+  50%{transform: scale(1.1);}
   100%{transform: scale(1);}
 }
 
