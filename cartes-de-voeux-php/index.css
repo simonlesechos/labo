@@ -5,6 +5,7 @@
         right: 10px;
         top: 10px;
         cursor: pointer;
+        z-index:999;
         -webkit-transition: all 400ms ease;
         -moz-transition: all 400ms ease;
         -ms-transition: all 400ms ease;
@@ -48,6 +49,7 @@
 
     .cartes-root-menu{
     max-width: 300px;
+    min-width: 240px;
     min-height:100%;
     height: 800px;
     position: fixed;
@@ -73,23 +75,55 @@
     display: block;
     line-height: 40px;
     color: #ccc;
-    background: #474747;
-    width: 200px;
+    width: 120px;
+    height: 120px;
     margin: 10px auto;
-    margin-left: 10px;
-    margin-right: 10px;
     text-decoration: none;
     text-align: center;
     font-size: 14px;
+    overflow: hidden;
+    position: relative;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -ms-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
     } 
+    
+    a.carte-link img{
+        position: absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        z-index: 1;
+    }
+
+    a.carte-link span{
+        display: block;
+        position: absolute;
+        width:100%;
+        height:100%;
+        left:0;
+        top: 100%;
+        background: #343434;
+        color: #fff;
+        line-height: 120px;
+        opacity:0;
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+        z-index: 4;
+    }
+    
+    a.carte-link:hover span{
+        top:0;
+        opacity: 1;
+    }
 
     a.carte-link:hover{
-    background: #343434;
     color: #fff;
     }
 
@@ -137,3 +171,10 @@
         color: #343434;
         background: #fff;
     }    
+
+
+    /*@media all and(max-width: 680px){
+        .openclose, .cartes-root-menu{
+            display: none;
+        }
+    }*/
