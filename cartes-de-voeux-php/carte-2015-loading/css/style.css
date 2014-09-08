@@ -912,6 +912,9 @@ html, body{
   height: 100%;
 }
 
+.controls{
+  display: none;
+}
 
 .carte-wrapper{
   height: 100%;

@@ -745,6 +745,9 @@ html, body{
   min-width: 280px;
 }
 
+.controls{
+  display: none;
+}
 
 #control-menu{
   display: none;

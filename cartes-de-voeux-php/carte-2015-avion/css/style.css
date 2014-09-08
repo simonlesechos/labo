@@ -489,6 +489,10 @@ html, body{
   min-width: 280px;
 }
 
+.controls{
+  display: none;
+}
+
 button{
   display: none;
 }
