@@ -29,7 +29,7 @@
           <p class="perso-cab-2"><strong>En partenariat avec la Fondation de France,</strong></p>
           <p class="perso-cab-3"><strong>EXPERT INFOS - LES ECHOS PUBLISHING</strong></p>
           <p class="perso-cab-4">vous proposent une collection de cartes de voeux originales,
-          <p class="perso-cab-5">solidaires et personnalisées avec vos logo, message et coordonées.</p>
+          <p class="perso-cab-5">solidaires et personnalisées avec vos logo, message et coordonnées.</p>
           </p>
       
 
@@ -53,7 +53,7 @@
               <div class="text-group-back">
 
                 <div class="fdf-desc">
-                   <p>Nous soutenons l'opération " Plus de chance pour l'emploi " menée avec la Fondation de France.</p>
+                   <p>Nous soutenons l'opération " Plus de chances pour l'emploi " menée avec la Fondation de France.</p>
                    <br/>
                    <a href="http://www.fondationdefrance.org" class="fdf-link" target="_blank">www.fondationdefrance.org</a>
                 </div>

@@ -70,6 +70,19 @@
 	</div>
   <script type="text/javascript" src="../ressources/jquery.js"></script>
   <script type="text/javascript" src="../ressources/menu-cartes.js"></script>
+
+  <script type="text/javascript">
+	$(document).ready(function() {
+   $("iframe").each(function(){
+      var ifr_source = $(this).attr('src');
+      var wmode = "wmode=transparent";
+      if(ifr_source.indexOf('?') != -1) $(this).attr('src',ifr_source+'&'+wmode);
+      else $(this).attr('src',ifr_source+'?'+wmode);
+	   });
+	});
+
+	</script>
+	
 </body>
 
 </html>
