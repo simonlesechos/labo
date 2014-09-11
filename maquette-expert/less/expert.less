@@ -11,8 +11,181 @@ body{
 	background: @white;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5{
 	font-family: @serifFontFamily;
+}
+
+h6{
+	font-family: @sansFontFamily;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+a{
+	-moz-transition: all 200ms ease;
+	-webkit-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+article strong{
+font-family: @serifFontFamily;
+font-weight: normal;
+font-size: 18px;
+margin-bottom: 10px;
+display: inline-block;
+}
+
+/*****************************************************************************************************QUELQUES ANIMATIONS*/
+
+/**********************************************************AJOUTER LES CLASSES EN JS POUR DÉCLENCHER LES ANIMATIONS*******/
+
+.rotation180 i{
+	-moz-transform: rotate(-180deg);
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.animateScale{
+	-moz-animation: 1s scaling ease;
+	-webkit-animation: 1s scaling ease;
+	-ms-animation: 1s scaling ease;
+	-o-animation: 1s scaling ease;
+	animation: 1s scaling ease;
+}
+
+@-moz-keyframes scaling{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+
+@-webkit-keyframes scaling{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+
+@-o-keyframes scaling{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+
+@keyframes scaling{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+
+
+.animateFromright{
+	-moz-animation: 1s fromright ease;
+	-webkit-animation: 1s fromright ease;
+	-ms-animation: 1s fromright ease;
+	-o-animation: 1s fromright ease;
+	animation: 1s fromright ease;
+}
+
+@-moz-keyframes fromright{
+	from{transform: translateX(1000px)}
+	to{transform: translateX(0)}
+}
+
+@-webkit-keyframes fromright{
+	from{transform: translateX(1000px)}
+	to{transform: translateX(0)}
+}
+
+@-o-keyframes fromright{
+	from{transform: translateX(1000px)}
+	to{transform: translateX(0)}
+}
+
+@keyframes fromright{
+	from{transform: translateX(1000px)}
+	to{transform: translateX(0)}
+}
+
+
+.animateFromleft{
+	-moz-animation: 1s fromleft ease;
+	-webkit-animation: 1s fromleft ease;
+	-ms-animation: 1s fromleft ease;
+	-o-animation: 1s fromleft ease;
+	animation: 1s fromleft ease;
+}
+
+@-moz-keyframes fromleft{
+	from{transform: translateX(-1000px)}
+	to{transform: translateX(0)}
+}
+
+@-webkit-keyframes fromleft{
+	from{transform: translateX(-1000px)}
+	to{transform: translateX(0)}
+}
+
+@-o-keyframes fromleft{
+	from{transform: translateX(-1000px)}
+	to{transform: translateX(0)}
+}
+
+@keyframes fromleft{
+	from{transform: translateX(-1000px)}
+	to{transform: translateX(0)}
+}
+
+.animateFrombottom{
+	-moz-animation: 1s frombottom ease;
+	-webkit-animation: 1s frombottom ease;
+	-ms-animation: 1s frombottom ease;
+	-o-animation: 1s frombottom ease;
+	animation: 1s frombottom ease;
+}
+
+@-moz-keyframes frombottom{
+	from{transform: translateY(1000px)}
+	to{transform: translateY(0)}
+}
+
+@-webkit-keyframes frombottom{
+	from{transform: translateY(1000px)}
+	to{transform: translateY(0)}
+}
+
+@-o-keyframes frombottom{
+	from{transform: translateY(1000px)}
+	to{transform: translateY(0)}
+}
+
+@keyframes frombottom{
+	from{transform: translateY(1000px)}
+	to{transform: translateY(0)}
+}
+
+
+/**************************************************************************TITRE AVEC UNE DOUBLE LIGNE DE COULEUR***********/
+.double-line-title{
+	border-bottom: 1px solid @colorCouleur4;
+}
+
+.double-line-title span{
+display: inline-block;
+position: relative;
+}
+
+.double-line-title span:before{
+	content:'';
+	width: 100%;
+	height: 3px;
+	background: @colorCouleur2;
+	position: absolute;
+	bottom:-1px;
 }
 
 /*************************************************************Animation sur les boutons liens  ( class="buttonlink" )**********/
@@ -123,7 +296,7 @@ h1, h2, h3, h4, h5, h6{
 
 .main-nav ul li a.active{
 	background: @colorCouleur1;
-	color: #fff;
+	color: @white;
 }
 
 /*************************************************************************LE MENU QUI SE DÉPLIE**********/
@@ -134,9 +307,11 @@ h1, h2, h3, h4, h5, h6{
 	position: absolute;
 	left:0;
 	width:100%;
-	background: @colorCouleur3;
+	background: @transparentcolor1;
 	transition: all 300ms ease;
-	color: #fff;
+	color: @white;
+	padding-top: 40px;
+	z-index: 100;
 }
 
 .large-menu-container ul{
@@ -152,20 +327,55 @@ h1, h2, h3, h4, h5, h6{
 .large-menu-container ul li a{
 	background: transparent;
 	display: block;
-	color: #fff;
+	color: @white;
+}
+
+.large-menu-container ul li a:hover{
+	background: @white;
+	color: @colorCouleur1;
 }
 
 .large-menu-container.showed{
 	display: block;
 }
 
+/*******************************************************************LE MENU QUI APPARAIT AU SCROLL**********/
+
+.scrollmenu-container{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	width: 100%;
+	opacity:0;
+	visibility:hidden;
+	background: @colorCouleur2;
+	-moz-transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.scrollmenu-container.fixed{
+opacity:1;
+visibility: visible;
+}
+
+
+
 /**************************************************LE SLIDER / IMAGE OU VIDÉO DE LA PAGE D'ACCUEIL**********/
 
 .home-image{
 	max-width: 100%;
-	height: 390px;
+	height: 350px;
 	background: @colorCouleur6;
 	overflow: hidden;
+}
+
+.home-image-inner{
+	max-width: 1200px;
+	margin: auto;
 }
 
 .home-image-text{
@@ -184,6 +394,16 @@ h1, h2, h3, h4, h5, h6{
 	max-width: 260px;
 	margin: auto;
 	margin-top: 40px;
+}
+
+.home-image-left{
+	height: 350px;
+	background: url(../img/tagcloud2.jpg) no-repeat center;
+}
+
+.home-image-left, .home-image-text{
+	width: 48.5%;
+	float: left;
 }
 
 /*************************************************************************LE CORPS DE PAGE / CONTENU PRINCIPAL**********/
@@ -235,11 +455,154 @@ font-weight: bold;
 
 
 
+/************************************************************************ARTICLE EN VEDETTE SEUL ( EXEMPLE: sur la home )***********/
+
+.home-article-alone{
+	padding-bottom:0;
+}
+
+.home-article-alone .article-content{
+	margin-left: 25px;
+}
+
+/*************************************************************************************************************LA SIDEBAR*/
+.sidebar{
+	margin-top:40px;
+}
+
+.sidebar-title{
+	color: @colorCouleur7;
+	font-size: 20px;
+}
+
+
+/******************************************************************************LES ARTICLE DANS LA SIDEBAR***************/
+.sidebar article{
+	background: @white;
+	padding-bottom: 20px;
+}
+
+.sidebar article a{
+	text-decoration: none
+}
+
+.sidebar-article-meta{
+color: @colorCouleur4;
+}
+
+a h4{
+	color: @black;
+	text-decoration: none !important;
+}
+
+a h4:hover{
+	color: @colorCouleur2;
+	text-decoration: none !important;
+}
+
+a.article-meta-link{
+	color: @colorCouleur4;
+}
+
+a.article-meta-link:last-child{
+	margin-left: 10px;
+}
+
+a.article-meta-link:hover{
+	color: @colorCouleur2;
+}
+
+a.article-meta-link i{
+	margin-right: 5px;
+}
+
 /**************************************************************************************************LE FOOTER**********/
 
 .main-footer{
 	background: @colorCouleur1;
-	min-height: 380px;
+	color: @white;
+}
+
+.footer-list{
+	display: inline-block;
+}
+
+
+.main-footer ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+.main-footer ul li{
+	margin:0;
+	padding:0;
+}
+
+
+.main-footer ul li a{
+	color: @white;
+}
+
+.main-footer h5{
+color: darken(@colorCouleur5,20%);
+}
+
+.footer-list{
+	width: 48%;
+	margin-bottom: 20px;
+}
+
+.footer-right p{
+	font-size: 16px;
+	color: darken(@colorCouleur5,20%);
+	font-family: @serifFontFamily;
+}
+
+/******************************************************************LA SECTION COPYRIGHT*/
+
+.copyright{
+	height: 40px;
+	background: @colorCouleur3;
+	margin-top: 20px;
+}
+
+.copyright p{
+	line-height: 40px;
+}
+
+
+/**************************************************************************************************LA PAGE ARTICLE*/
+
+.partage-article{
+	text-align: center;
+}
+
+a.partage-link{
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px;
+	padding-left: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 10px;
+}
+
+.partage-link i{
+font-size: 40px;
+color: @colorCouleur3;
+}
+
+.article-unique header{
+	margin-bottom: 20px;
+}
+
+.article-unique p{
+	color: @colorCouleur1;
+}
+
+.autres-articles{
+	padding: 10px;
 }
 
 
@@ -274,5 +637,11 @@ font-weight: bold;
 	width:100%;
 	background: @colorCouleur3;
 	transition: all 300ms ease;
-}
+	padding-top:0;
+	}
+
+	.large-menu-container ul{
+		min-height:0;
+	}
+
 }
