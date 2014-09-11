@@ -1,0 +1,278 @@
+*{box-sizing: border-box;}
+
+.clear{clear: both;}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+body{
+	background: @white;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: @serifFontFamily;
+}
+
+/*************************************************************Animation sur les boutons liens  ( class="buttonlink" )**********/
+.buttonlink{
+	background: transparent;
+	padding: 10px 15px;
+	position: relative;
+	z-index: 1;
+}
+
+.buttonlink:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left:0;
+	background: @colorCouleur2;
+	-moz-transition: all 200ms ease;
+	-webkit-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	-moz-transform: scaleX(0);
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	-o-transform: scaleX(0);
+	transform: scaleX(0);
+	opacity:0;
+	z-index: -1;
+
+}
+
+.buttonlink:hover:after{
+	-moz-transform: scaleX(1);
+	-webkit-transform: scaleX(1);
+	-ms-transform: scaleX(1);
+	-o-transform: scaleX(1);
+	transform: scaleX(1);
+	opacity:1;
+	z-index: -1;
+}
+
+.buttonlink:hover{
+	z-index: 1;
+	color: @white;
+	text-decoration: none;
+}
+
+
+
+/*************************************************************************LE HEADER**********/
+.main-header{
+	width:100%;
+}
+
+.main-header-haut{
+	height: 40px;
+	background: @colorCouleur1;
+	padding-top: 5px;
+}
+
+.main-header-haut a{
+	color: @white;
+	display: inline-block;
+	margin: 5px;
+}
+
+.main-header-haut a:hover{
+	color: @colorCouleur2;
+}
+
+.little-menu-haut{
+	max-width: 390px;
+	float: right;
+}
+
+
+.main-header-bas{
+	padding-top: 30px;
+}
+
+/*************************************************************************LE MENU PRINCIPAL**********/
+.main-nav ul{
+	float: right;
+	background: @colorCouleur2;
+	margin:0;
+}
+
+.main-nav ul li{
+	display: inline-block;
+	margin:0;
+}
+
+.main-nav ul li a{
+	display: block;
+	text-align: center;
+	width: 120px;
+	line-height: 40px;
+	color: @white;
+	background: @colorCouleur2;
+	text-decoration: none;
+}
+
+.main-nav ul li a:hover{
+	background: darken(@colorCouleur2, 10%)
+}
+
+.main-nav ul li a.active{
+	background: @colorCouleur1;
+	color: #fff;
+}
+
+/*************************************************************************LE MENU QUI SE DÉPLIE**********/
+
+.large-menu-container{
+	display: none;
+	min-height: 390px;
+	position: absolute;
+	left:0;
+	width:100%;
+	background: @colorCouleur3;
+	transition: all 300ms ease;
+	color: #fff;
+}
+
+.large-menu-container ul{
+	min-height: 240px;
+	float: none;
+	background: transparent;
+}
+
+.large-menu-container ul li{
+	display: block;
+}
+
+.large-menu-container ul li a{
+	background: transparent;
+	display: block;
+	color: #fff;
+}
+
+.large-menu-container.showed{
+	display: block;
+}
+
+/**************************************************LE SLIDER / IMAGE OU VIDÉO DE LA PAGE D'ACCUEIL**********/
+
+.home-image{
+	max-width: 100%;
+	height: 390px;
+	background: @colorCouleur6;
+	overflow: hidden;
+}
+
+.home-image-text{
+	color: #fff;
+}
+
+.home-image-text h1{
+	font-size: 30px;
+	margin-top: 80px;
+}
+
+.home-image-btn{
+	font-size: 20px;
+	line-height: 30px;
+	display: block;
+	max-width: 260px;
+	margin: auto;
+	margin-top: 40px;
+}
+
+/*************************************************************************LE CORPS DE PAGE / CONTENU PRINCIPAL**********/
+
+.main-content{
+	background: @colorCouleur5;
+	padding-bottom: 60px;
+}
+
+
+/******************************************************************LES DEUX ZONES (CONTENU À GAUCHE ET SIDEBAR)**********/
+
+.main-content-left, .sidebar{
+margin-top: 60px;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-o-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/***********************************Pour que les widget de la zone à gauche (sur la home soient) des blocs avec un fond blanc**********/
+
+.home-left-widget{
+	background: @white;
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+}
+
+
+/**************************************LES LISTES D'ARTICLES EN VEDETTE ( EXEMPLE : LES MISSIONS SUR LA HOME )**********/
+
+.article-content{
+	padding: 10px;
+}
+
+.article-content h2{
+font-weight: bold;
+}
+
+.article-content p{
+	font-family: @serifFontFamily;
+	color: @colorCouleur7;
+}
+
+.home-article-group a.sectionlink{
+	margin-left: 10px;
+}
+
+
+
+/**************************************************************************************************LE FOOTER**********/
+
+.main-footer{
+	background: @colorCouleur1;
+	min-height: 380px;
+}
+
+
+/********************************************************************************************MEDIA QUERIES**********/
+
+@media all and (max-width: 700px){
+
+/*******************************************************************************LE MENU EN VERSION MOBILE**********/
+	.main-nav ul{
+		float: none; 
+		margin-left: 0px;
+		background: @colorCouleur4;
+	}
+
+	.main-nav ul li{
+		display: block;
+    	width: 100%;
+    	max-width: 100%;
+    	}
+
+	.main-nav ul li a{
+		width: 100%;
+		max-width: 100%;
+	}
+	
+    .large-menu-container{
+	display: none;
+	position: relative;
+	left:0;
+	min-height:0;
+	height: auto;
+	width:100%;
+	background: @colorCouleur3;
+	transition: all 300ms ease;
+}
+}

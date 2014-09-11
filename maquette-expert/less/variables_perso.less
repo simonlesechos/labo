@@ -1,0 +1,86 @@
+//PAGE WIDTH
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         40px;
+@gridGutterWidth:         40px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// 1200px min
+@gridColumnWidth1200:     50px;
+@gridGutterWidth1200:     50px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// 768px-979px
+@gridColumnWidth768:      30px;
+@gridGutterWidth768:      30px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+
+// BORDER RADIUS :
+
+@baseBorderRadius:      0px;
+@borderRadiusLarge:     0px;
+@borderRadiusSmall:     0px;
+
+
+//COLORS
+
+@colorCouleur1: #194553;
+@colorCouleur2: #f15e25;
+@colorCouleur3: #4c616e;
+@colorCouleur4: #a8aeb5;
+@colorCouleur5: #eef1f2;
+@colorCouleur6: #040707;
+@colorCouleur7: #8f9fa7;
+
+// Typography
+// -------------------------
+@sansFontFamily:        "Open Sans", sans-serif;
+@serifFontFamily:       "Roboto Slab", serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:          14px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        20px;
+@altFontFamily:         @serifFontFamily;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
+@headingsColor:         inherit; // empty to use BS default, @textColor
+
+
+// Links
+// -------------------------
+@linkColor:             @colorCouleur2;
+@linkColorHover:        darken(@linkColor, 15%);
+
+
+// Buttons
+// -------------------------
+@btnBackground:                     @colorCouleur2;
+@btnBackgroundHighlight:            lighten(@colorCouleur2, 10%);
+@btnBorder:                         transparent;
+
+@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
+
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     #51a351;
+
+@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackgroundHighlight:     @orange;
+
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      #bd362f;
+
+@btnInverseBackground:              #444;
+@btnInverseBackgroundHighlight:     @grayDarker;
