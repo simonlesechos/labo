@@ -1,4 +1,4 @@
-$('.deployerlink').append('<i class="icon-caret-down" style="margin-left: 5px; display: inline-block;"></i>');
+$('.deployerlink').append('<i class="icon-chevron-down" style="margin-left: 5px; display: inline-block;"></i>');
 
 $('.deployerlink').click(function(){
 	$(this).toggleClass('rotation180');
