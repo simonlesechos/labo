@@ -29,6 +29,10 @@ a{
 	transition: all 200ms ease;
 }
 
+h1 a{
+	text-decoration: none !important;
+}
+
 article strong{
 font-family: @serifFontFamily;
 font-weight: normal;
@@ -41,6 +45,7 @@ display: inline-block;
 	color: @colorCouleur3;
 	padding-top: 20px;
 }
+
 
 /*****************************************************************************************************QUELQUES ANIMATIONS*/
 
@@ -375,6 +380,7 @@ position: relative;
 .scrollmenu-container.fixed{
 opacity:1;
 visibility: visible;
+z-index: 9999;
 }
 
 
@@ -428,6 +434,9 @@ visibility: visible;
 	padding-bottom: 60px;
 }
 
+.left-widget-inner{
+	padding: 10px;
+}
 
 /******************************************************************LES DEUX ZONES (CONTENU À GAUCHE ET SIDEBAR)**********/
 
@@ -439,6 +448,15 @@ margin-top: 60px;
 -o-box-sizing: border-box;
 box-sizing: border-box;
 }
+
+.page .main-content-left{ /*RESET DE LA MARGE EN HAUT pour les pages qui ne sont pas la home, pour être plus proche du fil d'arianne*/
+	margin-top: 15px;
+}
+
+.page .sidebar{
+	margin-top: 0;
+}
+
 
 /***********************************Pour que les widget de la zone à gauche (sur la home soient) des blocs avec un fond blanc**********/
 
@@ -588,14 +606,13 @@ color: darken(@colorCouleur5,20%);
 
 
 /**************************************************************************************************LA PAGE ARTICLE*/
-
-.article-page .main-content-left, .article-page .sidebar{ /*RESET DE LA MARGE EN HAUT pour être plus proche du fil d'arianne*/
-	margin-top: 10px;
+.page h1{
+font-size: 34px;
+font-weight: bold;
 }
 
 .article-unique h1{
-padding-left: 10px;
-padding-right: 10px;
+padding: 10px;
 font-size: 34px;
 font-weight: bold;
 }
@@ -644,10 +661,14 @@ color: @colorCouleur2;
 }
 
 
-.listed-article{
+.listed-article, .listed-block{
 	max-width: 47.5%;
 	display: inline-block;
 	margin-left: 10px;
+}
+
+.listed-block{
+	margin-bottom: 20px;
 }
 
 .listed-article .buttonlink{
@@ -662,6 +683,92 @@ color: @colorCouleur2;
 padding: 10px;
 }
 
+
+/***************************************************************************************************LA PAGE CONTACT*/
+.formulaire label{
+	visibility: hidden;
+
+}
+
+.formulaire form{
+	margin: 20px auto;
+}
+
+.formulaire form .controls{
+	margin: auto;
+}
+
+.controls.btn-controls{
+	margin: auto;
+}
+
+.formulaire input, .formulaire textarea, .formulaire select{
+	display: block;
+	width: 80%;
+	margin: auto;
+}
+
+
+/*****************************************************************************************ACCUEIL RUBRIQUE***********/
+.accroche-rubrique{
+	text-align: center;
+	background: @colorCouleur1;
+	color: @white;
+	overflow: hidden;
+}
+
+.accroche-rubrique h1{
+	line-height: 60px;
+}
+
+.accroche-rubrique h5{
+	padding-bottom: 20px;
+}
+
+.titre-rubrique{
+	padding: 10px;
+}
+
+.rubrique-entete{
+	padding-bottom: 20px;
+}
+
+.multicontent{
+	text-align: center;
+}
+
+.multicontent-item.item3{
+	width: 33%;
+	display: inline-block;
+
+}
+
+.multicontent h2{
+	text-align: left;
+}
+
+.multicontent a{
+	text-decoration: none !important;
+}
+
+.multicontent-item.item2{
+	width: 49.5%;
+	display: inline-block;
+	text-align: left;
+}
+
+
+.multicontent .buttonlink{
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.mini-list-articles{
+	text-align: left !important;
+	line-height: 30px;
+	padding-left: 20px;
+}
+
 /********************************************************************************************MEDIA QUERIES**********/
 @media all and (max-width: 980px){
 .listed-article{
@@ -669,6 +776,12 @@ padding: 10px;
 	display: block;
 	margin: 10px auto;
 }
+
+.multicontent-item{
+	width: 100%;
+	display: block;
+}
+
 }
 
 
