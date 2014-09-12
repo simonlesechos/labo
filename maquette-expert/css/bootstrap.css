@@ -8221,6 +8221,10 @@ article strong {
   margin-bottom: 10px;
   display: inline-block;
 }
+.fildarianne {
+  color: #4c616e;
+  padding-top: 20px;
+}
 /*****************************************************************************************************QUELQUES ANIMATIONS*/
 /**********************************************************AJOUTER LES CLASSES EN JS POUR DÉCLENCHER LES ANIMATIONS*******/
 .rotation180 i {
@@ -8472,6 +8476,7 @@ article strong {
 }
 .main-header-bas {
   padding-top: 30px;
+  padding-bottom: 10px;
 }
 /*************************************************************************LE MENU PRINCIPAL**********/
 .main-nav ul {
@@ -8512,10 +8517,16 @@ article strong {
   padding-top: 40px;
   z-index: 100;
 }
+.large-menu-container h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
 .large-menu-container ul {
   min-height: 240px;
   float: none;
   background: transparent;
+  border-right: 1px solid #4c616e;
 }
 .large-menu-container ul li {
   display: block;
@@ -8523,11 +8534,13 @@ article strong {
 .large-menu-container ul li a {
   background: transparent;
   display: block;
-  color: #ffffff;
+  line-height: 30px;
+  color: #c7d2d8;
+  text-align: left;
 }
 .large-menu-container ul li a:hover {
-  background: #ffffff;
-  color: #194553;
+  color: #ffffff;
+  background: transparent;
 }
 .large-menu-container.showed {
   display: block;
@@ -8633,7 +8646,7 @@ article strong {
 .sidebar {
   margin-top: 40px;
 }
-.sidebar-title {
+.grey-title {
   color: #8f9fa7;
   font-size: 20px;
 }
@@ -8710,6 +8723,17 @@ a.article-meta-link i {
   line-height: 40px;
 }
 /**************************************************************************************************LA PAGE ARTICLE*/
+.article-page .main-content-left,
+.article-page .sidebar {
+  /*RESET DE LA MARGE EN HAUT pour être plus proche du fil d'arianne*/
+  margin-top: 10px;
+}
+.article-unique h1 {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 34px;
+  font-weight: bold;
+}
 .partage-article {
   text-align: center;
 }
@@ -8732,10 +8756,41 @@ a.partage-link {
 .article-unique p {
   color: #194553;
 }
-.autres-articles {
+.article-meta {
+  padding: 10px;
+}
+/*********************AFFFICHE LA CATEGORIE DE L'ARTICLE DANS UN STYLE DIFFÉRENT*/
+.the-category {
+  font-size: 30px !important;
+  font-weight: 400;
+  color: #f15e25;
+}
+/**************************************************************************MODULE AUTRES ARTICLES DE MÊME CATÉGORIE*/
+.autres-articles a {
+  text-decoration: none;
+}
+.listed-article {
+  max-width: 47.5%;
+  display: inline-block;
+  margin-left: 10px;
+}
+.listed-article .buttonlink {
+  margin-left: 5px;
+}
+.article-extrait p {
+  color: #4c616e;
+}
+.article-list-title {
   padding: 10px;
 }
 /********************************************************************************************MEDIA QUERIES**********/
+@media all and (max-width: 980px) {
+  .listed-article {
+    max-width: 97%;
+    display: block;
+    margin: 10px auto;
+  }
+}
 @media all and (max-width: 700px) {
   /*******************************************************************************LE MENU EN VERSION MOBILE**********/
   .main-nav ul {

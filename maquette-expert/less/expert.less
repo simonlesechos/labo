@@ -37,6 +37,11 @@ margin-bottom: 10px;
 display: inline-block;
 }
 
+.fildarianne{
+	color: @colorCouleur3;
+	padding-top: 20px;
+}
+
 /*****************************************************************************************************QUELQUES ANIMATIONS*/
 
 /**********************************************************AJOUTER LES CLASSES EN JS POUR DÉCLENCHER LES ANIMATIONS*******/
@@ -266,6 +271,7 @@ position: relative;
 
 .main-header-bas{
 	padding-top: 30px;
+	padding-bottom: 10px;
 }
 
 /*************************************************************************LE MENU PRINCIPAL**********/
@@ -314,10 +320,17 @@ position: relative;
 	z-index: 100;
 }
 
+.large-menu-container h4{
+	font-family: @sansFontFamily;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
 .large-menu-container ul{
 	min-height: 240px;
 	float: none;
 	background: transparent;
+	border-right: 1px solid @colorCouleur3;
 }
 
 .large-menu-container ul li{
@@ -327,12 +340,14 @@ position: relative;
 .large-menu-container ul li a{
 	background: transparent;
 	display: block;
-	color: @white;
+	line-height: 30px;
+	color: lighten(@colorCouleur3,45%);
+	text-align: left;
 }
 
 .large-menu-container ul li a:hover{
-	background: @white;
-	color: @colorCouleur1;
+	color: @white;
+	background: transparent;
 }
 
 .large-menu-container.showed{
@@ -470,7 +485,7 @@ font-weight: bold;
 	margin-top:40px;
 }
 
-.sidebar-title{
+.grey-title{
 	color: @colorCouleur7;
 	font-size: 20px;
 }
@@ -574,6 +589,17 @@ color: darken(@colorCouleur5,20%);
 
 /**************************************************************************************************LA PAGE ARTICLE*/
 
+.article-page .main-content-left, .article-page .sidebar{ /*RESET DE LA MARGE EN HAUT pour être plus proche du fil d'arianne*/
+	margin-top: 10px;
+}
+
+.article-unique h1{
+padding-left: 10px;
+padding-right: 10px;
+font-size: 34px;
+font-weight: bold;
+}
+
 .partage-article{
 	text-align: center;
 }
@@ -601,12 +627,51 @@ color: @colorCouleur3;
 	color: @colorCouleur1;
 }
 
-.autres-articles{
+.article-meta{
 	padding: 10px;
+}
+/*********************AFFFICHE LA CATEGORIE DE L'ARTICLE DANS UN STYLE DIFFÉRENT*/
+.the-category{
+font-size: 30px !important;
+font-weight: 400;
+color: @colorCouleur2;
 }
 
 
+/**************************************************************************MODULE AUTRES ARTICLES DE MÊME CATÉGORIE*/
+.autres-articles a{
+	text-decoration: none
+}
+
+
+.listed-article{
+	max-width: 47.5%;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.listed-article .buttonlink{
+	margin-left: 5px;
+}
+
+.article-extrait p{
+	color: @colorCouleur3;
+}
+
+.article-list-title{
+padding: 10px;
+}
+
 /********************************************************************************************MEDIA QUERIES**********/
+@media all and (max-width: 980px){
+.listed-article{
+	max-width: 97%;
+	display: block;
+	margin: 10px auto;
+}
+}
+
+
 
 @media all and (max-width: 700px){
 
