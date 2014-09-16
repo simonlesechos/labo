@@ -372,6 +372,13 @@ max-width: 45%;
   background: url(http://lorempixel.com/460/340/city) no-repeat center;
 }
 
+.littleboxBureaux{
+  background: url(../img/cabinet-accueil.jpg) no-repeat center;
+}
+
+.littleboxPratique{
+  background: url(../img/actualite-reunion.jpg) no-repeat center;
+}
 
 .boxoverlay{
   position: absolute;
