@@ -704,6 +704,26 @@ transition: all 300ms ease;
   display: block;
 }
 
+.recrutement-cab{
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 60px;
+  padding: 10px;
+}
+
+.recrutement-cab p{
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.recrutement-cab ul{
+  padding: 0;
+  margin: 0 0 10px 25px; 
+  list-style-type: disc;
+}
+
+
 /*Widget d'actu en page cabinet*/
 
 .actu-page-widget{
