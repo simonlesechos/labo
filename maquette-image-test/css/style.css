@@ -380,8 +380,8 @@ max-width: 45%;
   background: url(../img/actualite-reunion.jpg) no-repeat center;
 }
 
-.bigbox .littleboxMissions1{
-  background: url(../img/actualite-reunion.jpg) no-repeat center red;
+.littleboxMissions1{
+  background: url(../img/personnes01.jpg) no-repeat center !important;
   width: 50%;
   max-width:50%;
   height:580px;
@@ -390,17 +390,17 @@ max-width: 45%;
 }
 
 .littleboxMissions2{
-  background: url(../img/actualite-reunion.jpg) no-repeat center;
+  background: url(../img/personnes02.jpg) no-repeat center;
 }
 
 .littleboxMissions3{
-  background: url(../img/actualite-reunion.jpg) no-repeat center;
+  background: url(../img/personnes03.jpg) no-repeat center;
 }
 .littleboxMissions4{
-  background: url(../img/actualite-reunion.jpg) no-repeat center;
+  background: url(../img/personnes04.jpg) no-repeat center;
 }
 .littleboxMissions5{
-  background: url(../img/actualite-reunion.jpg) no-repeat center;
+  background: url(../img/personnes05.jpg) no-repeat center;
 }
 
 .boxoverlay{
