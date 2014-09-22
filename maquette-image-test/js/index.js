@@ -9,6 +9,7 @@ $('.scrollbtn').click(function(){
 
 $(document).ready(function(){
 
+      $('.pagebody-cab .main-header').addClass('scrollhead');
    
       $('.pagebody .wrapper').addClass('loaded');
       $('.pagebody .box').each(function(i){
@@ -24,12 +25,12 @@ $(document).ready(function(){
 
   $(window).scroll(function(){  
         posScroll = $(document).scrollTop();  
-        if(posScroll >=250){  
-              $('.home-header').addClass('scrollhead');
+        if(posScroll >=60){  
+              $('.home-header, .pagebody .main-header').addClass('scrollhead');
               $('.homebody .box').addClass('animatedbox');
               $('.menu-page').addClass('fixed');
         }else{  
-            $('.home-header').removeClass('scrollhead');
+            $('.home-header, .pagebody .main-header').removeClass('scrollhead');
             $('.homebody .box').removeClass('animatedbox');
             $('.menu-page').removeClass('fixed');
         }
