@@ -74,9 +74,6 @@ input:focus, textarea:focus{
   padding-bottom: 150px;
 }
 
-.contact-header{
-  background: #fff !important;
-}
 
 .text-area-container{
   width: 90%;
@@ -153,8 +150,12 @@ input:focus, textarea:focus{
   transition: all 500ms ease;
 }
 
+.pagebody .main-header{
+  background: #1c1c33;
+}
+
 .main-header.scrollhead{
-  background: #fff;
+  background: #1C1C33;
   transition: all 200ms ease;
 }
 
@@ -184,13 +185,67 @@ input:focus, textarea:focus{
  visibility: visible; 
 }
 
+
+.openclose{
+        display: none;
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index:100000;
+        -webkit-transition: all 400ms ease;
+        -moz-transition: all 400ms ease;
+        -ms-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        transition: all 400ms ease;
+
+    }
+
+    .openclose span{
+        display: block;
+        height: 10px;
+        width: 100%;
+        margin: auto;
+        background: #1C1C33;
+        position: relative;
+        -webkit-transition: all 400ms ease;
+        -moz-transition: all 400ms ease;
+        -ms-transition: all 400ms ease;
+        -o-transition: all 400ms ease;
+        transition: all 400ms ease;
+    }
+    
+    span.s02{
+        margin: 5px auto;
+    }
+
+    .openclose.opened span.s01{
+    transform: rotate(-45deg);
+    top: 10px;
+    }
+
+    .openclose.opened span.s03{
+    transform: rotate(45deg);
+    top: -20px;
+    }
+
+    .openclose.opened span.s02{
+    width:0;
+   
+    }
+
+    .openclose.opened span{
+    background: #fff;
+    }
+
 .navbar nav{
   text-align: center;
   width: 82%;
 }
 
 .navbar nav a{
-  color:#363B4F;
   text-decoration: none;
   display: inline-block;
   margin: 0;
@@ -205,11 +260,11 @@ input:focus, textarea:focus{
 
 .navbar nav a:hover, .navbar nav a.active{
   color: #000;
-  background: #F1BF25;
+  background: rgba(255,255,255,.2);
 }
 
-.main-header.scrollhead .navbar a{
-  color: #363B4F;
+.main-header.scrollhead .navbar a, .pagebody .main-header .navbar a{
+  color: #eee;
 }
 
 .pagebody .navbar a{
@@ -324,7 +379,25 @@ width: 50%;
 max-width: 50%; 
 }
 
+/*
+.colonne-left{
+  max-width: 40%;
+  float: left;
+}
 
+.colonne-right{
+  max-width: 27%;
+  float: left;
+}
+
+.colonne-right .box-actu{
+  width:97%;
+  margin: 10px auto;
+  float: none;
+  clear: both;
+}
+
+*/
 
 .littlebox h3{
  color: #fff;
@@ -693,11 +766,13 @@ transition: all 300ms ease;
 }
 
 .menu-page.fixed{
-  background: #343434;
+  background: #1C1C33;
+  border-top: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 .menu-page.fixed nav a{
-  background: #545454;
+  background: transparent;
   color: #eee;  
 }
 
@@ -705,6 +780,11 @@ transition: all 300ms ease;
 .menu-page nav a:hover, .menu-page nav a.active{
   background: #1C1C33;
   color: #fff;
+}
+
+.menu-page.fixed nav a:hover, .menu-page.fixed nav a.active{
+  background: rgba(255,255,255,.2);
+  color: #fff;  
 }
 
 .pres-cab{
@@ -966,6 +1046,7 @@ footer .max-width{
   margin: 5px auto;
 }
 
+
 }
 
 
@@ -987,6 +1068,30 @@ footer .max-width{
   display: block;
   float: none;
   width: 100%;
+}
+
+.navbar{
+  position: fixed;
+  top:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  z-index: 9999;
+  background: #343434;
+  transition: all 500ms ease;
+  transform: scale(0);
+  left:-100%;
+}
+
+.navbar.opened{
+  transform: scale(1);
+  left:0;
+}
+
+div.openclose{
+  display: block;
+        width: 40px;
+        height: 40px;
 }
 
 .main-header .navbar nav a, .navbar nav a, .main-header.scrollhead .navbar nav a{

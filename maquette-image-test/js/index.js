@@ -35,3 +35,8 @@ $(document).ready(function(){
             $('.menu-page').removeClass('fixed');
         }
   });  
+
+$('.openclose').click(function(){
+  $(this).toggleClass('opened');
+  $('.navbar').toggleClass('opened');
+});
