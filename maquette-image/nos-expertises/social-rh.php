@@ -5,8 +5,8 @@
 
   <meta charset="UTF-8">
 
-  <title>Maquette Image - Social RH</title>
-
+  <title>Image v4 | Social RH</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="../css/style.css" media="screen" type="text/css" />
 </head>
 
@@ -19,8 +19,8 @@
 
   <div class="header-page">
   <div class="header-page-img">
-    <div class="color-filter">
-            <div class="titre-page"><h1>Social RH</h1></div>
+    <div class="color-filter filter3">
+            <div class="titre-page"><h1>Nos expertises</h1> <h2 class="bigh2">Des fondamentaux  de la gestion de votre entreprise… à une expertise pointue.</h2></div>
     </div>
   </div>
   </div>
@@ -29,10 +29,26 @@
     <div class="max-width">
       <div class="pres-cab">
         <h1 class="bigh1">Social RH</h1>        
-              <img src="../img/personnes02.jpg">
-          <p><strong>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</strong></p> 
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>   
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>             
+              <img src="../img/socialrh.jpg">
+          <p><strong>: La législation sociale évolue sans cesse, apportant des modifications sur le montant des cotisations patronales ou salariales, sur le calcul d’indemnités ou encore sur le temps de travail. Le Cabinet LE NOM DU CABINET sécurise votre votre gestion RH.</strong></p> 
+          <ul class="text-list">
+
+            <li>La réalisation de tableaux de bord sociaux.</li>
+            <li>La rédaction d’accords d’intéressement.</li>
+            <li>L’édition de fiches de paies.</li>
+            <li>La préparation de ruptures conventionnelles.</li>
+            <li>La réalisation de toutes les déclarations sociales.</li>
+
+          </ul>
+
+        <p>Autres domaines d’intervention du cabinet LE NOM DU CABINET :</p>
+        <ul class="text-list">
+          <li><a href="#">Expertise comptabilité et fiscal</a></li>
+          <li><a href="#">Accompagnement Création d'entreprise</a></li>
+          <li><a href="#">Expertise Patrimoine</a></li>
+          <li><a href="#">Secrétariat administratif</a></li>
+        </ul>
+
       </div>    
       <div class="clear"></div>
     </div>

@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <title>Maquette Image - Comptabilité et fiscal</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Image v4 | Comptabilité et fiscal</title>
 
     <link rel="stylesheet" href="../css/style.css" media="screen" type="text/css" />
 </head>
@@ -18,22 +18,38 @@
   <div class="wrapper">
 
   <div class="header-page">
-  <div class="header-page-img">
-    <div class="color-filter">
-            <div class="titre-page"><h1>Comptabilité et fiscal</h1></div>
+    <div class="header-page-img">
+      <div class="color-filter filter3">
+              <div class="titre-page"><h1>Nos expertises</h1><h2 class="bigh2">Des fondamentaux  de la gestion de votre entreprise… à une expertise pointue.</h2></div>
+      </div>
     </div>
-  </div>
   </div>
 <?php include('../includes/menu-page-expertises.php'); ?>
   <div class="content page-content">
     <div class="max-width">
       <div class="pres-cab">
-        <h1 class="bigh1">Comptabilité et fiscal</h1>        
-              <img src="../img/personnes01.jpg">
-          <p><strong>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</strong></p> 
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>   
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>             
-      </div>    
+        <h1 class="bigh1">Expertise comptabilité - fiscalité</h1>        
+              <img src="../img/comptafiscal.jpg">
+          <p><strong>Le cabinet le NOM DU CABINET assiste ses clients sur les fondamentaux de la gestion d'entreprise. </strong></p>
+        <ul class="text-list">
+          <li>Établissement des comptes annuels & situations intermédiaires</li>
+          <li>Élaboration de tableaux de bord et budgets prévisionnels</li>
+          <li>Établissement des déclarations fiscales</li>
+          <li>Tableau de bord, BP, reportings, coûts de revient, réconciliations interco/BU, …</li>
+          <li>Immobilisations, stocks, fournisseurs, clients, comptes de régularisations, trésorerie, …</li>
+          <li>Rattrapages (retards, reliquats de migration informatiques, absences,…), lettrages- nettoyages de comptes…</li>
+        </ul>
+
+        <p>Nous accompagnons les entreprises de toutes tailles pour qu'lles répondent à leurs obligations légales, comptables, fiscales et sociales et pilotent l’évolution de l’activité grâce à un reporting fiable et pertinent établi dans des délais réduits.</p>
+        <p>Autres domaines d’intervention du cabinet LE NOM DU CABINET :</p>
+        <ul class="text-list">
+          <li><a href="#">Expertise comptabilité et fiscal</a></li>
+          <li><a href="#">Accompagnement Création d'entreprise</a></li>
+          <li><a href="#">Expertise Patrimoine</a></li>
+          <li><a href="#">Secrétariat administratif</a></li>
+        </ul>
+        
+      </div>
       <div class="clear"></div>
     </div>
     <div class="actu-page-widget colored-back">

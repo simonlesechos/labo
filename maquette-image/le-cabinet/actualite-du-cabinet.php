@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <title>Maquette Image - L'actualité du cabinet</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Image v4 | L'actualité du cabinet</title>
 
     <link rel="stylesheet" href="../css/style.css" media="screen" type="text/css" />
 </head>
@@ -18,7 +18,7 @@
   <div class="wrapper">
 
   <div class="header-page">
-  <div class="header-page-img">
+  <div class="header-page-img img-actu-cab">
     <div class="color-filter filter2">
             <div class="titre-page"><h1>Actualité du cabinet</h1></div>
     </div>
@@ -35,8 +35,8 @@
               <img src="../img/actu1.jpg">
             </div>
             <div class="box-actu-excerpt">
-              <h4>Le Cabinet est partenaire des créateurs (...)</h4>
-              <p>Vous êtes partenaire d'événements ou de salons dans votre région? Faites-le savoir à vos clients et contacts en publiant l'information sur votre site Internet! Rendez-vous sur le (...)</p>
+              <h4>Journée portes ouvertes au cabinet Nomducabinet Poitiers</h4>
+              <p>Le cabinet Nomducebinet vous ouvre ses portes toute la matinée, mardi x mois. Chefs d'entreprise, responsables d'association, clients (...)</p>
               <a href="actualite-1.php" class="button">En savoir +</a>
             </div>
             
@@ -47,8 +47,8 @@
               <img src="../img/actu2.jpg">
             </div>
             <div class="box-actu-excerpt">
-              <h4>Le Cabinet accueille un nouveau collaborateur</h4>
-              <p>Vous voulez annoncer l'arrivée d'un nouveau collaborateur ? Vous venez de racheter un Cabinet ? Vous souhaitez proposer à vos clients une nouvelle offre de service ? Animez très (...)</p>
+              <h4>le service Patrimoine du cabinet Nomducabinet de Melle se développe !</h4>
+              <p>M. Lepatrimoine vient en effet de nous rejoindre pour renforcer nos équipes. M. Lepatrimoine a un double cursus précieux : il est à la fois (...)</p>
              <a href="actualite-2.php" class="button">En savoir +</a>
             </div>
            
@@ -59,8 +59,8 @@
               <img src="../img/actu3.jpg">
             </div>
             <div class="box-actu-excerpt">
-              <h4>Invitation à la réunion "Loi de finances"</h4>
-              <p>Vous organisez une réunion spéciale "Loi de finances" pour vos clients? Diffusez l'information sur votre site Internet et proposez-leur de télécharger le programme ou le compte-rendu (...)</p>
+              <h4>Petit Déjeuner Loi de finances, mercredi xx mois, 8H30 Angoulême</h4>
+              <p>Le cabinet Nomducabinet d’Angoulême organise un petit déjeuner ouvert à tous pour décrypter les nouvelles réformes fiscales et sociales de la dernière loi (...)</p>
               <a href="actualite-3.php" class="button">En savoir +</a>
             </div>
         
@@ -68,36 +68,36 @@
 
           <div class="box-actu">
             <div class="box-actu-img">
-              <img src="../img/actu1.jpg">
+              <img src="../img/image-news4.jpg">
             </div>
             <div class="box-actu-excerpt">
-              <h4>Le Cabinet est partenaire des créateurs (...)</h4>
-              <p>Vous êtes partenaire d'événements ou de salons dans votre région? Faites-le savoir à vos clients et contacts en publiant l'information sur votre site Internet! Rendez-vous sur le (...)</p>
-              <a href="actualite-1.php" class="button">En savoir +</a>
+              <h4>Le NOM DU CABINET, démarche qualité</h4>
+              <p>Le cabinet NOM DU CABINET s’engage dans une démarche qualité : nous faisons appel à l'institut OPINION SYSTEM (certifié AFNOR ISO 9001 qualité et ISO 20252 études) pour sonder nos client (...)</p>
+              <a href="actualite-4.php" class="button">En savoir +</a>
             </div>
             
           </div>
 
           <div class="box-actu">
             <div class="box-actu-img">
-              <img src="../img/actu2.jpg">
+              <img src="../img/image-news5.jpg">
             </div>
             <div class="box-actu-excerpt">
-              <h4>Le Cabinet accueille un nouveau collaborateur</h4>
-              <p>Vous voulez annoncer l'arrivée d'un nouveau collaborateur ? Vous venez de racheter un Cabinet ? Vous souhaitez proposer à vos clients une nouvelle offre de service ? Animez très (...)</p>
-             <a href="actualite-2.php" class="button">En savoir +</a>
+              <h4>Le cabinet NOM DU CABINET participe à la JRCE de La Rochelle</h4>
+              <p>Le x mois année, M.LASSOCIE3 et nos collaborateurs spécialisés dans l'accompagnement des créateurs seront présents à la Journée Régionale de la Création et Reprise d’Entreprise (JRCE) (...)</p>
+             <a href="actualite-5.php" class="button">En savoir +</a>
             </div>
            
           </div>
           
           <div class="box-actu">
             <div class="box-actu-img">
-              <img src="../img/actu3.jpg">
+              <img src="../img/image-news6.jpg">
             </div>
             <div class="box-actu-excerpt">
-              <h4>Invitation à la réunion "Loi de finances"</h4>
-              <p>Vous organisez une réunion spéciale "Loi de finances" pour vos clients? Diffusez l'information sur votre site Internet et proposez-leur de télécharger le programme ou le compte-rendu (...)</p>
-              <a href="actualite-3.php" class="button">En savoir +</a>
+              <h4>Bloc 6 Information TVA secteur BTP</h4>
+              <p>Artisans du BTP, une nouvelle modification du taux de TVA s’appliquera dès le mois de mois sur des travaux spécifiques de rénovation second œuvre. Le cabinet LE NOM DU CABINET vous invite à contacter votre collaborateur référent (...)</p>
+              <a href="actualite-6.php" class="button">En savoir +</a>
             </div>
         
           </div>

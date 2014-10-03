@@ -9046,6 +9046,9 @@ h4,
 h5 {
   font-family: "Roboto Slab", serif;
 }
+h3 {
+  line-height: 20px;
+}
 h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -9072,8 +9075,6 @@ article strong {
   color: #4c616e;
   padding-top: 20px;
 }
-/*****************************************************************************************************QUELQUES ANIMATIONS*/
-/**********************************************************AJOUTER LES CLASSES EN JS POUR DÉCLENCHER LES ANIMATIONS*******/
 .rotation180 i {
   -moz-transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
@@ -9242,9 +9243,9 @@ article strong {
     transform: translateY(0);
   }
 }
-/**************************************************************************TITRE AVEC UNE DOUBLE LIGNE DE COULEUR***********/
 .double-line-title {
   border-bottom: 1px solid #a8aeb5;
+  line-height: 32px;
 }
 .double-line-title span {
   display: inline-block;
@@ -9258,10 +9259,13 @@ article strong {
   position: absolute;
   bottom: -1px;
 }
-/*************************************************************Animation sur les boutons liens  ( class="buttonlink" )**********/
 .buttonlink {
+  display: inline-block;
   background: transparent;
   padding: 10px 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
   position: relative;
   z-index: 1;
 }
@@ -9300,7 +9304,11 @@ article strong {
   color: #ffffff;
   text-decoration: none;
 }
-/*************************************************************************LE HEADER**********/
+.buttonlink i {
+  float: left;
+  margin-right: 10px;
+  line-height: 20px;
+}
 .main-header {
   width: 100%;
 }
@@ -9313,6 +9321,7 @@ article strong {
   color: #ffffff;
   display: inline-block;
   margin: 5px;
+  margin-top: 2px;
 }
 .main-header-haut a:hover {
   color: #f15e25;
@@ -9325,7 +9334,9 @@ article strong {
   padding-top: 30px;
   padding-bottom: 10px;
 }
-/*************************************************************************LE MENU PRINCIPAL**********/
+.main-nav {
+  display: block;
+}
 .main-nav ul {
   float: right;
   background: #f15e25;
@@ -9338,7 +9349,7 @@ article strong {
 .main-nav ul li a {
   display: block;
   text-align: center;
-  width: 120px;
+  width: 140px;
   line-height: 40px;
   color: #ffffff;
   background: #f15e25;
@@ -9351,7 +9362,6 @@ article strong {
   background: #194553;
   color: #ffffff;
 }
-/*************************************************************************LE MENU QUI SE DÉPLIE**********/
 .large-menu-container {
   display: none;
   min-height: 390px;
@@ -9392,7 +9402,6 @@ article strong {
 .large-menu-container.showed {
   display: block;
 }
-/*******************************************************************LE MENU QUI APPARAIT AU SCROLL**********/
 .scrollmenu-container {
   position: fixed;
   top: 0;
@@ -9413,7 +9422,6 @@ article strong {
   visibility: visible;
   z-index: 9999;
 }
-/**************************************************LE SLIDER / IMAGE OU VIDÉO DE LA PAGE D'ACCUEIL**********/
 .home-image {
   max-width: 100%;
   height: 350px;
@@ -9439,6 +9447,17 @@ article strong {
   margin: auto;
   margin-top: 40px;
 }
+.home-image-btn i {
+  float: left;
+  margin-right: 5px;
+  line-height: 30px;
+}
+.sidebar .home-image-btn {
+  font-size: 14px;
+}
+.sidebar .home-image-btn i {
+  font-size: 20px;
+}
 .home-image-left {
   height: 350px;
   background: url(../img/tagcloud2.jpg) no-repeat center;
@@ -9448,7 +9467,6 @@ article strong {
   width: 48.5%;
   float: left;
 }
-/*************************************************************************LE CORPS DE PAGE / CONTENU PRINCIPAL**********/
 .main-content {
   background: #eef1f2;
   padding-bottom: 60px;
@@ -9456,7 +9474,6 @@ article strong {
 .left-widget-inner {
   padding: 10px;
 }
-/******************************************************************LES DEUX ZONES (CONTENU À GAUCHE ET SIDEBAR)**********/
 .main-content-left,
 .sidebar {
   margin-top: 60px;
@@ -9467,19 +9484,17 @@ article strong {
   box-sizing: border-box;
 }
 .page .main-content-left {
-  /*RESET DE LA MARGE EN HAUT pour les pages qui ne sont pas la home, pour être plus proche du fil d'arianne*/
   margin-top: 15px;
 }
 .page .sidebar {
   margin-top: 0;
 }
-/***********************************Pour que les widget de la zone à gauche (sur la home soient) des blocs avec un fond blanc**********/
 .home-left-widget {
   background: #ffffff;
   margin-bottom: 60px;
   padding-bottom: 20px;
+  overflow: hidden;
 }
-/**************************************LES LISTES D'ARTICLES EN VEDETTE ( EXEMPLE : LES MISSIONS SUR LA HOME )**********/
 .article-content {
   padding: 10px;
 }
@@ -9493,14 +9508,13 @@ article strong {
 .home-article-group a.sectionlink {
   margin-left: 10px;
 }
-/************************************************************************ARTICLE EN VEDETTE SEUL ( EXEMPLE: sur la home )***********/
 .home-article-alone {
   padding-bottom: 0;
 }
 .home-article-alone .article-content {
   margin-left: 25px;
+  padding: 0;
 }
-/*************************************************************************************************************LA SIDEBAR*/
 .sidebar {
   margin-top: 40px;
 }
@@ -9508,7 +9522,6 @@ article strong {
   color: #8f9fa7;
   font-size: 20px;
 }
-/******************************************************************************LES ARTICLE DANS LA SIDEBAR***************/
 .sidebar article {
   background: #ffffff;
   padding-bottom: 20px;
@@ -9522,6 +9535,11 @@ article strong {
 a h4 {
   color: #000000;
   text-decoration: none !important;
+  -moz-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 a h4:hover {
   color: #f15e25;
@@ -9539,13 +9557,34 @@ a.article-meta-link:hover {
 a.article-meta-link i {
   margin-right: 5px;
 }
-/**************************************************************************************************LE FOOTER**********/
+.sidebar-list {
+  list-style: none;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-list li {
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+.sidebar-list li:hover {
+  background: #f7f7f7;
+}
+.sidebar-list li a {
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+  color: #194553;
+}
+.sidebar-list li a:hover {
+  color: #f15e25;
+}
 .main-footer {
   background: #194553;
   color: #ffffff;
 }
 .footer-list {
   display: inline-block;
+  vertical-align: top;
 }
 .main-footer ul {
   list-style: none;
@@ -9571,7 +9610,6 @@ a.article-meta-link i {
   color: #b4c1c6;
   font-family: "Roboto Slab", serif;
 }
-/******************************************************************LA SECTION COPYRIGHT*/
 .copyright {
   height: 40px;
   background: #4c616e;
@@ -9580,7 +9618,6 @@ a.article-meta-link i {
 .copyright p {
   line-height: 40px;
 }
-/**************************************************************************************************LA PAGE ARTICLE*/
 .page h1 {
   font-size: 34px;
   font-weight: bold;
@@ -9615,13 +9652,11 @@ a.partage-link {
 .article-meta {
   padding: 10px;
 }
-/*********************AFFFICHE LA CATEGORIE DE L'ARTICLE DANS UN STYLE DIFFÉRENT*/
 .the-category {
   font-size: 30px !important;
   font-weight: 400;
   color: #f15e25;
 }
-/**************************************************************************MODULE AUTRES ARTICLES DE MÊME CATÉGORIE*/
 .autres-articles a {
   text-decoration: none;
 }
@@ -9630,6 +9665,9 @@ a.partage-link {
   max-width: 47.5%;
   display: inline-block;
   margin-left: 10px;
+  vertical-align: top;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
 }
 .listed-block {
   margin-bottom: 20px;
@@ -9637,15 +9675,19 @@ a.partage-link {
 .listed-article .buttonlink {
   margin-left: 5px;
 }
+.listed-article .article-extrait {
+  min-height: 140px;
+}
 .article-extrait p {
   color: #4c616e;
+  min-height: 120px;
 }
 .article-list-title {
   padding: 10px;
 }
-/***************************************************************************************************LA PAGE CONTACT*/
 .formulaire label {
   visibility: hidden;
+  display: none;
 }
 .formulaire form {
   margin: 20px auto;
@@ -9663,7 +9705,6 @@ a.partage-link {
   width: 80%;
   margin: auto;
 }
-/*****************************************************************************************ACCUEIL RUBRIQUE***********/
 .accroche-rubrique {
   text-align: center;
   background: #194553;
@@ -9685,8 +9726,16 @@ a.partage-link {
 .multicontent {
   text-align: center;
 }
+.multicontent-item {
+  vertical-align: top;
+}
+.multicontent-item .article-content p {
+  display: block;
+  min-height: 140px;
+}
 .multicontent-item.item3 {
-  width: 33%;
+  width: 30%;
+  margin: 7px;
   display: inline-block;
 }
 .multicontent h2 {
@@ -9709,24 +9758,100 @@ a.partage-link {
   line-height: 30px;
   padding-left: 20px;
 }
-/********************************************************************************************MEDIA QUERIES**********/
+.menutoggler {
+  display: none;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #f15e25;
+  text-align: right;
+  border-bottom: 1px solid #ed4d0f;
+}
+.menutoggler i {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+@media all and (min-width: 981px) {
+  .main-nav {
+    display: block !important;
+  }
+}
 @media all and (max-width: 980px) {
   .listed-article {
     max-width: 97%;
     display: block;
     margin: 10px auto;
   }
-  .multicontent-item {
+  .home-image-left,
+  .home-image-text {
     width: 100%;
+    float: none;
+    position: absolute;
+  }
+  .home-image-left {
+    opacity: 0.3;
+  }
+  .listed-article,
+  .listed-block {
+    width: 95%;
+    max-width: 100%;
+    float: none;
+  }
+  .multicontent-item.item3,
+  .multicontent-item.item2 {
+    width: 95%;
     display: block;
+    margin: 10px auto;
+    border-bottom: 1px solid #eee;
+  }
+  .home-article-alone .article-content {
+    margin: 0;
+    padding: 10px;
+  }
+  .multicontent-item .article-content p {
+    display: block;
+    min-height: 0;
+  }
+  .home-left-widget {
+    padding-bottom: 0;
+  }
+  .sidebar section {
+    margin-bottom: 20px;
+  }
+  .footer-left,
+  .footer-right {
+    padding: 10px;
   }
 }
-@media all and (max-width: 700px) {
-  /*******************************************************************************LE MENU EN VERSION MOBILE**********/
+@media all and (max-width: 768px) {
+  .menutoggler {
+    display: block;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  }
+  .menutoggler:hover {
+    background: #d5450e;
+  }
+  .main-nav {
+    display: none;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  }
+  .main-nav ul li {
+    border-bottom: 1px solid #ed4d0f;
+  }
+  .main-nav ul li ul li {
+    border-bottom: none;
+  }
+  .large-menu-container {
+    height: 400px !important;
+    overflow-y: auto;
+  }
   .main-nav ul {
     float: none;
     margin-left: 0px;
-    background: #a8aeb5;
+    background: #0d242c;
   }
   .main-nav ul li {
     display: block;
@@ -9736,6 +9861,14 @@ a.partage-link {
   .main-nav ul li a {
     width: 100%;
     max-width: 100%;
+    line-height: 40px;
+    padding-left: 5px;
+  }
+  .main-nav ul li a.active {
+    background: #d5450e;
+  }
+  .main-nav ul li ul li a:hover {
+    background: #f15e25;
   }
   .large-menu-container {
     display: none;
@@ -9744,7 +9877,7 @@ a.partage-link {
     min-height: 0;
     height: auto;
     width: 100%;
-    background: #4c616e;
+    background: #0d242c;
     transition: all 300ms ease;
     padding-top: 0;
   }

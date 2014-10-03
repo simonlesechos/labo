@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <title>Maquette Image - Patrimoine</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Image v4 | Patrimoine</title>
 
     <link rel="stylesheet" href="../css/style.css" media="screen" type="text/css" />
 </head>
@@ -19,8 +19,8 @@
 
   <div class="header-page">
   <div class="header-page-img">
-    <div class="color-filter">
-            <div class="titre-page"><h1>Patrimoine</h1></div>
+    <div class="color-filter filter3">
+            <div class="titre-page"><h1>Nos expertises</h1><h2 class="bigh2">Des fondamentaux  de la gestion de votre entreprise… à une expertise pointue.</h2></div>
     </div>
   </div>
   </div>
@@ -28,12 +28,38 @@
   <div class="content page-content">
     <div class="max-width">
       <div class="pres-cab">
-        <h1 class="bigh1">Patrimoine</h1>        
-              <img src="../img/personnes04.jpg">
-          <p><strong>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</strong></p> 
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>   
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>             
-      </div>    
+        <h1 class="bigh1">Expertise Patrimoine</h1>        
+              <img src="../img/patrimoine.jpg">
+          <p><strong>Le cabinet le NOM DU CABINET accompagne les chefs d'entreprise sur la gestion, l'optimisation et la sécurisation de leur patrimoine.</strong></p> 
+          <ul class="text-list">
+
+              <li>Stratégie de rémunération du dirigeant</li>
+              <li>Statut du dirigeant</li>
+              <li>Statut du conjoint</li>
+              <li>Diagnostic et stratégie prévoyance</li>
+              <li>Choix et mise en place de la protection sociale</li>
+              <li>Diagnostic et stratégie retraite</li>
+              <li>Accompagnement au départ en retraite</li>
+              <li>Valoriser votre patrimoine</li>
+              <li>Passage TNS</li>
+
+          </ul>
+
+          <p>Votre contrat de mariage est-il adapté ? Comment faire pour protéger votre conjoint ? Comment bien préparer votre retraite ? Quelle stratégie adopter pour votre rémunération (salaire, dividendes, etc.) ? Quels choix faire entre les différentes solutions d’épargne proposées par les banques ou les assurances ?... </p>
+          
+          <p>Autant de questions auxquelles il faut apporter rapidement une réponse précise car les enjeux sont cruciaux.
+          <br><strong>Nos collaborateurs vous aident à y voir plus clair pour bien préparer votre avenir et préserver votre patrimoine !</strong>
+          </p>
+          
+          <p>Autres domaines d’intervention du cabinet LE NOM DU CABINET</p>
+          <ul class="text-list">
+            <li><a href="#">Expertise comptabilité et fiscal</a></li>
+            <li><a href="#">Accompagnement Création d'entreprise</a></li>
+            <li><a href="#">Expertise Patrimoine</a></li>
+            <li><a href="#">Secrétariat administratif</a></li>
+          </ul>
+  
+      </div>
       <div class="clear"></div>
     </div>
     <div class="actu-page-widget colored-back">

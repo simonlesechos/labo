@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <title>Maquette Image - Le Cabinet</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Image v4 | Le Cabinet</title>
 
     <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 </head>
@@ -19,8 +19,8 @@
   <div class="wrapper">
 
   <div class="header-page">
-  <div class="header-page-img">
-    <div class="color-filter">
+  <div class="header-page-img img-cabinet">
+    <div class="color-filter filter2">
             <div class="titre-page"><h1>Présentation du cabinet</h1></div>
     </div>
   </div>
@@ -29,13 +29,13 @@
   <div class="content page-content">
     <div class="max-width">
       <div class="pres-cab">
-        <h1 class="bigh1">Notre cabinet vous accueille</h1>
-          <img src="img/cabinet-accueil.jpg">
-          <p><strong>Le nom du cabinet est une société d'expertise-comptable et de commissariat aux comptes implantée à Paris et dans le département de la Vienne. Elle est dirigée par 2 associés, messieurs Emmanuel Legrand et Alain Lefort, entourés d'une équipe de professionnels qui sont à votre écoute pour vous conseiller, construire, développer. Forte de plus de 600 clients, Le nom du cabinet intervient dans tous les secteurs d'activité : commerce, industrie, professions libérales, associations...</strong></p>
-          <p>Le nom du cabinet est une société d'expertise-comptable et de commissariat aux comptes implantée dans les départements de la Vienne et de la Charente depuis 1993. Nos 2 bureaux sont situés sur Poitiers et Ruffec. <br />
-          Le Le nom du cabinet est dirigé par 2 associés, Emmanuel Legrand et Alain Lefort, entourés d'une équipe de 10 collaborateurs, juristes, comptables et experts qui sont à votre écoute pour vous conseiller, construire, développer.</p>
-          <p>Forts de nos 600 clients et de nos 16 ans d’expérience, nos cabinets d'expertise comptable de Poitiers et Ruffec interviennent et maitrisent des environnements variés que ce soit en termes d’effectifs par exemple ou de secteur d’activité (commerces, industries, professions libérales, BTP,…).</p>
-          <p>La conception que nous avons de notre métier est d’être proche de nos clients, sur le terrain, toujours à votre disposition. Chacun de nos clients a un interlocuteur unique qui les suit, se forme régulièrement pour être toujours au fait des évolutions impactant votre gestion, organise le recours à toutes nos autres compétences internes ou externes et sait se rendre disponible.</p>
+        <h1 class="bigh1">Le NOM DU CABINET : technicité et proximité</h1>
+          <img src="img/image-cabinet1-notre-cabinet.jpg">
+
+          <p><strong>Le cabinet NOM DU CABINET développe depuis 1934 des expertises en accompagnement des entreprises : expertise comptable, expertise fiscale, sociale et ressources humaines, financement, création, transmission...</strong></p>
+          <p>Nos 19 associés Experts Comptables et Commissaires aux Comptes inscrits au tableau de l'Ordre des Experts-Comptables, coordonnent le travail de près de 170 collaborateurs aujourd'hui. Notre valeur ajoutée est d'exiger pour chacun de nos clients une haute technicité dans les prestations que nous livrons, quelles qu'elles soient, de la tenue de comptes, aux missions spécifiques comme la transmission ou la responsabilité sociale, en passant par la gestion de la paie. Une technicité associée à une connaissance approfondie du tissu économique de la région Poitou-Charentes : nous comptons <a href="<?php echo $siteroot;?>/le-cabinet/nos-bureaux.php">6 bureaux</a> en région Poitou-Charentes (Poitiers, Angoulême, Melle, Bressiures, La Rochelle, Ruffec) qui assistent le développement de plus de 5000 entreprises, libéraux ou artisans. Nos clients attestent de la qualité de notre accompagnement et de notre proximité.</p>
+          <p><a class="link-special link-special2" href="<?php echo $siteroot?>/le-cabinet/nos-clients-temoignent.php">Ils nous font  confiance</a></p>
+          <p>Membre du groupement international NOM DU GROUPEMENT, nous nous appuyons aussi sur un réseau de 89 cabinets pour intervenir sur des besoins spécifiques avec les compétences adéquates et accompagner nos clients hors des frontières.</p>
       </div>
       <div class="clear"></div>
     </div>

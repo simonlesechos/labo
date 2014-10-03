@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <title>Maquette Image - Secrétariat</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Image v4 | Secrétariat</title>
 
     <link rel="stylesheet" href="../css/style.css" media="screen" type="text/css" />
 </head>
@@ -19,8 +19,8 @@
 
   <div class="header-page">
   <div class="header-page-img">
-    <div class="color-filter">
-            <div class="titre-page"><h1>Secrétariat</h1></div>
+    <div class="color-filter filter3">
+            <div class="titre-page"><h1>Nos expertises</h1><h2 class="bigh2">Des fondamentaux  de la gestion de votre entreprise… à une expertise pointue.</h2></div>
     </div>
   </div>
   </div>
@@ -28,12 +28,29 @@
   <div class="content page-content">
     <div class="max-width">
       <div class="pres-cab">
-        <h1 class="bigh1">Secrétariat</h1>        
-              <img src="../img/personnes05.jpg">
-          <p><strong>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</strong></p> 
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>   
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>             
-      </div>    
+        <h1 class="bigh1">Assistance Secrétariat</h1>        
+              <img src="../img/secretariat.jpg">
+          <p><strong>Le cabinet LE NOM DU CABINET simplifie la gestion au quotidien des entreprises qui lui font confiance.</strong></p> 
+          <ul class="text-list">
+              
+              <li>La rédaction de courriers dictés.</li>
+              <li>La relance client, devis, facturation.</li>
+              <li>Le scan de vos documents comptables</li>
+              <li>La rédaction de vos devis.</li>
+              <li>La saisine de vos factures</li>
+           
+          </ul>
+
+          <p>Nous prenons en charge le secrétariat administratif pour redonner du temps productif aux chefs d'entreprise.</p>
+          
+          <p>Autres domaines d’intervention du cabinet LE NOM DU CABINET</p>
+          <ul class="text-list">
+            <li><a href="#">Expertise comptabilité et fiscal</a></li>
+            <li><a href="#">Accompagnement Création d'entreprise</a></li>
+            <li><a href="#">Expertise Patrimoine</a></li>
+            <li><a href="#">Secrétariat administratif</a></li>
+          </ul>
+      </div>
       <div class="clear"></div>
     </div>
     <div class="actu-page-widget colored-back">

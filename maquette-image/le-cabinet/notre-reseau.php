@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <title>Maquette Image - Notre réseau</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Image v4 | Notre réseau</title>
 
     <link rel="stylesheet" href="../css/style.css" media="screen" type="text/css" />
 </head>
@@ -18,8 +18,8 @@
   <div class="wrapper">
 
   <div class="header-page">
-  <div class="header-page-img">
-    <div class="color-filter">
+  <div class="header-page-img img-reseau">
+    <div class="color-filter filter2">
             <div class="titre-page"><h1>Notre réseau</h1></div>
     </div>
   </div>
@@ -28,51 +28,38 @@
   <div class="content page-content">
     <div class="max-width">
       <div class="pres-cab">
-        <h1 class="bigh1">Notre réseau</h1>        
+        <h1 class="bigh1">NOM DU GROUPEMENT, réseau d'expertises et compétences</h1>        
               <img src="../img/notre-reseau.jpg">
-          <p><strong>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</strong></p> 
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>   
-          <p>Ut velit tellus, porttitor id dapibus at, ultricies eget tellus. Fusce bibendum consequat malesuada. Integer tempus pharetra mattis. Etiam quis arcu non turpis pharetra vestibulum. Proin id augue a nisi feugiat cursus. Integer libero dolor, viverra quis bibendum ut, condimentum eu diam</p>             
+          <p><strong>Le cabinet <a href="../le-cabinet.php">NOM DU CABINET</a> est membre du réseau <a href="../le-cabinet.php">NOM DU GROUPEMENT</a>. 
+Depuis 1956, notre réseau réunit des cabinets d’expertise comptable et fiscale, d’audit et de conseil indépendants mettant en commun leurs moyens, leurs compétences techniques et leurs spécificités dans un cadre fédéraliste. Notre organisation privilégie des groupes de travail qui joignent leurs savoir-faire au profit des projets communs de nos clients.
+</strong></p> 
+          <p>L'un des points de notre réseau tient à la diversité de ses membres, source de solutions pour nos clients, puisque nous nous appuyons sur un ensemble de compétences de haut niveau.
+Le réseau NOM DU GROUPEMENT est particulièrement reconnu pour l'accompagnement des entreprises à l'international : import, export, domiciliation, fiscalité internationale, etc. 
+<br>Le réseau du cabinet <a href="../le-cabinet.php">LE NOM DU CABINET</a> compte 5 structures totalement dédiées aux entreprises qui souhaitent franchir les frontières.
+</p>
+<p>Outre la dimension internationale, l'appartenance du cabinet <a href="../le-cabinet.php">LE NOM DU CABINET</a>  au réseau <a href="../le-cabinet.php">NOM DU GROUPEMENT</a> nous permet d'intervenir sur des domaines hautement techniques :</p>   
+          
+        <ul class="text-list">
+          <li>Consolidation, IFRS, xx GAAP,  Normes et règlementation, Doc. de Ref., veille normative,…</li>
+          <li>Due diligences, Corporate Finance, évaluations, Expertises Financières Indépendantes, scissions, apports, transferts,…</li>
+          <li>Gestion de projets complexes, AMOA,  réorganisation (regroupements-découpages d’activités),  audit –réorientation de projets, interface SSII/DF, expressions de besoins, cahiers des charges, tests AMOA, jeux d’essais, benchmarks fonctionnels,…</li>
+          <li>Outils et Processus, contrôle de gestion, réductions de délais, optimisations fonctionnelles, …</li>
+          <li>Formation, pilotage, manuels, accompagnement,…</li>
+          <li>« Forensic audit », arbitrage et audit de risques, audit interne, analyses et expertises, attestations ad-hoc,…</li>
+          <li>Projets transverses, multinationaux, mutualisations et « best practices », convergence, SSC, gouvernance,...</li>
+          <li>Audits sociaux</li>
+          <li>Audits de risques</li>
+        </ul>
+        <a class="endpage-link" href="#">> En savoir plus sur le réseau NOM DU GROUPEMENT</a>
+       
+        <a class="endpage-link" href="#">> Annuaire des Membres du réseau du NOM DU GROUPEMENT</a>
+        <a class="endpage-link" href="#">> Expertises spécifiques du cabinet le NOM DU CABINET</a>
+
       </div>    
       <div class="clear"></div>
     </div>
-    <div class="actu-page-widget colored-back">
-       <h2>Dernières actualités du cabinet</h2>
-    <div class="box-actu-container">
-        <div class="box-actu">
-          <div class="box-actu-img">
-            <img src="../img/actu1.jpg">
-          </div>
-          <div class="box-actu-excerpt">
-            <h4>Le Cabinet est partenaire des créateurs (...)</h4>
-            <p>Vous êtes partenaire d'événements ou de salons dans votre région? Faites-le savoir à vos clients et contacts en publiant l'information sur votre site Internet! Rendez-vous sur le (...)</p>
-          </div>
-          <a href="actualite-1.php" class="button">En savoir +</a>
-        </div>
-         <div class="box-actu">
-          <div class="box-actu-img">
-            <img src="../img/actu2.jpg">
-          </div>
-          <div class="box-actu-excerpt">
-            <h4>Le Cabinet accueille un nouveau collaborateur</h4>
-            <p>Vous voulez annoncer l'arrivée d'un nouveau collaborateur ? Vous venez de racheter un Cabinet ? Vous souhaitez proposer à vos clients une nouvelle offre de service ? Animez très (...)</p>
-          </div>
-          <a href="actualite-2.php" class="button">En savoir +</a>
-        </div>
-         <div class="box-actu">
-          <div class="box-actu-img">
-            <img src="../img/actu3.jpg">
-          </div>
-          <div class="box-actu-excerpt">
-            <h4>Invitation à la réunion "Loi de finances"</h4>
-            <p>Vous organisez une réunion spéciale "Loi de finances" pour vos clients? Diffusez l'information sur votre site Internet et proposez-leur de télécharger le programme ou le compte-rendu (...)</p>
-          </div>
-          <a href="actualite-3.php" class="button">En savoir +</a>
-        </div>
-
-    </div>
-  </div>
-  <?php include('../includes/footer.php'); ?> 
+    <?php include('../includes/newswidget.php');?>
+    <?php include('../includes/footer.php'); ?> 
 </div>
 
 

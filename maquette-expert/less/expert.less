@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5{
 	font-family: @serifFontFamily;
 }
 
+h3{
+	line-height: 20px;
+}
+
 h6{
 	font-family: @sansFontFamily;
 	font-size: 16px;
@@ -47,9 +51,9 @@ display: inline-block;
 }
 
 
-/*****************************************************************************************************QUELQUES ANIMATIONS*/
+//////////////////////////////////////////////////////////////////////////////////////////////////////QUELQUES ANIMATIONS//
 
-/**********************************************************AJOUTER LES CLASSES EN JS POUR DÉCLENCHER LES ANIMATIONS*******/
+///////////////////////////////////////////////////////////AJOUTER LES CLASSES EN JS POUR DÉCLENCHER LES ANIMATIONS////////
 
 .rotation180 i{
 	-moz-transform: rotate(-180deg);
@@ -179,9 +183,10 @@ display: inline-block;
 }
 
 
-/**************************************************************************TITRE AVEC UNE DOUBLE LIGNE DE COULEUR***********/
+///////////////////////////////////////////////////////////////////////////TITRE AVEC UNE DOUBLE LIGNE DE COULEUR////////////
 .double-line-title{
 	border-bottom: 1px solid @colorCouleur4;
+	line-height: 32px;
 }
 
 .double-line-title span{
@@ -198,10 +203,14 @@ position: relative;
 	bottom:-1px;
 }
 
-/*************************************************************Animation sur les boutons liens  ( class="buttonlink" )**********/
+//////////////////////////////////////////////////////////////Animation sur les boutons liens  ( class="buttonlink" )///////////
 .buttonlink{
+	display: inline-block;
 	background: transparent;
 	padding: 10px 15px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 5px;
 	position: relative;
 	z-index: 1;
 }
@@ -226,7 +235,6 @@ position: relative;
 	transform: scaleX(0);
 	opacity:0;
 	z-index: -1;
-
 }
 
 .buttonlink:hover:after{
@@ -246,8 +254,14 @@ position: relative;
 }
 
 
+.buttonlink i{
+	float: left;
+	margin-right: 10px;
+	line-height: 20px;
+}
 
-/*************************************************************************LE HEADER**********/
+
+//////////////////////////////////////////////////////////////////////////LE HEADER///////////
 .main-header{
 	width:100%;
 }
@@ -262,6 +276,7 @@ position: relative;
 	color: @white;
 	display: inline-block;
 	margin: 5px;
+	margin-top: 2px;
 }
 
 .main-header-haut a:hover{
@@ -279,7 +294,11 @@ position: relative;
 	padding-bottom: 10px;
 }
 
-/*************************************************************************LE MENU PRINCIPAL**********/
+//////////////////////////////////////////////////////////////////////////LE MENU PRINCIPAL///////////
+.main-nav{
+display: block;
+}
+
 .main-nav ul{
 	float: right;
 	background: @colorCouleur2;
@@ -294,7 +313,7 @@ position: relative;
 .main-nav ul li a{
 	display: block;
 	text-align: center;
-	width: 120px;
+	width: 140px;
 	line-height: 40px;
 	color: @white;
 	background: @colorCouleur2;
@@ -310,7 +329,7 @@ position: relative;
 	color: @white;
 }
 
-/*************************************************************************LE MENU QUI SE DÉPLIE**********/
+//////////////////////////////////////////////////////////////////////////LE MENU QUI SE DÉPLIE///////////
 
 .large-menu-container{
 	display: none;
@@ -359,7 +378,7 @@ position: relative;
 	display: block;
 }
 
-/*******************************************************************LE MENU QUI APPARAIT AU SCROLL**********/
+////////////////////////////////////////////////////////////////////LE MENU QUI APPARAIT AU SCROLL///////////
 
 .scrollmenu-container{
 	position: fixed;
@@ -385,7 +404,7 @@ z-index: 9999;
 
 
 
-/**************************************************LE SLIDER / IMAGE OU VIDÉO DE LA PAGE D'ACCUEIL**********/
+///////////////////////////////////////////////////LE SLIDER / IMAGE OU VIDÉO DE LA PAGE D'ACCUEIL///////////
 
 .home-image{
 	max-width: 100%;
@@ -417,6 +436,23 @@ z-index: 9999;
 	margin-top: 40px;
 }
 
+.home-image-btn i{
+	float: left;
+	margin-right: 5px;
+	line-height: 30px;
+}
+
+
+.sidebar{
+	.home-image-btn{
+		font-size: 14px;
+
+		i{
+			font-size: 20px;
+		}
+	}
+}
+
 .home-image-left{
 	height: 350px;
 	background: url(../img/tagcloud2.jpg) no-repeat center;
@@ -427,7 +463,7 @@ z-index: 9999;
 	float: left;
 }
 
-/*************************************************************************LE CORPS DE PAGE / CONTENU PRINCIPAL**********/
+//////////////////////////////////////////////////////////////////////////LE CORPS DE PAGE / CONTENU PRINCIPAL///////////
 
 .main-content{
 	background: @colorCouleur5;
@@ -438,7 +474,7 @@ z-index: 9999;
 	padding: 10px;
 }
 
-/******************************************************************LES DEUX ZONES (CONTENU À GAUCHE ET SIDEBAR)**********/
+///////////////////////////////////////////////////////////////////LES DEUX ZONES (CONTENU À GAUCHE ET SIDEBAR)///////////
 
 .main-content-left, .sidebar{
 margin-top: 60px;
@@ -449,7 +485,7 @@ margin-top: 60px;
 box-sizing: border-box;
 }
 
-.page .main-content-left{ /*RESET DE LA MARGE EN HAUT pour les pages qui ne sont pas la home, pour être plus proche du fil d'arianne*/
+.page .main-content-left{ //RESET DE LA MARGE EN HAUT pour les pages qui ne sont pas la home, pour être plus proche du fil d'arianne//
 	margin-top: 15px;
 }
 
@@ -458,16 +494,17 @@ box-sizing: border-box;
 }
 
 
-/***********************************Pour que les widget de la zone à gauche (sur la home soient) des blocs avec un fond blanc**********/
+////////////////////////////////////Pour que les widget de la zone à gauche (sur la home soient) des blocs avec un fond blanc///////////
 
 .home-left-widget{
 	background: @white;
 	margin-bottom: 60px;
 	padding-bottom: 20px;
+	overflow: hidden;
 }
 
 
-/**************************************LES LISTES D'ARTICLES EN VEDETTE ( EXEMPLE : LES MISSIONS SUR LA HOME )**********/
+///////////////////////////////////////LES LISTES D'ARTICLES EN VEDETTE ( EXEMPLE : LES MISSIONS SUR LA HOME )///////////
 
 .article-content{
 	padding: 10px;
@@ -488,7 +525,7 @@ font-weight: bold;
 
 
 
-/************************************************************************ARTICLE EN VEDETTE SEUL ( EXEMPLE: sur la home )***********/
+/////////////////////////////////////////////////////////////////////////ARTICLE EN VEDETTE SEUL ( EXEMPLE: sur la home )////////////
 
 .home-article-alone{
 	padding-bottom:0;
@@ -496,9 +533,10 @@ font-weight: bold;
 
 .home-article-alone .article-content{
 	margin-left: 25px;
+	padding:0;
 }
 
-/*************************************************************************************************************LA SIDEBAR*/
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////LA SIDEBAR//
 .sidebar{
 	margin-top:40px;
 }
@@ -509,14 +547,14 @@ font-weight: bold;
 }
 
 
-/******************************************************************************LES ARTICLE DANS LA SIDEBAR***************/
+///////////////////////////////////////////////////////////////////////////////LES ARTICLES DANS LA SIDEBAR////////////////
 .sidebar article{
 	background: @white;
 	padding-bottom: 20px;
 }
 
 .sidebar article a{
-	text-decoration: none
+	text-decoration: none;
 }
 
 .sidebar-article-meta{
@@ -526,6 +564,11 @@ color: @colorCouleur4;
 a h4{
 	color: @black;
 	text-decoration: none !important;
+	-moz-transition: all 200ms ease;
+	-webkit-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
 
 a h4:hover{
@@ -549,7 +592,36 @@ a.article-meta-link i{
 	margin-right: 5px;
 }
 
-/**************************************************************************************************LE FOOTER**********/
+
+//////////////////////////////////////////////////////////////////////////////////////////////////LES LISTES DE LA SIDEBAR //
+
+.sidebar-list{
+	list-style: none;
+	line-height: 30px;
+	margin:0;
+	padding:0;
+}
+
+.sidebar-list li{
+	border-bottom: 1px solid #eee;
+ 	padding:5px;
+}
+
+.sidebar-list li:hover{
+	background: #f7f7f7;
+}
+
+.sidebar-list li a{
+font-weight: bold;
+font-family: @serifFontFamily;
+color: @colorCouleur1; 
+}
+
+.sidebar-list li a:hover{
+	color: @colorCouleur2;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////LE FOOTER///////////
 
 .main-footer{
 	background: @colorCouleur1;
@@ -558,6 +630,7 @@ a.article-meta-link i{
 
 .footer-list{
 	display: inline-block;
+	vertical-align: top;
 }
 
 
@@ -592,7 +665,7 @@ color: darken(@colorCouleur5,20%);
 	font-family: @serifFontFamily;
 }
 
-/******************************************************************LA SECTION COPYRIGHT*/
+///////////////////////////////////////////////////////////////////LA SECTION COPYRIGHT//
 
 .copyright{
 	height: 40px;
@@ -605,7 +678,7 @@ color: darken(@colorCouleur5,20%);
 }
 
 
-/**************************************************************************************************LA PAGE ARTICLE*/
+///////////////////////////////////////////////////////////////////////////////////////////////////LA PAGE ARTICLE//
 .page h1{
 font-size: 34px;
 font-weight: bold;
@@ -647,15 +720,14 @@ color: @colorCouleur3;
 .article-meta{
 	padding: 10px;
 }
-/*********************AFFFICHE LA CATEGORIE DE L'ARTICLE DANS UN STYLE DIFFÉRENT*/
+//////////////////////AFFFICHE LA CATEGORIE DE L'ARTICLE DANS UN STYLE DIFFÉRENT//
 .the-category{
 font-size: 30px !important;
 font-weight: 400;
 color: @colorCouleur2;
 }
 
-
-/**************************************************************************MODULE AUTRES ARTICLES DE MÊME CATÉGORIE*/
+///////////////////////////////////////////////////////////////////////////MODULE AUTRES ARTICLES DE MÊME CATÉGORIE//
 .autres-articles a{
 	text-decoration: none
 }
@@ -665,6 +737,9 @@ color: @colorCouleur2;
 	max-width: 47.5%;
 	display: inline-block;
 	margin-left: 10px;
+    vertical-align: top;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #eee;
 }
 
 .listed-block{
@@ -675,8 +750,13 @@ color: @colorCouleur2;
 	margin-left: 5px;
 }
 
+.listed-article .article-extrait{
+	min-height: 140px;
+}
+
 .article-extrait p{
 	color: @colorCouleur3;
+	min-height:120px;
 }
 
 .article-list-title{
@@ -684,10 +764,10 @@ padding: 10px;
 }
 
 
-/***************************************************************************************************LA PAGE CONTACT*/
+////////////////////////////////////////////////////////////////////////////////////////////////////LA PAGE CONTACT//
 .formulaire label{
 	visibility: hidden;
-
+	display: none;
 }
 
 .formulaire form{
@@ -709,7 +789,7 @@ padding: 10px;
 }
 
 
-/*****************************************************************************************ACCUEIL RUBRIQUE***********/
+//////////////////////////////////////////////////////////////////////////////////////////ACCUEIL RUBRIQUE////////////
 .accroche-rubrique{
 	text-align: center;
 	background: @colorCouleur1;
@@ -737,8 +817,18 @@ padding: 10px;
 	text-align: center;
 }
 
+.multicontent-item{
+  vertical-align: top;
+}
+
+.multicontent-item .article-content p{
+	display: block;
+	min-height: 140px;
+}
+
 .multicontent-item.item3{
-	width: 33%;
+	width: 30%;
+	margin: 7px;
 	display: inline-block;
 
 }
@@ -769,30 +859,134 @@ padding: 10px;
 	padding-left: 20px;
 }
 
-/********************************************************************************************MEDIA QUERIES**********/
+////////////////////////////////////////////////////////////////////////////LE BOUTON DU MENU EN MODE MOBILE///////////
+
+.menutoggler{
+	display: none;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	background: @colorCouleur2;
+	text-align: right;
+	border-bottom: 1px solid darken(@colorCouleur2, 5%);
+}
+
+.menutoggler i{
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////MEDIA QUERIES///////////
+@media all and (min-width: 981px){
+	.main-nav{
+	display: block !important;
+	}
+}
+
+
 @media all and (max-width: 980px){
+
+
 .listed-article{
 	max-width: 97%;
 	display: block;
 	margin: 10px auto;
 }
 
-.multicontent-item{
+
+.home-image-left, .home-image-text{
 	width: 100%;
+	float: none;
+		position: absolute;
+}
+
+.home-image-left{
+opacity: 0.3;
+}
+
+.listed-article, .listed-block{
+	width: 95%;
+	max-width: 100%;
+	float: none;
+}
+
+.multicontent-item.item3, .multicontent-item.item2{
+	width: 95%;
 	display: block;
+	margin: 10px auto;
+	border-bottom: 1px solid #eee;
+}
+
+
+.home-article-alone .article-content{
+	margin: 0;
+	padding: 10px;
+}
+
+.multicontent-item .article-content p{
+	display: block;
+	min-height: 0;
+}
+
+.home-left-widget{
+	padding-bottom:0;
+}
+
+.sidebar section{
+	margin-bottom: 20px;
+}
+
+.footer-left, .footer-right{
+	padding: 10px;
 }
 
 }
 
 
 
-@media all and (max-width: 700px){
+@media all and (max-width: 768px){
 
-/*******************************************************************************LE MENU EN VERSION MOBILE**********/
+////////////////////////////////////////////////////////////////////////////////LE MENU EN VERSION MOBILE///////////
+
+.menutoggler{
+	display: block;
+	cursor: pointer;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+}
+
+
+.menutoggler:hover{
+	background: darken(@colorCouleur2, 10%);
+}
+
+
+.main-nav{
+	display: none;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,.4);
+}
+
+.main-nav ul li{
+	border-bottom: 1px solid darken(@colorCouleur2, 5%);
+}
+
+.main-nav ul li ul li{
+	border-bottom: none;
+}
+
+
+.large-menu-container{
+	height: 400px !important;
+	overflow-y: auto;
+}
+
 	.main-nav ul{
 		float: none; 
 		margin-left: 0px;
-		background: @colorCouleur4;
+		background: darken(@colorCouleur1, 10%);
 	}
 
 	.main-nav ul li{
@@ -804,8 +998,21 @@ padding: 10px;
 	.main-nav ul li a{
 		width: 100%;
 		max-width: 100%;
+		line-height : 40px;
+		padding-left: 5px;
+	}
+
+
+	.main-nav ul li a.active{
+	background: darken(@colorCouleur2, 10%);
+	}
+
+	.main-nav ul li ul li a:hover{
+		background: @colorCouleur2;
 	}
 	
+
+
     .large-menu-container{
 	display: none;
 	position: relative;
@@ -813,7 +1020,7 @@ padding: 10px;
 	min-height:0;
 	height: auto;
 	width:100%;
-	background: @colorCouleur3;
+	background: darken(@colorCouleur1, 10%);
 	transition: all 300ms ease;
 	padding-top:0;
 	}

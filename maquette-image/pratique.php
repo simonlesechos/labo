@@ -4,8 +4,8 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <title>Maquette Image - Pratique</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Image v4 | Pratique</title>
 
   <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 </head>
@@ -16,94 +16,177 @@
   </header>
 
   <div class="wrapper">
-
-
+  <div class="header-page">
+    <div class="header-page-img">
+      <div class="color-filter">
+              <div class="titre-page"><h1>Votre information</h1><h2 class="bigh2">Le monde du chef d’entreprise : actualités, dossiers, simulateurs…</h2></div>
+      </div>
+    </div>
+  </div>
+    <?php include('includes/menu-basedoc.php'); ?>
   <div class="content">
-    <div class="max-width">
-      <h1 class="bigh1" id="topcontent">Pratique</h1>
-      <div class="box bigbox">
-        <div class="boxoverlay">
-          <div class="preview">
-            <h2>L’actualité de l’entreprise</h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/rubriques/fils-dactualites" class="button">En savoir +</a>
-          </div>
-        </div>
-      </div>
-      <div class="box littlebox littlebox1">
-         <div class="boxoverlay">
-           <div class="preview">
-            <h2>Web services et simulateurs </h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/simulateurs" class="button">En savoir +</a>
-          </div>
-         </div>
-      </div>
-      <div class="box littlebox littlebox2">
-         <div class="boxoverlay">
-           <div class="preview">
-            <h2>Espace création</h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/rubriques/creation-d-entreprise" class="button">En savoir +</a>
-          </div>
-         </div>
-      </div>
-      <div class="box littlebox littlebox4">
-         <div class="boxoverlay">
-           <div class="preview">
-            <h2>Vos échéances</h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/rubriques/echeancier/septembre-2014" class="button">En savoir +</a>
-          </div>
-         </div>
-      </div>
-      <div class="box littlebox littlebox5 littlebox-size50">
-         <div class="boxoverlay">
-           <div class="preview">
-            <h2>Quiz entrepreneurs</h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/quiz-d-expertinfos" class="button">En savoir +</a>
-          </div>
-         </div>
-      </div>
-       <div class="box littlebox littlebox5">
-         <div class="boxoverlay">
-           <div class="preview">
-            <h2>Chiffres clés et indicateurs</h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/outils-pratiques/chiffres-utiles" class="button">En savoir +</a>
-          </div>
-         </div>
-      </div>
-       <div class="box littlebox littlebox5 littlebox-size50">
-         <div class="boxoverlay">
-           <div class="preview">
-            <h2>Dossiers</h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/rubriques/social/dossiers" class="button">En savoir +</a>
-          </div>
-         </div>
-      </div>
-       <div class="box littlebox littlebox5">
-         <div class="boxoverlay">
-           <div class="preview">
-            <h2>Sites utiles et références</h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/sites-utiles" class="button">En savoir +</a>
-          </div>
-         </div>
-      </div>
-       <div class="box littlebox littlebox5 littlebox-size50">
-         <div class="boxoverlay">
-           <div class="preview">
-            <h2>Dessin</h2>
-            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin congue neque mauris. Proin pellentesque nisi et nisl pharetra tempus.</p>
-            <a href="http://ec-opera.expert-infos.com/dessin" class="button">En savoir +</a>
-          </div>
-         </div>
-      </div>
 
-      <div class="clear"></div>
+    <div class="max-width">
+
+
+      <div class="littlebox-container">
+
+              <div class="box littlebox littleboxpratique1">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>L'actualité de l'entreprise</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>Toutes les actualités en Fical, juridique et social</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/actualites.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+              <div class="box littlebox littleboxpratique2">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>Web services et simulateurs</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>calculs financiers, congés, frais kilométriques…</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/simulateurs.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+
+              <div class="box littlebox littleboxpratique3">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>Espace Création</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>Guide de la création d’entreprise, actualités, idées business…</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/creation.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+              <div class="box littlebox littleboxpratique4">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>Vos échéances</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>Vos prochaines obligations légales</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/echeancier.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+              <div class="box littlebox littleboxpratique5">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>Quiz entrepreneurs</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>Testez vos connaissances d’entrepreneur</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/quiz.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+              <div class="box littlebox littleboxpratique6">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>Chiffres clés et indicateurs</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>Barèmes fiscaux, charges sociales, indices de la construction…</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/chiffres.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+              <div class="box littlebox littleboxpratique7">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>Dossiers</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>Loi de finances, paie, gestion…</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/dossiers.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+              <div class="box littlebox littleboxpratique8">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>Sites utiles et références</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>Les sites recommandés par le cabinet  (gouvernement, collectivités, déclaratifs…)</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/sites-utiles.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+              <div class="box littlebox littleboxpratique9">
+                        <div class="boxoverlay" href="#">
+                            <div class="box-legend">
+                              
+                               <div class="box-title">
+                                  <h3>Dessins</h3>
+                    
+                               </div>
+                               <div class="preview">
+                                      <h4>L’actualité des entreprises illustrée</h4>
+                                     <a class ="button" href="<?php echo $siteroot;?>pratique/dessins.php">En savoir +</a>
+                                     
+                               </div> 
+                            </div>                  
+
+                        </div>
+              </div>
+      </div><!-- Fin de .littlebox-container -->
+
     </div>
   </div>
 <?php include('includes/footer.php'); ?> 
