@@ -163,12 +163,29 @@ $('.pause-btn').click(function(){
 
 });
 
+$('.colpause').click(function(){
+  tl.pause();
+  $(this).addClass('hidden');
+  $('.colplay').removeClass('hidden');
+});
+
+$('.colplay').click(function(){
+  tl.play();
+  $(this).addClass('hidden');
+  $('.colpause').removeClass('hidden');
+});
+
+
+
 function timelineDone() {
   setTimeout(function(){
      tl.restart();
    }, 7000);
      
 }
+
+
+
 
 //fermer le menu
 

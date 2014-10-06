@@ -128,7 +128,14 @@
   </div><!-- Fin de la div .carte-wrapper -->
 
   <section class="controls"><!-- Menu de selection des couoleurs -->
-  <div class="colreplay"></div>
+ <div class="colreplay"></div>
+  <div class="colplay hidden">
+    <span></span>
+  </div>
+  <div class="colpause">
+    <span class="colpause01"></span>
+    <span class="colpause02"></span>
+  </div>
   <div class="colclose"></div>
 
 </section><!-- Fin du menu de selection des couleurs -->
