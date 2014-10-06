@@ -47,7 +47,7 @@
                   </div>
           
                   <div class="vedette-img">
-                    <img src="img/background-home.jpg">
+                    <img src="img/background-home2.jpg">
                   </div>
                   <div class="vedette-text">
                    

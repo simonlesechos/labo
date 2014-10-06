@@ -77,34 +77,46 @@ tl.from($('.merveilleuse'), 1.2, {opacity: 0, left: "100%", ease: Quad.easeOut},
 $('.carte div').each(function(){
 	var rotation = Math.floor(Math.random() * 180) + 180;
 	console.log(rotation);
-	tl.to($(this), 2, {rotation: rotation, opacity: 0, scale: 2, top: "-100%", ease: Quad.easeOut}, 14);
+	tl.to($(this), 2, {rotation: rotation, opacity: 0, scale: 2, top: "-100%", ease: Quad.easeOut}, 12);
 });
 
 //Face 2 :
-tl.to($('.couleur-bas'), 0.7, {bottom:0, ease: Strong.easeOut}, 15);
-tl.to($('.y2015-bas'), 1.2, {right: '10px', opacity:1, ease: Power2.easeOut},15.1);
-tl.to($('.perso-cabinet'), 0.7, {top: 0, ease: Strong.easeOut}, 15.2);
+tl.to($('.couleur-bas'), 0.7, {bottom:0, ease: Strong.easeOut}, 12);
+tl.to($('.y2015-bas'), 1.2, {opacity:1, ease: Power2.easeOut},12.1);
+tl.to($('.perso-cabinet'), 0.7, {top: 0, ease: Strong.easeOut}, 12.2);
 
-tl.from($('.perso-cabinet h3'), 1.7, {top: "40px", opacity:0, ease: Power2.easeOut}, 15.5);
-tl.from($('.perso-cabinet p'), 1.7, {top: "40px", opacity:0, ease: Power2.easeOut}, 15.6);
+tl.from($('.perso-cabinet h3'), 1.7, {top: "40px", opacity:0, ease: Power2.easeOut}, 12.5);
+tl.from($('.perso-cabinet p'), 1.7, {top: "40px", opacity:0, ease: Power2.easeOut}, 12.6);
 
 //Face 3 :
-tl.to($('.carte-back'), 0.7, {top:0, ease: Quad.easeOut}, 25);
-tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 25);
-tl.from($('.mots-back'),2.2, {opacity:0, scaleY:0, ease: Bounce.easeOut},25.5);
-tl.from($('.fdf'), 0.7, {scale: 0, rotation: 120, opacity: 0, ease: Quad.easeOut}, 26.7);
-tl.from($('.fdf-desc'), 1.2, {opacity: 0, ease: Quad.easeOut}, 27.2);
+tl.to($('.carte-back'), 0.7, {opacity:1, ease: Quad.easeOut}, 19);
+tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 19.2);
+tl.from($('.mots-back'),2.2, {opacity:0, scale: 0, ease: Elastic.easeOut},19.5);
+tl.from($('.fdf'), 0.5, {scale: 0, rotation: 120, opacity: 0, ease: Quad.easeOut}, 20.7);
+tl.from($('.fdf-desc'), 1.2, {opacity: 0, ease: Quad.easeOut}, 21.2);
 
-tl.to($('.couleur-bas2'), 0.7, {bottom:0, ease: Strong.easeOut},33);
-tl.to($('.perso-cabinet2'), 0.7, {top: 0, ease: Strong.easeOut},33.1);
-tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 33.2);
-tl.to($('.bandeau-texte'), 7.7,{right: 0, opacity: 1, ease:Quad.easeOut},33.2);
+tl.to($('.couleur-bas2'), 1.2, {bottom:0, ease: Power2.easeOut},25);
+tl.to($('.perso-cabinet2'), 2.2, {top: 0, ease: Strong.easeOut},25.1);
+tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 25.2);
+tl.to($('.bandeau-texte'), 7.7,{right: 0, opacity: 1, ease:Quad.easeOut},25.2);
 
 
 
-tl.timeScale(1.2);
+tl.timeScale(1.6);
 
 tl.pause();
+
+$('.colpause').click(function(){
+  tl.pause();
+  $(this).addClass('hidden');
+  $('.colplay').removeClass('hidden');
+});
+
+$('.colplay').click(function(){
+  tl.play();
+  $(this).addClass('hidden');
+  $('.colpause').removeClass('hidden');
+});
 
 
 $('.restart-btn').click(function(){
@@ -174,7 +186,7 @@ $(window).resize(function(){
         $('.perso-face').css('font-size', fontsize);
 });
  
-
+/*
 /////////////////////////////////////////////////////////////////////////// MENUS PERMETTANT DE TESTER (texte et couleurs) 
 
 
@@ -278,3 +290,4 @@ $( "#perso-cab-1" )
   .keyup();
 
 
+*/

@@ -117,7 +117,7 @@
             <img src="img/logofull2.png">  
           </div>
           <h4>Pour en savoir plus :</h4>
-          <p>Tél : 05 49 60 26 47</p>
+          <p>Tél : 05 49 60 20 60</p>
           <p>Email : contact@expertinfos.com</p>
           <p>Web : www.expertinfos.com</p>
         </div>
@@ -129,6 +129,13 @@
 
   <section class="controls"><!-- Menu de selection des couoleurs -->
   <div class="colreplay"></div>
+  <div class="colplay hidden">
+    <span></span>
+  </div>
+  <div class="colpause">
+    <span class="colpause01"></span>
+    <span class="colpause02"></span>
+  </div>
   <div class="colclose"></div>
 
 </section><!-- Fin du menu de selection des couleurs -->

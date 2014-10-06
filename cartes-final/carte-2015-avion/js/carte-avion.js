@@ -45,7 +45,7 @@ resizer();
 
 $(window).resize(function(){
    //calculer la taille de police sur la face 1 en fonction de la largeur de la carte
-          var fontsize = $('.carte').width()/17 + "px";
+          var fontsize = $('.carte').width()/14 + "px";
         $('.citation').css('font-size', fontsize);
 });
 
@@ -68,7 +68,7 @@ var cite3 = $('.cit-3');
 
 tl.to($('.carte-bg'), 20, {scale: 1.1, ease: Power2.easeOut},0);
 
-tl.from($('.aviateur'), 1.7, {bottom: "-100%", scale:1, opacity:0, ease: Power2.easeOut},0.5);
+tl.from($('.aviateur'), 1.7, {bottom: "-100%", scale:1, opacity:0, ease: Power2.easeOut},5);
 
 tl.from(cite1, 1.4, {opacity:0, scale: 0.8, ease: Quad.easeOut}, 2);
 tl.from(cite2, 1.4, {opacity:0, scale: 0.8, ease: Quad.easeOut}, 3);
@@ -102,11 +102,11 @@ tl.from($('.fdf-desc'), 2, {opacity: 0, ease: Quad.easeOut}, 24.2);
 //FACE 4 :
 
 tl.to($('.couleur-bas2'), 0.7, {bottom:0, ease: Strong.easeOut},30);
-tl.to($('.perso-cabinet2'), 0.7, {top: 0, ease: Strong.easeOut},30.1);
+tl.to($('.perso-cabinet2'), 0.7, {bottom: 0, ease: Strong.easeOut},30.1);
 tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 30.2);
 
 
-tl.timeScale(1.3);//!!!remettre à 1.1!!!
+tl.timeScale(1.7);//!!!remettre à 1.1!!!
 
 tl.pause();
 

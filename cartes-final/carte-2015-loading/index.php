@@ -22,15 +22,10 @@
 
       <div class="perso-cabinet">
         <div class="perso1">
-          <h3>Experts-comptables,</h3>
-          <br/>
-          <p>Ce modèle de carte de voeux est réalisé pour vous</p>
-          <br/>
-          <br/>
-          <p><strong>En partenariat avec la Fondation de France,</strong></p>
-          <p><strong>EXPERT INFOS - LES ECHOS PUBLISHING</strong></p>
-          <p>vous proposent une collection de cartes de voeux originales, <br/>
-          solidaires et personnalisées avec vos logo, message et coordonnées.
+          <h3>Le nom du cabinet</h3>
+          <br>
+          <p>vous remercie de votre confiance témoignée au cours de l’année écoulée,</p> 
+          <p>et vous présente ses meilleurs vœux pour cette nouvelle année.
           </p>
         </div>
 
@@ -154,13 +149,20 @@
   </div><!-- Fin de la div .carte-wrapper -->
 
 <section class="controls"><!-- Menu de selection des couoleurs -->
-  <div class="colorspot col1" data-bg="#410038" data-color="#cadb2a"></div>
-  <div class="colorspot col2" data-bg="#118acb" data-color="#cadb2a"></div>
-  <div class="colorspot col3" data-bg="#575559" data-color="#6dcff6"></div>
-  <div class="colorspot col4" data-bg="#9d0520" data-color="#ffdd00"></div>
-  <div class="colorspot col5" data-bg="#f16531" data-color="#6dcff6"></div>
-  <div class="colorspot col6" data-bg="#87b964" data-color="#fff" data-color2="#231f20"></div>
+  <div class="colorspot col1" data-bg="#410038" data-color="#cadb2a" data-color2="#fff"></div>
+  <div class="colorspot col2" data-bg="#118acb" data-color="#cadb2a" data-color2="#fff"></div>
+  <div class="colorspot col3" data-bg="#575559" data-color="#6dcff6" data-color2="#fff"></div>
+  <div class="colorspot col4" data-bg="#9d0520" data-color="#ffdd00" data-color2="#fff"></div>
+  <div class="colorspot col5" data-bg="#f16531" data-color="#6dcff6" data-color2="#fff"></div>
+  <div class="colorspot col6" data-bg="#87b964" data-color="#fff" data-color2="#231f20" data-color3="#231f20"></div>
   <div class="colreplay"></div>
+  <div class="colplay hidden">
+    <span></span>
+  </div>
+  <div class="colpause">
+    <span class="colpause01"></span>
+    <span class="colpause02"></span>
+  </div>
   <div class="colclose"></div>
 </section><!-- Fin du menu de selection des couleurs -->
 

@@ -50,9 +50,9 @@ var tl4 = new TimelineMax();
 //var eachdelay = 0.042; 
 
 //tl.to($('.carte-bg'), 20, {scale: 1.1, ease: Power2.easeOut},0); remettre pour faire bouger lentement le background
-tl.from($('.votre-expert'), 1.2, {left: "-100%", ease:Power2.easeOut});
-tl.from($('.y2015'), 2.7, {bottom: "100%", scale:0, opacity:0, ease: Elastic.easeOut},0.5);
-tl.from($('.ombre'), 0.7,{opacity:0, scaleX: 0.5, ease:Quad.easeOut},0.5);
+tl.from($('.votre-expert'), 1.2, {left: "-100%", ease:Power2.easeOut},6.5);
+tl.from($('.y2015'), 2.7, {bottom: "100%", scale:0, opacity:0, ease: Elastic.easeOut},6);
+tl.from($('.ombre'), 0.7,{opacity:0, scaleX: 0.5, ease:Quad.easeOut},6);
 
 /*$($('.chiffres div').get().reverse()).each(function(){
 
@@ -66,7 +66,7 @@ console.log(eachdelay);
 });
 */
 var rotation = Math.floor(Math.random() * 180) + 180;
-
+/*
 tl.from($('.chiffre1'), 0.4, {opacity:0, scale:0, rotation: rotation, ease:Quad.easeOut}, 5.84);
 tl.from($('.chiffre2'), 0.4, {opacity:0, scale:0, rotation: rotation, ease:Elastic.easeOut}, 5.82);
 tl.from($('.chiffre3'), 0.4, {opacity:0, scale:0, rotation: rotation, ease:Quad.easeOut}, 5.8);
@@ -109,7 +109,7 @@ tl.from($('.chiffre39'), 0.6, {opacity:0, scale:0, ease:Elastic.easeOut}, 2);
 tl.from($('.chiffre40'), 0.7, {opacity:0, scale:0, ease:Elastic.easeOut}, 1.5);
 tl.from($('.chiffre41'), 0.7, {opacity:0, scale:0, left: "50%", ease:Power2.easeOut}, 1);
 
-/*
+*/
 tl.from($('.chiffre1'), 0.4, {opacity:0, scale:0, rotation: rotation, ease:Quad.easeOut}, 1);
 tl.from($('.chiffre2'), 0.4, {opacity:0, scale:0, rotation: rotation, ease:Elastic.easeOut}, 1.5);
 tl.from($('.chiffre3'), 0.4, {opacity:0, scale:0, rotation: rotation, ease:Quad.easeOut}, 2);
@@ -151,7 +151,7 @@ tl.from($('.chiffre38'), 0.5, {opacity:0, scale:0, ease:Power3.easeOut}, 5.78);
 tl.from($('.chiffre39'), 0.6, {opacity:0, scale:0, ease:Elastic.easeOut}, 5.8);
 tl.from($('.chiffre40'), 0.7, {opacity:0, scale:0, ease:Elastic.easeOut}, 5.82);
 tl.from($('.chiffre41'), 0.7, {opacity:0, scale:0, left: "50%", ease:Power2.easeOut}, 5.84);
-*/
+
 $('.chiffres div').each(function(){
   tl.to($(this), 3.7, {scale:0, ease: Strong.easeOut, delay: 0.2}, 10);
 });
@@ -174,12 +174,11 @@ tl.to($('.carte-back .ombre'), 0.7,{bottom: "50%", opacity:1, scaleX: 1, ease:Qu
 tl.from($('.fdf'), 0.7, {scale: 0, opacity: 0, ease: Strong.easeOut}, 23.7);
 tl.from($('.fdf-desc'), 1.2, {opacity: 0, ease: Quad.easeOut}, 24.2);
 
-tl.to($('.couleur-bas2'), 0.7, {bottom:0, ease: Strong.easeOut},30);
-tl.to($('.perso-cabinet2'), 0.7, {top: 0, ease: Strong.easeOut},30.1);
+tl.to($('.perso-cabinet2'), 2.7, {bottom: 0, ease: Power2.easeOut},30.1);
 tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 30.2);
 
 
-tl.timeScale(1.1);//!!!remettre à 1.1!!!
+tl.timeScale(1.7);//!!!remettre à 1.1!!!
 tl2.timeScale(1);
 //tl3.timeScale(5);
 tl.pause();
@@ -228,9 +227,21 @@ $('.pause-btn').click(function(){
 
   tl.pause();
 
-
-
 });
+
+$('.colpause').click(function(){
+  tl.pause();
+  $(this).addClass('hidden');
+  $('.colplay').removeClass('hidden');
+});
+
+$('.colplay').click(function(){
+  tl.play();
+  $(this).addClass('hidden');
+  $('.colpause').removeClass('hidden');
+});
+
+
 
 function timelineDone() {
   setTimeout(function(){

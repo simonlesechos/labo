@@ -21,17 +21,15 @@
   
    <div class="perso-cabinet">
    
-          <h3>Experts-comptables,</h3>
-          <br/>
-          <p class="perso-cab-1">Ce modèle de carte de voeux est réalisé pour vous</p>
+          <h3>Le nom du cabinet</h3>
           <br>
-          <br>
-          <p class="perso-cab-2"><strong>En partenariat avec la Fondation de France,</strong></p>
-          <p class="perso-cab-3"><strong>EXPERT INFOS - LES ECHOS PUBLISHING</strong></p>
-          <p class="perso-cab-4">vous proposent une collection de cartes de voeux originales,
-          <p class="perso-cab-5">solidaires et personnalisées avec vos logo, message et coordonnées.</p>
-          </p>
-      
+     
+          <p class="perso-cab-1">vous remercie de votre confiance témoignée au cours de l’année écoulée,</p>
+          <p class="perso-cab-2">et vous présente ses meilleurs vœux pour cette nouvelle année.</p>
+          <p class="perso-cab-3"></p>
+          <p class="perso-cab-4"></p>
+          <p class="perso-cab-5"></p>
+         
 
     </div>
 
@@ -156,7 +154,7 @@
             <img src="img/logofull2.png">  
           </div>
           <h4>Pour en savoir plus :</h4>
-          <p>Tél : 05 49 60 26 47</p>
+          <p>Tél : 05 49 60 20 60</p>
           <p>Email : contact@expertinfos.com</p>
           <p>Web : www.expertinfos.com</p>
         </div>
@@ -246,6 +244,13 @@
   <div class="colorspot col7" data-bg="img/fonds/fond-beige.jpg"></div>
   <div class="colorspot col8" data-bg="img/fonds/fond-rose.jpg"></div>
   <div class="colreplay"></div>
+  <div class="colplay hidden">
+    <span></span>
+  </div>
+  <div class="colpause">
+    <span class="colpause01"></span>
+    <span class="colpause02"></span>
+  </div>
   <!--<div class="colmenu"></div> bouton pour afficher ou cacher le menu de modifs complet-->
   <div class="colclose"></div>
 

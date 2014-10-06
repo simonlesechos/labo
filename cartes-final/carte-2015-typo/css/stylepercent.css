@@ -63,7 +63,6 @@ img{
   left:0;
   right:0;
   width: 100%;
-  background: #fff;
   height: 82.35294117647059%;
   z-index: 99;
   text-align: center;
@@ -72,6 +71,17 @@ img{
   padding-top: 17.64705882352941%;
   line-height: 30px;
   text-transform: none;
+}
+
+
+.perso-cabinet{
+  color: #fff;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.perso-cabinet2{
+  background: #fff;
 }
 
 .perso-cabinet2 h4, .perso-cabinet2 p{
@@ -89,24 +99,29 @@ img{
 
 
 .couleur-bas, .couleur-bas2{
-  background: url(../img/fond.jpg) no-repeat center;
+
   position: absolute;
   left:0;
   right:0;
   /*top: 560px;*/
   bottom: -110%;
   height: 120px;
-  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
+ 
   z-index: 99;
  }
 .couleur-bas2{
   z-index: 102;
+    bottom: -220px;
   overflow: hidden;
+  background: url(../img/fond.jpg) no-repeat center;
+  height: 220px;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.4);
 }
 
 .bandeau-texte{
   position: relative;
   right:50%;
+  top: 45px;
 }
 
 .bandeau-texte img{
@@ -116,8 +131,9 @@ img{
 
 .y2015-bas{
 position:absolute;
-right:-100%;
-bottom:10px;
+bottom:80%;
+left: 50%;
+margin-left: -128px;
 font-weight:100;
 display: block;
 opacity:0;
@@ -125,19 +141,22 @@ max-width: 256px;
 }
 
 .perso-cabinet h3{
-  font-size: 24px;
-  color: rgba(0,0,0, 0.7);
+  font-size: 32px;
+  color: #fff;
   font-weight: bold;
   position: relative;
 }
 
 .perso-cabinet p{
-color: rgba(0,0,0,0.5);
+color: #fff;
+display: block;
+max-width: 520px;
+margin: auto;
 position: relative;
 }
 
 .perso-cabinet p strong{
-  color: rgba(0,0,0,0.7);
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
 }
@@ -312,13 +331,14 @@ height: 5.294117647058823%;
 
 .carte-back{
   position: absolute;
-  top: 100%;
+  top: 0;
   left:0;
   right:0;
   background: url(../img/fond.jpg) no-repeat center;
   height: 100%;
   z-index: 100;
   background-size: cover;
+  opacity:0;
 }
 
 .logo-cabinet{
@@ -345,7 +365,7 @@ height: 5.294117647058823%;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 40px;
+  bottom: 60px;
 }
 
 .fdf{
@@ -599,7 +619,7 @@ color: #f4aaa3;
   z-index: 1000;
 }
 
-.colorspot, .colmenu, .colreplay{
+.colorspot, .colmenu, .colreplay, .colpause, .colplay{
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -613,6 +633,8 @@ color: #f4aaa3;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
 }
+
+
 
 .colorspot.active{
   border: 4px solid #fff;
@@ -698,6 +720,62 @@ color: #f4aaa3;
   transform: rotate(360deg);
   background-color: #343434;
 }
+
+
+.colpause{
+  background: #bbb;
+}
+
+.colpause.hidden{
+ display: none;
+}
+
+.colplay{
+  background: #bbb;
+}
+
+.colplay.hidden{
+ display: none;
+}
+
+
+.colpause span{
+  display: block;
+  height: 25px;
+  width: 7px;
+  margin-top: 7px;
+  background: #fff;
+  float: left;
+}
+
+.colpause01{
+  margin-left: 10px;
+}
+
+.colpause02{
+  margin-left: 5px;
+}
+
+.colpause:hover{
+  background: #343434;
+}
+
+.colplay:hover{
+  background: #343434;
+}
+
+.colplay span{
+display: block;
+margin: auto;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 12.5px 0 12.5px 20px;
+border-color: transparent transparent transparent #ffffff;
+margin-left: 12px;
+margin-top: 7px;
+}
+
 
 /***********************************************************************/
 
@@ -834,8 +912,8 @@ padding-top: 40px;
 }
 
 .perso-cabinet{
-    line-height: 20px;
-    padding-top: 10px;
+    line-height: 30px;
+    padding-top: 20px;
 }
 
 }
@@ -888,8 +966,8 @@ bottom: 40px;
 
 @media all and (max-height: 600px) and (max-width: 320px){
   .perso-cabinet{
-    line-height: 20px;
-    padding-top: 10px;
+    line-height: 30px;
+    padding-top: 20px;
   }
 }
 

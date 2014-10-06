@@ -37,7 +37,6 @@ z-index: 2;
 
 .perso-cabinet, .perso-cabinet2{
   position: absolute;
-  top: 120%;
   left:0;
   right:0;
   width: 100%;
@@ -52,10 +51,29 @@ z-index: 2;
   text-transform: none;
 }
 
-.perso-cabinet2{
-  z-index: 101;
-  padding-top: 10%;
+.perso-cabinet{
+  background: #410038;
+  top: 120%;
 }
+
+
+.perso-cabinet2{
+  position: absolute;
+  bottom: -100%;
+  left:0;
+  right:0;
+  width: 100%;
+  background: #fff;
+  height: 45%;
+  z-index: 300;
+  text-align: center;
+  font-family: arial;
+  font-style: italic;
+  padding-top: 3%;
+  line-height: 30px;
+  text-transform: none;
+}
+
 
 
 .text-bottom{
@@ -96,11 +114,12 @@ color:#ccff00;
 font-size:130px;
 text-align:center;
 position:absolute;
-right:-100%;
-bottom:0;
+bottom: -100%;
 font-weight:100;
 display: block;
 opacity:0;
+left: 50%;
+margin-left: -138px;
 }
 
 .y2015-bas img{
@@ -305,19 +324,24 @@ top: 5px;
 
 
 .couleur-bas, .couleur-bas2{
-  background: #410038;
+ 
   position: absolute;
   left:0;
   right:0;
   /*top: 560px;*/
   bottom: -110%;
   height: 120px;
-  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
+
   z-index: 99;
  }
 
+.couleur-bas{
+
+}
+
 .couleur-bas2{
   z-index: 102;
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
 }
 
 .telechargement2{
@@ -335,20 +359,26 @@ top: 5px;
   font-style: normal;
 }
 
+
 .perso-cabinet2 h4{
   font-weight: bold;
 }
 
 .perso-cabinet h3{
-  font-size: 24px;
-  color: rgba(0,0,0, 0.7);
+  font-size: 32px;
+  color: #fff;
   font-weight: bold;
   position: relative;
 }
 
 .perso-cabinet p{
-color: rgba(0,0,0,0.5);
+color: #fff;
+font-size: 24px;
 position: relative;
+line-height: 40px;
+display: block;
+max-width: 580px;
+margin: auto;
 }
 
 .perso-cabinet p strong{
@@ -825,7 +855,7 @@ opacity:1 !important;
   z-index: 1000;
 }
 
-.colorspot, .colmenu, .colreplay{
+.colorspot, .colmenu, .colreplay, .colpause, .colplay{
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -840,8 +870,96 @@ opacity:1 !important;
   transition: all 300ms ease;
 }
 
+.colclose{
+  width:40px;
+  height:40px;
+  float: right;
+  margin:10px;
+  margin-top: 15px;
+  position: relative;
+  cursor: pointer;
+  background: url(../img/icon-close.svg) no-repeat center;
+  background-size: cover;
+}
+
+.colreplay{
+  background: url(../img/icon-replay.svg) no-repeat center;
+  background-color: #bbb;
+  background-size: cover;
+  margin-left: 50px; /*Juste pour cette carte , car sinon la croix pour fermer le menu décale l'icone replay*/
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.colreplay:hover{
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  background-color: #343434;
+}
+
+.colpause{
+  background: #bbb;
+}
+
+.colpause.hidden{
+ display: none;
+}
+
+.colplay{
+  background: #bbb;
+}
+
+.colplay.hidden{
+ display: none;
+}
+
+
+.colpause span{
+  display: block;
+  height: 25px;
+  width: 7px;
+  margin-top: 7px;
+  background: #fff;
+  float: left;
+}
+
+.colpause01{
+  margin-left: 10px;
+}
+
+.colpause02{
+  margin-left: 5px;
+}
+
+.colpause:hover{
+  background: #343434;
+}
+
+.colplay:hover{
+  background: #343434;
+}
+
+.colplay span{
+display: block;
+margin: auto;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 12.5px 0 12.5px 20px;
+border-color: transparent transparent transparent #ffffff;
+margin-left: 12px;
+margin-top: 7px;
+}
+
+
 .colorspot.active{
-  border: 4px solid #fff;
+  border: 4px solid #fff !important;
 }
 
 .col1{
@@ -869,37 +987,6 @@ opacity:1 !important;
   background: #87b964;
 }
 
-.colreplay{
-  background: url(../img/icon-replay.svg) no-repeat center;
-  background-color: #bbb;
-  background-size: cover;
-  -moz-transition: all 300ms ease;
-  -webkit-transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-.colreplay:hover{
-  -moz-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
-  background-color: #343434;
-}
-
-.colclose{
-  width:40px;
-  height:40px;
-  float: right;
-  margin:10px;
-  margin-top: 15px;
-  position: relative;
-  cursor: pointer;
-  background: url(../img/icon-close.svg) no-repeat center;
-  background-size: cover;
-}
 
 
 /***********************************************************************/

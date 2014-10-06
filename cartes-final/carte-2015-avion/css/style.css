@@ -42,21 +42,40 @@ body{
 }
 
 
-.perso-cabinet, .perso-cabinet2{
+.perso-cabinet{
   position: absolute;
   top: 120%;
   left:0;
   right:0;
   width: 100%;
-  background: #fff;
-  height: 82.35294117647059%;
+  background: url(../img/fond.jpg) no-repeat center;
+  height: 100%;
   z-index: 99;
   text-align: center;
   font-family: arial;
   font-style: italic;
-  padding-top: 17.64705882352941%;
+  padding-top: 0;
+  line-height: 40px;
+  text-transform: none;
+}
+
+
+.perso-cabinet2{
+  position: absolute;
+  bottom: -100%;
+  left:0;
+  right:0;
+  width: 100%;
+  background: #fff;
+  height: 35%;
+  z-index: 120;
+  text-align: center;
+  font-family: arial;
+  font-style: italic;
+  padding-top: 3%;
   line-height: 30px;
   text-transform: none;
+  font-style: normal;
 }
 
 .perso-cabinet2 h4, .perso-cabinet2 p{
@@ -64,23 +83,19 @@ body{
   font-style: normal;
 }
 
-.perso-cabinet2{
-  z-index: 101;
-  padding-top: 10%;
-}
+
 .perso-cabinet2 h4{
   font-weight: bold;
 }
 
 .couleur-bas, .couleur-bas2{
-  background: url(../img/fond.jpg) no-repeat center;
+  background: transparent;
   position: absolute;
   left:0;
   right:0;
   /*top: 560px;*/
   bottom: -110%;
   height: 120px;
-  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
   z-index: 99;
  }
 
@@ -96,16 +111,25 @@ img{
 }
 
 .perso-cabinet h3{
-  font-size: 24px;
-  color: rgba(0,0,0, 0.7);
+  font-size: 34px;
+  color: #4C3931;
   font-weight: bold;
   position: relative;
+  font-family: 'episoderegular';
+  margin-top: 25%;
 }
 
 .perso-cabinet p{
-color: rgba(0,0,0,0.5);
-position: relative;
+  font-size: 24px;
+  display: block;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin: auto;
+  color: #7C3F2A;
+  position: relative;
+  font-family: "Over the Rainbow",cursive;
 }
+
 
 .perso-cabinet p strong{
   color: rgba(0,0,0,0.7);
@@ -157,7 +181,7 @@ top: 5px;
 .fdf-desc{
   text-transform: none;
   font-size: 14px;
-  color: #b5522c;
+  color: #4C3931;
   position: relative;
   top:20px;
   left:0;
@@ -181,7 +205,7 @@ top: 5px;
 .logo-cabinet, .logo-cabinbet2{
   max-width: 380px;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 0;
   position: relative;
   opacity:0;
 }
@@ -528,14 +552,36 @@ button{
 
 /***********************************************************************/
 
+@media all and (max-width: 480px){
+  .votre-expert {
+    position: absolute;
+    left: 30%;
+    bottom: 35%;
+    font-family: "episoderegular";
+    font-size: 30px;
+    color: #FFF;
+    width: 200px;
+    margin-left: -100px;
+}
+
+.couleur-bas .votre-expert{
+    right: 50%;
+    margin-left: 100px;
+    bottom: 60%;
+}
+
+}
 
 @media all and (max-width:380px){
 
-.perso-cabinet{
+.perso-cabinet p{
+font-size: 16px;
+line-height: 25px;
 
-padding-top: 20px;
-line-height: 20px;
+}
 
+.perso-cabinet h3{
+  margin-top: 10px;
 }
 
 .st-ex{
@@ -562,9 +608,8 @@ bottom: 5%;
 
 @media all and (max-height:470px){
 .perso-cabinet p{
-  line-height: 20px;
+  line-height: 30px;
 }
-
 
 }
 

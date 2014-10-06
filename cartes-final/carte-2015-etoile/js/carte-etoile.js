@@ -47,11 +47,11 @@ tl.from($('.fdf'), 1.2, {scale: 0, rotation: 120, opacity: 0, ease: Quad.easeOut
 tl.from($('.fdf-desc'), 2, {opacity: 0, ease: Quad.easeOut}, 19.2);
 
 
-tl.to($('.perso-cabinet2'), 0.7, {bottom: 0, ease: Strong.easeOut},24.1);
+tl.to($('.perso-cabinet2'), 2.7, {bottom: 0, ease: Power2.easeOut},24.1);
 tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 24.2);
 
 
-tl.timeScale(1.1);//!!!remettre à 1.1!!!
+tl.timeScale(1.7);//!!!Variable qui change la vitesse globale de l'animation!!!
 
 tl.pause();
 
@@ -101,9 +101,21 @@ $('.pause-btn').click(function(){
 
   tl.pause();
 
-
-
 });
+
+$('.colpause').click(function(){
+  tl.pause();
+  $(this).addClass('hidden');
+  $('.colplay').removeClass('hidden');
+});
+
+$('.colplay').click(function(){
+  tl.play();
+  $(this).addClass('hidden');
+  $('.colpause').removeClass('hidden');
+});
+
+
 
 function timelineDone() {
   setTimeout(function(){

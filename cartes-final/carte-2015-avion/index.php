@@ -25,15 +25,10 @@
   
    <div class="perso-cabinet">
    
-          <h3>Experts-comptables,</h3>
-          <br/>
-          <p>Ce modèle de carte de voeux est réalisé pour vous</p>
+          <h3>Le nom du cabinet</h3>
           <br>
-          <br>  
-          <p><strong>En partenariat avec la Fondation de France,</strong></p>
-          <p><strong>EXPERT INFOS - LES ECHOS PUBLISHING</strong></p>
-          <p>vous proposent une collection de cartes de voeux originales, <br/>
-          solidaires et personnalisées avec vos logo, message et coordonnées.
+          <p>vous remercie de votre confiance témoignée au cours de l’année écoulée, </p> 
+          <p>et vous présente ses meilleurs vœux pour cette nouvelle année.
           </p>
       
 
