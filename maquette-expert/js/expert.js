@@ -41,7 +41,10 @@ $('.menutoggler').click(function(){
     });
 
 
-
+$(document).ready(function(){
+  $('.home-image-left').addClass('animateScale');
+  $('.home-image-text').addClass('animateFromright');
+});
 
 
 

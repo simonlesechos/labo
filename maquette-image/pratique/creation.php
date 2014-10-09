@@ -19,8 +19,8 @@
 
   <div class="header-page">
     <div class="header-page-img">
-      <div class="color-filter filter3">
-              <div class="titre-page"><h1>Nos expertises</h1><h2 class="bigh2">Des fondamentaux  de la gestion de votre entreprise… à une expertise pointue.</h2></div>
+      <div class="color-filter">
+              <div class="titre-page"><h1>Votre information</h1><h2 class="bigh2">Le monde du chef d’entreprise : actualités, dossiers, simulateurs…</h2></div>
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@
             <h4>Comptabilité et fiscal</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
           </div>
-           <a href="nos-expertises-1.php" class="button">En savoir +</a>
+           <a href="comptabilite-et-fiscal.php" class="button">En savoir +</a>
         </div>
         <div class="box-actu">
           <div class="box-actu-img">
@@ -55,7 +55,7 @@
             <h4>Social RH</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
           </div>
-           <a href="nos-expertises-2.php" class="button">En savoir +</a>
+           <a href="social-rh.php" class="button">En savoir +</a>
         </div> <div class="box-actu">
           <div class="box-actu-img">
             <img src="../img/personnes03.jpg">
@@ -64,7 +64,7 @@
             <h4>Gestion </h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
           </div>
-           <a href="nos-expertises-3.php" class="button">En savoir +</a>
+           <a href="#" class="button">En savoir +</a>
         </div>
     </div>
   </div>

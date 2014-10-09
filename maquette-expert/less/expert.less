@@ -626,6 +626,7 @@ color: @colorCouleur1;
 .main-footer{
 	background: @colorCouleur1;
 	color: @white;
+	padding-top: 40px;
 }
 
 .footer-list{
@@ -662,6 +663,14 @@ color: darken(@colorCouleur5,20%);
 .footer-right p{
 	font-size: 16px;
 	color: darken(@colorCouleur5,20%);
+	font-family: @serifFontFamily;
+}
+
+.footer ul li a{
+	font-family: @serifFontFamily;
+}
+.footer-list a{
+	color: darken(@white, 15%);
 	font-family: @serifFontFamily;
 }
 
@@ -878,7 +887,11 @@ padding: 10px;
 	font-size: 20px;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////LISTES TYPE ÉCHÉANCIER//////////
 
+.border-liste{
+   border-bottom: dotted 1px #000; margin-bottom: 15px; padding-bottom: 15px;
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////MEDIA QUERIES///////////
 @media all and (min-width: 981px){

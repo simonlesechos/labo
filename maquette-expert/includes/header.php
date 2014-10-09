@@ -36,18 +36,19 @@
     <div class="menutoggler">Menu<i class="icon-chevron-down"></i></div>
       <nav class="main-nav row">
         <ul>
-          <li><a href="<?php echo $siteroot; ?>">Accueil</a></li>
-          <li><a class="deployerlink" href="javascript:;">Le cabinet</a>
+          <li><a href="<?php echo $siteroot; ?>">Accueil</a></li><!--
+          
+          --><li><a class="deployerlink" href="javascript:;">Le cabinet</a>
             <div class="large-menu-container">
               <div class="container">
                   <div class="row">
                       <div class="span3 offset4 largemenu-list">
                         <h4>Notre cabinet</h4>
                           <ul>
-                              <li><a href="<?php echo $siteroot; ?>le-cabinet/presentation-du-cabinet.php">Présentation</a></li>
+                              <li><a href="<?php echo $siteroot; ?>le-cabinet/presentation-du-cabinet.php">Le Cabinet</a></li>
                               <li><a href="<?php echo $siteroot; ?>le-cabinet/nos-equipes.php">Nos équipes</a></li>
                               <li><a href="<?php echo $siteroot; ?>le-cabinet/nos-bureaux.php">Nos bureaux</a></li>
-                              <li><a href="<?php echo $siteroot; ?>le-cabinet/nos-references.php">Nos clients</a></li>
+                              <li><a href="<?php echo $siteroot; ?>le-cabinet/nos-references.php">Démarche qualité et avis clients</a></li>
                               <li><a href="<?php echo $siteroot; ?>le-cabinet/actualites.php">La vie du cabinet</a></li>
                           </ul>
                       </div>
@@ -58,8 +59,9 @@
                 </div>
             </div>
 
-          </li>
-          <li><a class="deployerlink" href="javascript:;">Nos missions</a>
+          </li><!--
+          
+          --><li><a class="deployerlink" href="javascript:;">Nos missions</a>
             
             <div class="large-menu-container">
               <div class="container">
@@ -71,7 +73,6 @@
                               <li><a href="<?php echo $siteroot; ?>nos-missions/social-rh.php">Social et RH</a></li>
                               <li><a href="<?php echo $siteroot; ?>nos-missions/conseil-gestion.php">Conseil et Gestion</a></li>
                               <li><a href="<?php echo $siteroot; ?>nos-missions/creation-entreprise.php">Création d’entreprise</a></li>
-                              <li><a href="<?php echo $siteroot; ?>le-cabinet/actualites.php">La vie du cabinet</a></li>
                           </ul>
                       </div>
 
@@ -83,9 +84,10 @@
 
             </div>
 
-          </li>
+          </li><!--
           
-          <li><a class="deployerlink" href="javascript:;">Votre information</a>
+           
+          --><li><a class="deployerlink" href="javascript:;">Votre information</a>
             <div class="large-menu-container">
               <div class="container">
                   <div class="row">
@@ -136,8 +138,9 @@
                     </div>
                 </div>
             </div>
-          </li>
-          <li><a href="<?php echo $siteroot; ?>contact.php">Contact</a></li>
+          </li><!--
+          
+          --><li><a href="<?php echo $siteroot; ?>contact.php">Contact</a></li>
         </ul>
       </nav>
     </div>

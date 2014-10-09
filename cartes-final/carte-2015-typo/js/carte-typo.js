@@ -186,7 +186,7 @@ $(window).resize(function(){
         $('.perso-face').css('font-size', fontsize);
 });
  
-/*
+
 /////////////////////////////////////////////////////////////////////////// MENUS PERMETTANT DE TESTER (texte et couleurs) 
 
 
@@ -207,7 +207,7 @@ $('.colorspot').click(function(){
 $('.colclose').click(function(){
   $('.controls').fadeOut('fast');
 });
-
+/*
 //menu pour le dev
 
 $('.colmenu').click(function(){

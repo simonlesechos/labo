@@ -47,7 +47,7 @@
                   </div>
           
                   <div class="vedette-img">
-                    <img src="img/background-home2.jpg">
+                    <img src="img/background-home3.jpg">
                   </div>
                   <div class="vedette-text">
                    
@@ -177,6 +177,11 @@
 
       </div><!-- Fin de .littlebox-container -->
     </div>
+  </div>
+  <div class="carte-de-voeux">
+  <a class="pull-left biglink" href="http://ec-commercial.expert-infos.com/carte-2015-etoile/index.php?ref=image"><strong>Bonne année 2015 !</strong><br>Découvrez notre carte de voeux animée....</a>
+  <a class="pull-right" href="http://ec-commercial.expert-infos.com/carte-2015-etoile/index.php?ref=image"><img src="img/carte-miniature.jpg"></a>
+  <div class="clear"></div>
   </div>
 <?php include('includes/footer.php'); ?>
 </div>
