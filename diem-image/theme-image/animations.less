@@ -1,0 +1,130 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////QUELQUES ANIMATIONS//
+
+///////////////////////////////////////////////////////////AJOUTER LES CLASSES EN JS POUR DÉCLENCHER LES ANIMATIONS////////
+
+.rotation180 i{
+	-moz-transform: rotate(-180deg);
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.animateScale{
+	-moz-animation: 1s scaling ease;
+	-webkit-animation: 1s scaling ease;
+	-ms-animation: 1s scaling ease;
+	-o-animation: 1s scaling ease;
+	animation: 1s scaling ease;
+}
+
+@-moz-keyframes scaling{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+
+@-webkit-keyframes scaling{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+
+@-o-keyframes scaling{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+
+@keyframes scaling{
+	from{transform: scale(0)}
+	to{transform: scale(1)}
+}
+
+
+.animateFromright{
+	-moz-animation: 1s fromright ease;
+	-webkit-animation: 1s fromright ease;
+	-ms-animation: 1s fromright ease;
+	-o-animation: 1s fromright ease;
+	animation: 1s fromright ease;
+}
+
+@-moz-keyframes fromright{
+	from{transform: translateX(1000px)}
+	to{transform: translateX(0)}
+}
+
+@-webkit-keyframes fromright{
+	from{transform: translateX(1000px)}
+	to{transform: translateX(0)}
+}
+
+@-o-keyframes fromright{
+	from{transform: translateX(1000px)}
+	to{transform: translateX(0)}
+}
+
+@keyframes fromright{
+	from{transform: translateX(1000px)}
+	to{transform: translateX(0)}
+}
+
+
+.animateFromleft{
+	-moz-animation: 1s fromleft ease;
+	-webkit-animation: 1s fromleft ease;
+	-ms-animation: 1s fromleft ease;
+	-o-animation: 1s fromleft ease;
+	animation: 1s fromleft ease;
+}
+
+@-moz-keyframes fromleft{
+	from{transform: translateX(-1000px)}
+	to{transform: translateX(0)}
+}
+
+@-webkit-keyframes fromleft{
+	from{transform: translateX(-1000px)}
+	to{transform: translateX(0)}
+}
+
+@-o-keyframes fromleft{
+	from{transform: translateX(-1000px)}
+	to{transform: translateX(0)}
+}
+
+@keyframes fromleft{
+	from{transform: translateX(-1000px)}
+	to{transform: translateX(0)}
+}
+
+.animateFrombottom{
+	-moz-animation: 1s frombottom ease;
+	-webkit-animation: 1s frombottom ease;
+	-ms-animation: 1s frombottom ease;
+	-o-animation: 1s frombottom ease;
+	animation: 1s frombottom ease;
+}
+
+@-moz-keyframes frombottom{
+	from{transform: translateY(1000px)}
+	to{transform: translateY(0)}
+}
+
+@-webkit-keyframes frombottom{
+	from{transform: translateY(1000px)}
+	to{transform: translateY(0)}
+}
+
+@-o-keyframes frombottom{
+	from{transform: translateY(1000px)}
+	to{transform: translateY(0)}
+}
+
+@keyframes frombottom{
+	from{transform: translateY(1000px)}
+	to{transform: translateY(0)}
+}

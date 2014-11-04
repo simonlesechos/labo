@@ -1,0 +1,149 @@
+//ALler chercher font-awesome
+
+@FontAwesomePath:    "../fa/font";
+
+
+// BORDER RADIUS :
+
+@baseBorderRadius:      0px;
+@borderRadiusLarge:     0px;
+@borderRadiusSmall:     0px;
+
+
+//COLORS
+
+//couleurs de base :
+
+@colorCouleur1: #1C1C33;
+@colorCouleur2: #74b2c4;
+@colorCouleur3: #4c616e;
+
+//Varuiantes des couleurs de base :
+@couleur1Clair: lighten(@colorCouleur1, 30%);
+@couleur1Dark: darken(@colorCouleur1, 20%);
+
+@couleur2Clair: lighten(@colorCouleur2, 30%);
+@couleur2Dark: darken(@colorCouleur2, 30%);
+
+@couleur2Clair: lighten(@colorCouleur3, 30%);
+@couleur3Dark: darken(@colorCouleur3, 30%);
+
+//Couleurs transparentes
+
+@transparentcolor1 : rgba(116, 178, 196, .95);
+@transparentcolor2 : rgba(90, 117, 161, .2);
+
+//Blanc transparent léger :
+
+@lightwhite : rgba(255,255,255,.2);
+
+
+// Grays
+// -------------------------
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #333;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @white;
+@textColor:             @grayDark;
+
+
+// Links
+// -------------------------
+@linkColor:             @couleur1Clair;
+@linkColorHover:        @colorCouleur2;
+
+
+
+// Typography
+// -------------------------
+@sansFontFamily:        "Raleway",sans-serif;
+@serifFontFamily:       "Roboto Slab", serif;
+
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:          16px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        20px;
+@altFontFamily:         @serifFontFamily;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
+@headingsColor:         inherit; // empty to use BS default, @textColor
+
+
+// Links
+// -------------------------
+@linkColor:             @colorCouleur2;
+@linkColorHover:        darken(@linkColor, 15%);
+
+
+// Buttons
+// -------------------------
+@btnBackground:                     @colorCouleur2;
+@btnBackgroundHighlight:            lighten(@colorCouleur2, 10%);
+@btnBorder:                         transparent;
+
+@btnPrimaryBackground:              @colorCouleur2;
+@btnPrimaryBackgroundHighlight:     lighten(@colorCouleur2, 10%);
+
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
+
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     #51a351;
+
+@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackgroundHighlight:     @orange;
+
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      #bd362f;
+
+@btnInverseBackground:              #444;
+@btnInverseBackgroundHighlight:     @grayDarker;
+
+
+// Forms
+// -------------------------
+@inputBackground:               @white;
+@inputBorder:                   #ccc;
+@inputBorderRadius:             @baseBorderRadius;
+@inputDisabledBackground:       @grayLighter;
+@formActionsBackground:         #f5f5f5;
+@inputHeight:                   @baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
+
+
+// Widgets
+
+
+///Simulateurs
+
+////Hauteur des blocs
+@widgetSimulateurHeight1200 : 240px;
+@widgetSimulateurHeight940 : 166px;
+@widgetSimulateurHeight768 : 100px;
+
+////Couleurs des liens des catégories de simulateurs
+@simulateurSelectorLinkColor: @grayLighter;
+
+/////borders des outline-style: 
+@simulateurSelectorBorderColor: transparent;

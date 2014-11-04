@@ -1,0 +1,73 @@
+// theme's imports
+@import "import.less";
+
+// additionnal site's theme's style which extends theme's style
+@import "theme-image/import.less";
+
+
+//Corrections du style des panneaux dédition des widgets
+
+.ui-widget{
+	-moz-box-sizing: padding-box;
+	-webkit-box-sizing: padding-box;
+	-ms-box-sizing: padding-box;
+	-o-box-sizing: padding-box;
+	box-sizing: padding-box;
+
+	.controls{
+		margin-left:0 !important;
+		width: 100% !important;
+	}
+	
+	input{
+		border: 1px solid #D4D4D4;
+		color: #000;
+		background: none repeat scroll 0% 0% #FFF;
+		display: inline;
+		height: inherit;
+		min-height: 20px;
+		padding: 2px;
+		margin: 0 !important;
+		font-variant: inherit;
+		line-height: inherit;
+		font-size-adjust: inherit;
+		font-stretch: inherit;
+		-moz-font-feature-settings: inherit;
+		-moz-font-language-override: inherit;
+		font-weight: normal;
+		font-style: normal;
+		font-family: arial,helvetica,verdana,sans-serif;
+		font-size: 11px;
+		width: auto !important;
+		min-width: 60%;
+	}
+
+	input[type="submit"]{
+		width: auto !important;
+		min-width: 140px;
+	}
+	
+	label{
+		margin-left:0;
+		margin-bottom: auto;
+		margin-top: auto;
+	}
+
+	button, .button{
+		margin-top: 0;
+	}
+
+    form{
+    	margin: 0 auto;
+
+    }
+
+  .radio_list input, .checkbox_list input{
+  	min-width: 10px;
+  }
+
+  label, .control-label{
+	width: auto;
+  }
+
+}

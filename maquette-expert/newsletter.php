@@ -23,7 +23,7 @@
       <div class="row">
         <div class="span12">
           <div class="fildarianne">
-            <span><a href="../index.php">Accueil</a>/Newsletter</span>
+            <span><a href="../index.php">Accueil</a>/ Newsletter</span>
           </div>  
         </div>
 

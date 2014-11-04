@@ -1,0 +1,252 @@
+/*SIMULATEURS*/
+
+.simulateurs-selector{
+  padding-top: 30px;
+  margin-left: @gridGutterWidth - 5px;
+}
+
+.simulateurs-selector li{
+display: inline-block;
+background: rgba(255,255,255,.1);
+border: 1px solid @simulateurSelectorBorderColor;
+.transition(all 300ms ease 0s);
+}
+
+.simulateurs-selector li:hover, .simulateurs-selector li.active{
+background: @colorCouleur1;
+border-radius: 3px;
+border: 1px solid @simulateurSelectorSelectedBorderColor;
+}
+
+.simulateurs-selector li a{
+  color: @simulateurSelectorLinkColor;
+  padding: @widgetSimulateurSelectorPadding;
+  display: block;
+  text-decoration: none;
+}
+
+.simulateurs-selector li a:hover{
+  color: @white;
+}
+
+.simulateurs-selector li.active a, .simulateurs-selector li.active a i{
+  color: @white;
+}
+
+.simulateurs-selector li a i{
+  color: @simulateurSelectorLinkColor;
+  float: left;
+  margin-right: 10px;
+  font-size: @widgetSimulateurIconFontsize;
+  line-height:@widgetSimulateurIconFontsize;
+}
+
+.simulateurs-selector li:hover i{
+color: @white;
+}
+
+.simulateurs-container{
+  min-height: @widgetSimulateurMinHeight;
+  perspective: 800px;
+  padding-bottom: @widgetSimulateurPaddingBottom;
+}
+
+.simulateur{
+  height: @widgetSimulateurHeight1200;
+  background: #fff;
+  margin-top: 30px;
+  -moz-transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  -webkit-transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  -ms-transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  -o-transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  opacity:1;
+  position: relative;
+  text-align: center;
+  .transition(all 1000ms ease 0s);
+  cursor: pointer;
+  font-size: @widgetSimulateurFontsize;
+  color: @white;
+  text-transform: uppercase;
+}
+
+.simulateur i{
+  color: fade(@white, 30%);
+  font-size: 60px;
+  line-height: 60px;
+  display: block;
+  width: 30%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -30px;
+  -moz-transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  -webkit-transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  -ms-transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  -o-transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  transform: scale(1) skew(0) rotateY(0) rotateX(0);
+  .transition(all 300ms ease 0s);
+}
+
+.simulateur span{
+  display: block;
+
+  text-align: center;
+
+  line-height: @widgetSimulateurFontsize + 3px;
+  background: fade(@black, 10%);
+  padding: 5px;
+  padding-top: 5%;
+  position: absolute;
+  right: 0;
+  left: 30%;
+  bottom:0;
+  top:0;
+
+}
+
+.simulateur:hover{
+  /*-moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);*/
+  .transition(all 300ms ease 0s);
+}
+
+.simulateur:hover i{
+  color: @white;
+}
+
+.simulateur.filter-hide{
+  -moz-transform: scale(0) skew(0eg) rotateY(0deg);
+  -webkit-transform: scale(0) skew(0deg) rotateY(0deg);
+  -ms-transform: scale(0) skew(0deg) rotateY(0deg);
+  -o-transform: scale(0) skew(0deg) rotateY(0deg);
+  transform: scale(0) skew(0deg) rotateY(0deg);
+  width:0;
+  height:0;
+  margin:0;
+  opacity:0;
+  visibility: hidden;
+  .transition(all 500ms ease 0s);
+}
+
+.simulateur.filter-hide i{
+  -moz-transform: scale(0) skew(0eg) rotateY(0deg);
+  -webkit-transform: scale(0) skew(0deg) rotateY(0deg);
+  -ms-transform: scale(0) skew(0deg) rotateY(0deg);
+  -o-transform: scale(0) skew(0deg) rotateY(0deg);
+  transform: scale(0) skew(0deg) rotateY(0deg);
+  width:0;
+  height:0;
+  margin:0;
+  opacity:0;
+  visibility: hidden;
+  .transition(all 500ms ease 0s);
+}
+
+.simulateur.filter-hide span{
+  opacity:0;
+  visibility: hidden;
+  
+}
+
+.simulateur[data-classe='emprunts']{
+  background: @colorCouleur3;
+  &:hover{
+    background: darken(@colorCouleur3, 10%);
+  }
+}
+
+.simulateur[data-classe='placements']{
+  background: @couleur1Clair;
+    &:hover{
+    background: darken(@couleur1Clair, 10%);
+  }
+}
+
+.simulateur[data-classe='credit-bail']{
+  background: saturate(@colorCouleur2, 35%);
+    &:hover{
+    background: darken(saturate(@colorCouleur2, 35%), 10%);
+  }
+
+}
+
+.simulateur[data-classe='conges-payes']{
+  background: lighten(@colorCouleur1, 65%);
+   &:hover{
+    background: darken(lighten(@colorCouleur1, 65%), 10%);
+  }
+}
+
+.simulateur[data-classe='autres']{
+  background: saturate(@colorCouleur3, 35%) + rgb(30,30,30);
+  &:hover{
+    background: darken(saturate(@colorCouleur3, 35%) + rgb(30,30,30), 10%);
+  }
+}
+
+
+@media all and (max-width: 1080px){
+    .simulateur{
+    height: @widgetSimulateurHeight1080;
+  }
+}
+
+@media all and (max-width: 940px){
+  .simulateurs-selector{
+    margin-left: @gridGutterWidth;
+  }
+
+  .simulateur{
+    height: @widgetSimulateurHeight940;
+  }
+}
+
+@media all and (max-width: 768px){
+  .simulateurs-selector{
+    margin-left: @gridGutterWidth768;
+    padding-bottom: 20px;
+  }
+  
+  .simulateurs-selector li{
+    margin-top:10px;
+  }
+
+  .simulateur{
+   
+    width: 95%;
+    height: @widgetSimulateurHeight768;
+    margin: 10px auto;
+  }
+  
+  .simulateurs-container{
+  min-height: 420px;
+  }
+
+}
+
+
+@media all and (max-width: 420px){
+
+  .simulateurs-selector li{
+    width: 95%;
+    margin: 5px auto;
+    margin-left:0;
+    display: block;
+
+    a{
+      padding: 5px;
+    }
+  }
+
+
+  .simulateur{
+  font-size: @widgetSimulateurFontsizeMobile;
+  text-transform: none;
+  }
+
+
+}

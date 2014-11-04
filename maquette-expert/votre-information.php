@@ -40,12 +40,12 @@
 
                   <div class="multicontent-item item2">
                       <header>
-                        <a href="#"><img src="<?php echo $img;?>thumb_33614_article_xbig.jpeg"/></a>
+                        <a href="<?php echo $siteroot; ?>actualites-1-base.php"><img src="<?php echo $img;?>thumb_33614_article_xbig.jpeg"/></a>
                       </header>
                       <div class="sidebar-article-title article-content">
-                        <a href="#"><h4>L’Université d’automne 2014 de France Angels se tiendra à Toulouse</h4></a>
+                        <a href="<?php echo $siteroot; ?>actualites-1-base.php"><h4>L’Université d’automne 2014 de France Angels se tiendra à Toulouse</h4></a>
                         <p>Les 1er et 2 octobre prochains, la ville de Toulouse accueillera l’Université d’automne 2014 de la Fédération des réseaux de Business Angels. Deux jours de rencontres et d’échanges entre les membres de la Fédération, venus de toute la France...</p>                       
-                        <a href="#" class="buttonlink">Accéder</a>
+                        <a href="<?php echo $siteroot; ?>actualites-1-base.php" class="buttonlink">Accéder</a>
 
 
                       </div>
@@ -53,12 +53,12 @@
                 
                 <div class="multicontent-item item2">
                       <header>
-                        <a href="#"><img src="<?php echo $img;?>thumb_33017_article_xbig.jpeg"/></a>
+                        <a href="<?php echo $siteroot; ?>actualites-1-base.php"><img src="<?php echo $img;?>thumb_33017_article_xbig.jpeg"/></a>
                       </header>
                       <div class="sidebar-article-title article-content">
-                        <a href="#"><h4>5 jours pour entreprendre : les inscriptions aux stages de la CCI...</h4></a>
+                        <a href="<?php echo $siteroot; ?>actualites-1-base.php"><h4>5 jours pour entreprendre : les inscriptions aux stages de la CCI...</h4></a>
                         <p>Organisés par la CCI Paris Ile-de-France, les stages « 5 jours pour entreprendre » s’adressent aux porteurs de projets souhaitant enrichir leurs compétences et mener une réflexion complète avant de se lancer. Une vingtaine de rendez-vous...</p>                       
-                        <a href="#" class="buttonlink">Accéder</a>
+                        <a href="<?php echo $siteroot; ?>actualites-1-base.php" class="buttonlink">Accéder</a>
 
 
                       </div>
@@ -121,9 +121,9 @@
                   <div class="multicontent-item item3">
                       
                       <div class="sidebar-article-title article-content">
-                        <a href="#"><h4>11 octobre 2014</h4></a>
-                        <p>Assujettis à la TVA réalisant des opérations intracommunautaires</p>
-                        <a href="#" class="buttonlink">Accéder</a>
+                        <a href="<?php echo $siteroot; ?>base-doc/echeances.php"><h4>11 octobre 2014</h4></a>
+                        <p style="min-height: 60px;">Assujettis à la TVA réalisant des opérations intracommunautaires</p>
+                        <a href="<?php echo $siteroot; ?>base-doc/echeances.php" class="buttonlink">Accéder</a>
 
 
                       </div>
@@ -132,9 +132,9 @@
                 <div class="multicontent-item item3">
                       
                       <div class="sidebar-article-title article-content">
-                        <a href="#"><h4>15 octobre 2014</h4></a>
-                        <p>Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 juin 2014</p>
-                        <a href="#" class="buttonlink">Accéder</a>
+                        <a href="<?php echo $siteroot; ?>base-doc/echeances.php"><h4>15 octobre 2014</h4></a>
+                        <p style="min-height: 60px;">Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 juin 2014</p>
+                        <a href="<?php echo $siteroot; ?>base-doc/echeances.php" class="buttonlink">Accéder</a>
                       </div>
                 </div>
     
@@ -142,9 +142,9 @@
               <div class="multicontent-item item3">
                       
                       <div class="sidebar-article-title article-content">
-                        <a href="#"><h4>20 octobre 2014</h4></a>
-                        <p>Artisans, commerçants et industriels<br /><br /></p>
-                        <a href="#" class="buttonlink">Accéder</a>
+                        <a href="<?php echo $siteroot; ?>base-doc/echeances.php"><h4>20 octobre 2014</h4></a>
+                        <p style="min-height: 60px;">Artisans, commerçants et industriels<br /><br /></p>
+                        <a href="<?php echo $siteroot; ?>base-doc/echeances.php" class="buttonlink">Accéder</a>
                       </div>
                 </div>
 
