@@ -34,6 +34,7 @@
 
 
 
+
 //Varuiantes des couleurs de base :
 @couleur1Clair: lighten(@colorCouleur1, 30%);
 @couleur1Medium: lighten(@colorCouleur1, 20%);
@@ -95,8 +96,8 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        'Raleway', sans-serif;
-@serifFontFamily:       'Roboto Slab', serif;
+@sansFontFamily:        "Raleway", sans-serif;
+@serifFontFamily:       "Roboto Slab", serif;
 
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
@@ -112,7 +113,7 @@
 
 // Links
 // -------------------------
-@linkColor:             @colorCouleur2;
+@linkColor:             @colorCouleur1;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -164,17 +165,17 @@
 @widgetSimulateurPaddingTop: 0px;
 
 ////Hauteur des blocs
-@widgetSimulateurHeight1200: 130px;
+@widgetSimulateurHeight1200: 100px;
 @widgetSimulateurHeight1080: 140px;
 @widgetSimulateurHeight940:  120px;
 @widgetSimulateurHeight768:  100px;
 
 ////Couleurs des liens des catégories de simulateurs
-@simulateurSelectorLinkColor: @grayLighter;
+@simulateurSelectorLinkColor: @couleur1Dark;
 
 /////borders des boutons liens des catégories: 
 @simulateurSelectorBorderColor: transparent;
-@simulateurSelectorSelectedBorderColor: darken(@white, 75%);
+@simulateurSelectorSelectedBorderColor: darken(@white, 10%);
 
 ////padding des Boutons liens des catégories par defaut
 @widgetSimulateurSelectorPadding: 15px 10px;
@@ -186,6 +187,9 @@
 
 ////Taille des icones des blocs simulateurs
 @widgetSimulateurIconFontsize: 20px;
+
+///border-radius des boutons de selection
+@simulateurSelectorBorderRadius : 0px;
 
 
 //GRID

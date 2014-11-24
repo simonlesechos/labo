@@ -1,0 +1,1076 @@
+// theme's imports
+@import "import.less";
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////// STYLES GENERAUX
+html, body{
+	font-family: @commercialFont !important;
+}
+
+body{
+	font: inherit;
+}
+
+h1{
+	font-weight: 300;
+}
+
+
+p{
+	font-size: 17px;
+	line-height: 28px;
+	
+
+}
+
+
+.underlined {
+    border-bottom: 1px solid @grayDark;
+}
+
+h1, h2, h3, h4, h5, h6, p, a{
+	font-family: @commercialFont;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////// STYLES DES WIDGETS
+
+
+/////////////////////////////////////////////////////////// TOUS LES WIDGETS MULTICONTENT ET LIST BY MOTIF
+#dm_page_content_bottom .content_multicontent.colonnes-list .title,
+#dm_page_content_bottom .affichage_list_by_motif.colonnes-list .title.special_title,
+#dm_page_content_bottom .content_multicontent.colonnes-list .title.special_title{
+	border-bottom: none !important;
+}
+
+.content_multicontent h4, .colonnes-list h4 {
+    border-bottom: 1px solid @grayDark;
+    -webkit-transition: all 100ms linear;
+    -moz-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    -o-transition: all 100ms linear;
+    transition: all 100ms linear;
+}
+
+.content_multicontent.text-left a.link, .colonnes-list.text-left a.link {
+    text-align: left;
+}
+
+.content_multicontent .generallink a.link, .colonnes-list .generallink a.link {
+    border-color: transparent;
+    background: transparent;
+    color: @colorCouleur3;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    max-width: 100%;
+   
+    &:before{
+    	content:"\f061";
+    	font-family: FontAwesome;
+	  	font-weight: normal;
+	  	font-style: normal;
+	  	display: inline-block;
+	  	text-decoration: inherit;
+	  	color: @grayLight;
+	  	margin-right: 5px;
+	  	font-size: 14px;    
+    }
+
+    &:hover{
+    	color: @colorCouleur2;
+    }
+}
+
+.content_multicontent .subTitle, .colonnes-list .subTitle{
+	margin-bottom: 10px;
+}
+
+
+.content_multicontent, .affichage_list_by_motif, .colonnes-list{
+
+	padding-top: 45px !important;
+	padding-bottom: 45px;
+
+	h2{
+		font-size: 47px !important;
+		border-bottom: none !important;
+	}
+	
+	h3.special_title{
+		font-size: 47px !important;
+		border-bottom: none !important;
+	}
+
+	.span4{
+		margin-top: 20px;
+	}	
+
+	.show-date{
+		color: darken(@grayLight, 10%);
+		border-top: 1px solid darken(@grayLight, 10%);
+		padding-top:5px;
+	}
+
+	a.link.no-wrap{
+		h4{
+			min-height:64px;
+		}
+	}
+
+	p{
+		font-size: 16px;
+		line-height: 21px;
+		color:@grayDark;
+	}
+
+	.picto{
+		height: 120px;
+		width: 120px;
+		background: @colorCouleur1;
+		border-radius: 50%;
+		font-size: 60px;
+		color: @white;
+		font-weight: bold;
+		text-align: center;
+		line-height: 120px;
+		margin: auto;
+
+		&:hover{
+			background: @grayDark;
+		}
+	}
+
+}
+
+/////////////////////////////////////////////////////////////// Les listes d'articles PAS en colonnes
+ul.media-list{
+	padding-left:0;
+	border-left:none;
+}
+
+h4.media-heading{
+	border-bottom: 1px solid @gray;
+	color: lighten(@colorCouleur2,10%);
+}
+
+.media-body p{
+		font-size: 16px;
+		line-height: 21px;
+		color:@grayDark;
+}
+
+
+///////////////////////////////////////////////////////////Pagination
+
+.pagination{
+	ul{
+		li{
+			
+
+			a, a.link{
+				margin: 0;
+				margin-top:0;
+				padding:5px;
+				width: 20px;
+				border-radius: 0;
+				text-align: center;
+			}
+
+			&:first-child{
+				a, a.link{
+					border-radius: 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////// Widget Solutions / Missions
+
+.widget-solutions{
+
+	a.link.no-wrap{
+		h4{
+			min-height:0;
+			font-size: 24px;
+		}
+	}
+
+	img{
+		background: @colorCouleur1;
+		margin-bottom: 20px;
+	}
+
+}
+
+
+////////////////////////////////////////////////////////// Widget Opinion Systemsur la home
+
+.widget-opinion-system{
+	h3{
+		font-size: 24px;
+		line-height: 27px;
+		font-weight: bold;
+	}
+}
+
+
+//////////////////////////////////////////////////////// Widget simulateurs
+.content_multicontent{
+
+	.icon-simulateur{
+		display: block;
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		font-size: 60px;
+		margin: auto;
+		color: @white;
+		background: @colorCouleur1;
+		border-radius: 50%;
+
+
+	}
+
+	a.link.blockGrid:hover .icon-simulateur{
+
+			color: @white;
+			background: darken(@colorCouleur1, 10%);
+
+	}
+
+}
+
+///////////////////////////////////////////////////////// Widget échéancier
+
+.widget-echeances-list{
+	a.link.no-wrap{
+		h4{
+			margin-top: 10px;
+			min-height:0;
+			font-size: 24px;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////Interviews d'entrepreneurs
+
+.interviews{
+	background: darken(@colorCouleur2, 10%);
+
+	h3, .title, .special_title{
+		color: @white !important;
+	}
+
+	p.subTitle, .subTitle{
+		color: @white;
+	}
+
+	.span4{
+		background: transparent;
+
+		h4{
+			color: @white;
+			min-height: 64px;
+			border-bottom: 1px solid fade(@white, 40%) !important;
+		}
+
+		p{
+			
+			color: @white;
+		}
+	}
+} 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////// VERSION " BAS DE PAGE " DES WIDGETS // : les widgets qui s'affichent en bas de page dans les pages de contenu n'ont pas le même aspect que leur version en "page type home / sous-home"
+
+.widget-bas{
+		h2, h3, .title, .special_title{
+		 &:after{
+		 	content: "";
+		 	display: block;
+		 	width: 33%;
+		 	height: 4px;
+		 	background: @colorCouleur1;
+		 	margin: auto;
+		 	margin-top: 40px;
+			
+		 	}
+		}
+}
+
+
+
+///////////////////////////////////////////////////////// ACCORDEON
+
+.accordion-group{
+	background:@white;
+}
+
+.accordion-heading {
+    background: transparent;
+    border-bottom-color: @colorCouleur2;
+    border: 1px solid @colorCouleur2;
+
+    &:hover{
+	    background: transparent;
+	    border-bottom-color:lighten(@colorCouleur2, 20%);
+	    border: 1px solid lighten(@colorCouleur2, 20%);
+    }
+
+	
+	.accordion-toggle{
+		color: @colorCouleur2;
+		padding: 10px 15px;
+
+		&:hover{
+			background: transparent;
+		}
+	}
+
+	&:hover .accordion-toggle{
+		color: lighten(@colorCouleur2, 20%);
+	}
+
+}
+
+
+
+////Tableaux
+.table th, .table td {
+	border-top: 1px solid @colorCouleur2;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LE MENU
+
+//// Correction du background de A-flat
+
+.topmenu{
+	.navbar-inner{
+		background: @colorCouleur1;
+	}
+}
+
+
+
+
+//////// Version mobile
+#open-left-mobile{
+	border: none;
+
+	&::after{
+		margin-top: -31px;
+		margin-right: -84px;
+	}
+}
+
+#open-left-mobile:hover {
+    border: none;
+}
+
+
+//////////////////////////////////////////////////////// Le bouton recherche dans le menu en haut
+.navbar{
+	
+	.searchbtn{
+		border-right: 1px solid @white;
+	}
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////LES ARTICLES
+
+//////Le titre des articles
+
+article h1{
+	background: transparent;
+	font-size: 44px;
+	color: @grayDark;
+	display: block;
+	top:0;
+	letter-spacing: 1px;
+	padding:0;
+	font-weight: 300;
+}
+
+
+//////Les tailles de polices dans les articles
+
+article{
+	p{
+		strong{
+			font-weight: 400;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////// La barre des boutons de partage en haut des articles (Facebook, twitter, google+, viadeo etc.)
+
+.dm_widget .social_network_shared .dm_widget_inner ul{
+	margin-top:20px;
+
+	li{
+		height: 25px;
+		padding:2px;
+		line-height: 25px;
+	}
+}
+
+.social-mask{
+	height: 25px;
+	line-height: 25px; 
+	i{
+		line-height: 25px;
+		font-size: 14px;	
+		color: @colorCouleur1;
+	}
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Sidebar
+
+//////// Sidebar adresse
+
+
+.sidebar-adress ul li {
+    font-size: 15px;
+    border-bottom: 1px solid @gray;
+    padding: 10px 5px;
+    transition: all 200ms ease 0s;
+
+    &:last-child{
+    	border-bottom: none;
+    }
+}
+
+
+.sidebar-adress h3 {
+    font-weight: 400;
+    border-bottom: 1px solid @gray;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Pack Création
+
+////Menu création
+
+.menu-creation{
+	ul.menu-navbar{
+		background: transparent;
+		max-width: 675px;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.btn-navbar .icon{
+		margin-top: 4px;
+		margin-right: 5px;		
+	}
+}
+
+
+
+.dm_widget.menu-creation .dm_widget_navigation_menu_container .navbar .navbar-inner .container .nav-collapse .nav-pills > li > a{
+	color: darken(@colorCouleur2, 5%);
+}
+
+.dm_widget.menu-creation .dm_widget_navigation_menu_container .navbar .navbar-inner .container .nav-collapse .nav > li > a:hover,
+.dm_widget.menu-creation .dm_widget_navigation_menu_container .navbar .navbar-inner .container .nav-collapse .nav > li > a:focus,
+.dm_widget.menu-creation .dm_widget_navigation_menu_container .navbar .navbar-inner .container .nav-collapse .nav > li > a:active
+ {
+    color: darken(@colorCouleur2, 5%);
+}
+
+.dm_widget.menu-creation .dm_widget_navigation_menu_container .navbar .navbar-inner .container .nav-collapse .nav-pills > .active > a{
+	background: darken(@colorCouleur2, 5%);
+	color: #fff;
+
+	&:hover, &:focus, &:active{
+		background: darken(@colorCouleur2, 10%);
+		color: #fff;
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////Nouveaux pictos pour le guide création
+
+.guide-creation div[data-motif="GCEP"] {
+	background-image: url('/uploads/pictos-crea/crea-projet.png');
+	background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCESA"] {
+    background-image: url('/uploads/pictos-crea/crea-secteur-activite.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCEFJ"] {
+    background-image: url('/uploads/pictos-crea/crea-forme-juridique.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCEL"] {
+    background-image: url('/uploads/pictos-crea/crea-locaux-pro.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCERF"] {
+    background-image: url('/uploads/pictos-crea/crea-regime-fiscal.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCERS"] {
+    background-image: url('/uploads/pictos-crea/crea-regime-social.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCEBP"] {
+    background-image: url('/uploads/pictos-crea/crea-business-plan.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCERS"] {
+    background-image: url('/uploads/pictos-crea/crea-regime-social.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCEF"] {
+    background-image: url('/uploads/pictos-crea/crea-financement.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCEPA"] {
+    background-image: url('/uploads/pictos-crea/crea-partenaires-conseil.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCEA"] {
+    background-image: url('/uploads/pictos-crea/crea-aides.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+.guide-creation div[data-motif="GCEFO"] {
+    background-image: url('/uploads/pictos-crea/crea-formalites.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
+
+.guide-creation div.wrapper-link{
+	margin-bottom: 100px;
+	
+	.background{
+		border-radius: 50%;
+		width: 120px;
+		height: 120px;
+	}
+
+
+}
+
+
+.guide-creation div.wrapper-link .background .fond-titre-section{
+	position: absolute;
+	bottom: -70px;
+	width: 100%;
+	height: auto;
+	background-color: transparent;
+	padding: 0px;
+	height: 60px;
+	width: 120%;
+	left: -10%;
+	border-top: 1px solid @grayDarker;
+
+
+	.section-guide-creation{
+		color:@grayDarker;
+		text-transform: lowercase;
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		margin: 0px;
+		line-height: 22px;
+		padding-top: 10px;							
+		display: block;
+
+		&::first-letter{
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+.guide-creation .wrapper-link .link .background:hover{
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////// Formulaires en modal ( "modalform" )
+
+.modalform{
+	bottom:0;
+	overflow-y: auto;
+
+	.dm_widget_inner{
+		margin-top:5%;
+	}
+
+	.contentHeader{
+		.wrapper{
+			display: block;
+			margin: 10px;
+			padding: 10px;
+			background: darken(@white, 10%);
+		}
+	}
+
+	form{
+		display: block !important;
+	}
+}
+
+
+.modalform.formvisible{
+
+	form{
+		display: block !important;
+	}
+}
+
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus{
+	color: @grayDark;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////La barre fixe en bas ( fixed bar )
+
+///////////////////////////////////////////////////////Le bandeau dans la barre
+.fixed-bar{
+	padding:0;
+	height: 25px;
+	overflow: hidden;
+	background: darken(@colorCouleur2, 5%);
+	border: none;
+
+	.bandeau-container{
+		overflow: hidden;
+	}
+	
+	.bandeau_show{
+		margin: 0 auto;
+		border: none;
+		padding:0;
+		line-height: 25px;
+	
+		div{
+			height: 25px !important;
+		}
+	}
+
+	.fb-buttons{
+		padding-top:0;
+		margin-left: 30px;
+		
+			
+		.btn-cont{
+			display: block;
+			float: left;
+			width: 33%;
+		}
+	}
+
+	.contactshowbtn, .btn.btn-primary{
+		display: block;
+		background: fade(lighten(@colorCouleur2, 10%), 80%);
+		margin-left:0;
+		padding:0;
+		width: 100%;
+		border-left: 2px solid @white;
+		box-shadow: none;
+		text-transform: none;
+		font-size: 15px;
+		line-height: 25px;
+		letter-spacing: 0.02em;
+
+		&:hover{
+			box-shadow: none;
+		}
+		
+		&:last-child{
+			//border-right: 2px solid @white;
+		}	
+
+		i{
+			float: left;
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			background: saturate(@colorCouleur3, 20%);
+
+		}
+	}
+
+		.icon-remove{
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			top:0;
+			right:0;
+			text-align: center;
+			background: darken(@colorCouleur2, 20%);
+		}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////LE MENU QUI SE DÉPLIE
+
+body.snapjs-left{
+	.snap-drawer {
+		display: block;
+	}	
+}
+
+.snap-drawer{
+	h3{
+		margin: 12px;
+	}
+
+	h4{
+		padding: 10px;
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////// FORMULAIRES
+
+fieldset.well{
+	background: transparent;
+}
+
+.form-actions {
+    background-color: transparent;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// MEDIAS QUERIES
+
+@media all and (max-width: 1200px){
+	.bandeau-container, .fb-buttons{
+		width: 48%;
+		margin:0;
+	}
+
+	.fb-buttons{
+		float: right;
+	}
+}	
+
+@media all and (max-width: 980px){
+
+	.fixed-bar{
+		.bandeau-container, .fb-buttons{
+			width: 48%;
+			margin:0;
+		}
+
+		.fb-buttons{
+			margin-left:0;
+			float: right;
+			clear: none;
+
+			.btn-cont{
+				display: block !important;
+				margin-left:0;
+
+				.contactshowbtn, .btn.btn-primary{
+					font-size: 11px;
+				}
+			}
+
+
+		}	
+	}
+
+	.guide-creation div.wrapper-link .background .fond-titre-section{
+		width: 95%;
+		left:2.5%;
+	}
+
+	.guide-creation div.background{
+		width: 100px !important;
+		height: 100px !important;
+	}
+
+	.guide-creation div[data-motif="GCEP"],
+	.guide-creation div[data-motif="GCESA"],
+	.guide-creation div[data-motif="GCEFJ"],
+	.guide-creation div[data-motif="GCEL"],
+	.guide-creation div[data-motif="GCERF"],
+	.guide-creation div[data-motif="GCERS"],
+	.guide-creation div[data-motif="GCEBP"],
+	.guide-creation div[data-motif="GCERS"],
+	.guide-creation div[data-motif="GCEF"],
+	.guide-creation div[data-motif="GCEPA"],
+	.guide-creation div[data-motif="GCEA"],
+	.guide-creation div[data-motif="GCEFO"]{
+		
+		width: 100px !important;
+		height: 100px !important;
+		background-size: 100px 100px !important;
+		
+	}
+
+}
+
+
+@media all and (max-width: 768px){
+
+	.generallink a {
+	    border: none !important;
+	  }
+	
+	.fixed-bar{
+		display: block;
+
+		.bandeau-container{
+			display: none;
+		}
+
+		.fb-buttons{
+			float: none;
+			width: 100%;
+			margin-left:0;
+			float: right;
+			clear: none;
+
+			.btn-cont{
+				display: block !important;
+				margin-left:0;
+
+				.contactshowbtn, .btn.btn-primary{
+					font-size: 14px;
+				}
+			}
+
+
+		}	
+	}
+
+	.guide-creation div.wrapper-link{
+		width: 49%;
+		float: left;
+		text-align: center;
+	}
+
+	.guide-creation div.wrapper-link .background .fond-titre-section{
+		width: 100%;
+		left:0;
+	}
+
+	.guide-creation div.background{
+		width: 100px !important;
+		height: 100px !important;
+		margin: auto;
+	}
+
+	.guide-creation div[data-motif="GCEP"],
+	.guide-creation div[data-motif="GCESA"],
+	.guide-creation div[data-motif="GCEFJ"],
+	.guide-creation div[data-motif="GCEL"],
+	.guide-creation div[data-motif="GCERF"],
+	.guide-creation div[data-motif="GCERS"],
+	.guide-creation div[data-motif="GCEBP"],
+	.guide-creation div[data-motif="GCERS"],
+	.guide-creation div[data-motif="GCEF"],
+	.guide-creation div[data-motif="GCEPA"],
+	.guide-creation div[data-motif="GCEA"],
+	.guide-creation div[data-motif="GCEFO"]{
+		
+		width: 100px !important;
+		height: 100px !important;
+		background-size: 100px 100px !important;
+		
+	}
+
+
+}
+
+
+@media all and (max-width: 580px){
+	
+	.fixed-bar{
+		display: none;
+	}
+
+	.content_multicontent h3.special_title, .affichage_list_by_motif h3.special_title, .colonnes-list h3.special_title{
+		font-size: 37px !important;
+		line-height: 40px;
+	}
+
+}
+
+
+@media all and (max-width: 440px){
+	
+	.guide-creation div.wrapper-link{
+		width: 100%;
+		float: none;
+		margin: auto;
+		text-align: center;
+	}
+
+	.guide-creation div.wrapper-link .background .fond-titre-section{
+		width: 100%;
+		left:0;
+		border-bottom: 1px solid fade(@black, 10%);
+	}
+
+	.guide-creation div.background{
+		width: 200px !important;
+		height: 200px !important;
+		margin: auto;
+		margin-bottom: 100px;
+	}
+
+	.guide-creation div[data-motif="GCEP"],
+	.guide-creation div[data-motif="GCESA"],
+	.guide-creation div[data-motif="GCEFJ"],
+	.guide-creation div[data-motif="GCEL"],
+	.guide-creation div[data-motif="GCERF"],
+	.guide-creation div[data-motif="GCERS"],
+	.guide-creation div[data-motif="GCEBP"],
+	.guide-creation div[data-motif="GCERS"],
+	.guide-creation div[data-motif="GCEF"],
+	.guide-creation div[data-motif="GCEPA"],
+	.guide-creation div[data-motif="GCEA"],
+	.guide-creation div[data-motif="GCEFO"]{
+		
+		width: 200px !important;
+		height: 200px !important;
+		background-size: 200px 200px !important;
+		
+	}
+
+
+
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////CODE POUR CORRIGER LES WIDGETS "INSERT CODE"
+
+.source_code_insert_form{
+	
+	font-family: arial, sans-serif !important;
+	
+
+	h1,h2,h3,h4,h5,h6{
+		border: none;
+		padding:0;
+	}
+		
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+	  margin: 10px 0;
+	  font-family: inherit;
+	  font-weight: bold;
+	  line-height: 20px;
+	  color: inherit;
+	  text-rendering: optimizelegibility;
+	}
+
+	h1 small,
+	h2 small,
+	h3 small,
+	h4 small,
+	h5 small,
+	h6 small {
+	  font-weight: normal;
+	  line-height: 1;
+	  color: #999999;
+	}
+
+	h1,
+	h2,
+	h3 {
+	  line-height: 40px;
+	}
+
+	h1 {
+	  font-size: 38.5px;
+	}
+
+	h2 {
+	  font-size: 31.5px;
+	}
+
+	h3 {
+	  font-size: 24.5px;
+	}
+
+	h4 {
+	  font-size: 17.5px;
+	}
+
+	h5 {
+	  font-size: 14px;
+	}
+
+	h6 {
+	  font-size: 11.9px;
+	}
+
+
+	.accordion-heading {
+	  background: #447294;
+	  border-bottom-color: #ffffff;
+	}
+	.accordion-heading .accordion-toggle {
+	  padding: 13px 15px;
+	  color: #ffffff;
+	  transition: color 0.3s;
+	  -o-transition: color 0.3s;
+	  -webkit-transition: color 0.3s;
+	  -moz-transition: color 0.3s;
+	}
+	.accordion-heading .accordion-toggle:hover {
+	  color: #447294;
+	  text-decoration: none;
+	  background: #74A6BD;
+	}
+	.accordion-heading .accordion-group {
+	  border: none;
+	  background: #ECF0F1;
+	}.accordion-toggle {
+	  padding: 13px 15px;
+	}
+	.accordion-inner {
+	  border-top-color: #ffffff;
+	}
+
+	*.well{
+		background-color: #F4F4F4;
+	}
+}
