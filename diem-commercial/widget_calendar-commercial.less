@@ -1,0 +1,129 @@
+.expertscalendar{
+	.showAsWeek{ 
+		.eventsCalendar-day{ 
+				a{
+					border-radius: 50%;
+					font-weight: bold;
+					background: fade(@colorCouleur2, 35%);
+				}
+
+		}
+	
+		li.empty span{
+			border-radius: 50%;
+		}
+	
+	}
+
+
+	.eventsCalendar-list li{
+		border-bottom-color: @colorCouleur2;
+
+		&:first-child{
+			border-top-color: @colorCouleur2;
+		}
+
+		&::nth-child(even) {
+			background: transparent;
+		}
+		
+		&:nth-child(odd) {
+			background: fade(@colorCouleur1, 4%);
+		}
+
+		time{
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				line-height: 60px
+			}		
+	}
+
+	.eventsCalendar-currentTitle .monthTitle{
+		background: fade(@colorCouleur2, 35%);
+		font-weight: 400;
+	}
+	
+	.eventsCalendar-list .eventsCalendar-noEvents{
+		color: @gray;
+	}
+
+
+}
+
+
+@media all and (max-width: 440px){
+	.expertscalendar{
+
+				.showAsWeek .eventsCalendar-day a{
+					line-height: 50px;
+				}
+				.eventsCalendar-daysList.showAsWeek li.empty{
+					height: 50px;
+					min-height: 50px;
+				}
+
+				.eventCalendar-wrap {
+					max-width: 97%;
+				}
+
+				.eventsCalendar-monthWrap, .eventsCalendar-list-wrap{
+					max-width: 100%;
+				}
+	
+	}
+
+
+				
+}
+
+@media all and (max-width: 400px){
+	.expertscalendar{
+				
+				.showAsWeek .eventsCalendar-day a{
+					line-height: 40px;
+					width: 40px;
+					height: 40px;
+					font-size: 18px;
+				}
+				.eventsCalendar-daysList.showAsWeek li.empty{
+					height: 40px;
+					min-height: 40px;
+					width: 40px;
+					
+
+
+					span{
+						width: 40px;
+						height: 40px;
+					}
+				}
+	}			
+}
+
+
+@media all and (max-width: 330px){
+	.expertscalendar{
+				
+				.showAsWeek .eventsCalendar-day a{
+					line-height: 35px;
+					height: 35px;
+					width: 35px;
+					font-size: 18px;
+				}
+				.eventsCalendar-daysList.showAsWeek li.empty{
+					height: 35px;
+					min-height: 35px;
+					width: 35px;
+					
+
+
+					span{
+						width: 35px;
+						height: 35px;
+					}
+				}
+	}			
+}
+
+

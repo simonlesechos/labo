@@ -67,7 +67,7 @@ p{
     font-family: @sansFontFamily;
 
 }
-.clear{clear: both;}
+.clear, .clr{clear: both;}
 
 img{
 	max-width: 100%;
@@ -160,7 +160,29 @@ article {
     em{
       padding-left: 7px;
       border-left: 5px solid @grayLighter;
+      color: @grayLight;
+      font-style: normal;
     }
+
+  blockquote.well{
+    h5{
+      font-weight: bold;
+      color: @gray;
+    }
+
+    span{
+      display: inline-block;
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: -30px;
+    }
+  
+    b{
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+  }
 
 }
 
@@ -171,7 +193,7 @@ article {
   margin: auto;
   font-size: 11px;
   background: @white;
-  white-space: nowrap;
+  white-space: pre-wrap;
   overflow: hidden;
 }
 
@@ -192,94 +214,92 @@ display: none;
       margin: 0;
       border: 1px solid #eee;
       border-right: none;
-      padding: 10px 5px;
       height: 50px;
       width: 20%;
       text-align: center;
       //overflow: hidden;
+      .transition(all 200ms ease 0s);
+
     } 
 
      li.last{
       border-right: 1px solid #eee;
      }
 
-     span, iframe{
-      top: 2px;
-     }
 
-    .socialbtn-overlay{
-      position: absolute;
-      top:0;
-      left:0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    
-    .socialbtn-overlay > div{
-    position: absolute;
-    z-index: 5;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    background: @white;
-    text-align: center;
-    .transition(all 700ms ease 0s);
-      
-      i{
+
+      a{
+        display: block;
+        width: 100%;
         line-height: 50px;
+      }
+    
+      i{
         font-size: 24px;
         color: @white;
       }
 
-    }
 
-    .facebook-mask > div, .facebook-back{
+
+    .bs-facebook{
       background: #3B5998;
+       &:hover{
+        background: lighten(#3B5998, 10%);
+       }
     }
 
-    .google-mask > div, .google-back{
+    .bs-googleplus{
       background: #EF4740;
+       &:hover{
+        background: lighten(#EF4740, 10%);
+       }
     }
 
-    .twitter-mask > div, .twitter-back{
+    .bs-twitter{
       background: #3BCAFF;
+       &:hover{
+        background: lighten(#3BCAFF, 10%);
+       }
     }
 
-    .linkedin-mask > div, .linkedin-back{
-      background: #808082;
-
+    .bs-linkedin{
+      background: #006699;
+       &:hover{
+        background: lighten(#006699, 10%);
+       }
     }
 
-    .viadeo-mask > div, .viadeo-back{
+    .bs-viadeo{
       background: #FF8A1B;
+       &:hover{
+        background: lighten(#FF8A1B, 10%);
+       }
     }
 
-    .viadeo_widget_recommend .display-recommend-btn .recommend_btn{
-      margin: auto;
-      margin-top: 5px;
-      float: none !important;
+    .bs-print{
+      background: @grayLight;
+       &:hover{
+        background: lighten(@grayLight, 10%);
+       }
+    }
+
+    .bs-mail{
+      background: @grayLight;
+       &:hover{
+        background: lighten(@grayLight, 10%);
+       }
+    }
+
+    .bs-comment{
+       background: @grayLight;
+
+       &:hover{
+        background: lighten(@grayLight, 10%);
+       }
     }
 
 
-    .twitter-share-button{
-      margin-top: 3px;
-    }
-
-    li:hover .socialbtn-overlay > div{
-      top: -100%;
-      //top: 100%;
-      opacity:0;
-      visibility: hidden;
-      .transition(all 300ms ease 0s);
-    }
-
-      li:hover .socialbtn-overlay{
-      opacity:0;
-      visibility: hidden;
-      .transition(all 300ms ease 0s);
-    }
+    
 }
 
 .fildarianne{
@@ -298,7 +318,6 @@ display: none;
 }
 
 .citation{
-  font-style: italic;
   padding: 5px 10px;
   line-height: 24px;
   border-radius: 5px;
@@ -307,11 +326,15 @@ display: none;
 .citation:before{
   content:'" ';
   font-size: 20px;
+  font-family: serif;
+  color: @gray;
 }
 
 .citation:after{
   content:' "';
   font-size: 20px;
+  font-family: serif;
+  color: @gray;
 }
 
 .inpage-contact-form{
@@ -449,7 +472,17 @@ fieldset.well, form .well, .form-actions{
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////Le formulaire principal
-.main-contact-form .dm_widget_inner{
+.main-contact-form{
+    h2{
+      text-align: center;
+      margin-bottom: 10px !important; 
+    }
+
+    padding-bottom: 60px;
+}
+
+
+/*.main-contact-form .dm_widget_inner{
     max-width: 1200px;
     margin: 60px auto;
     border: none;
@@ -619,7 +652,7 @@ fieldset.well, form .well, .form-actions{
     }
 }
 
-
+*/
 /////////////////////////////////////////////////////////////////////////////////////////////////////Le formulaire des simulateurs
 
 .simulateur-form{
@@ -1865,11 +1898,17 @@ a.homelink.active:hover{
   color: @white !important;  
 }
 
-.pres-cab, .content_quizz{
+.pres-cab, .content_quizz, .sitemap_plan_du_site{
   max-width: 800px;
   margin: auto;
   margin-bottom: 60px;
   padding: 10px;
+}
+
+.dessin-semaine{
+    h3{
+      text-align: center;
+    }
 }
 
 .margin-bottom-none{
@@ -1898,12 +1937,12 @@ a.homelink.active:hover{
 
 .pres-cab p{
   margin: 10px auto;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 30px;
 }
 
 .pres-cab strong{
-  font-size: 19px;
+  font-size: 20px;
   line-height: 28px;
   font-weight: 500;
   margin-top: 15px;
@@ -2106,9 +2145,7 @@ vertical-align: top;
 padding-bottom: 10px;
 .transition(all 200ms ease);
 
-  img{
-    height: 160px;
-  }
+
 }
 
 .colonnes-list .span8{
@@ -2186,32 +2223,43 @@ background: @colorCouleur1;
 /////////////////////////////////////////////////////////////////////////////////CARROUSEL
 
 .carousel-caption{
-  background: fade(@colorCouleur1, 70%);
-  bottom: -100%;
+  position: static;
+  padding: 20px;
+  background: transparent;
+  min-height: 200px;
   .transition(all 400ms ease);
+  text-align: center;
 
   p{
-   font-size: 12px;  
+   font-size: 16px;
+   color: @black;
+   text-align: left;  
+    
+    em{
+      font-size: 12px;
+      font-style: normal;
+      font-weight: bold;
+      display: none;
+    }
+
   }
 
   h4{
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: @black;
+    padding-bottom: 10px;
   }
   
 }
 
-.slide:hover .carousel-caption{
-  bottom: 0; 
-}
 
 .carousel-control:hover, .carousel-control:focus {
     color: @colorCouleur2;
   
 }
 
-.carousel-cnotrol:hover .carousel-caption{
-        bottom: -100% !important;
-}
+
 
 
 /*********************************************************************************FOOTER*/
@@ -2222,6 +2270,10 @@ background: @colorCouleur1;
 .carte-de-voeux a {
   color:@colorCouleur1;
   text-decoration: none;
+}
+
+.footer-inner-content{
+  padding-top: 40px;
 }
 
 footer.main-footer{
@@ -2250,7 +2302,7 @@ footer .max-width{
 }
 
 .logo-footer{
-  max-width: 300px;
+  max-width: 220px;
   float: left;
   margin-top: 10px;
 }
@@ -2263,7 +2315,7 @@ footer .max-width{
   font-size: 26px;
   line-height: 60px;
 }
-
+/*
 .menu-footer{
   margin:20px auto;
 }
@@ -2296,14 +2348,87 @@ footer .max-width{
   max-width: 400px
 }
 
-.adresse-footer{
-  text-align: left;
-  max-width: 400px;
-  float: left;
-  font-size: 0.9em;
-  font-size: 14px;
-  color: @white;
+*/
+
+
+.footer-menu{
+  padding-top: 7px;
+
+  ul{
+    li{
+       a{
+        display: block;
+        width: 100%;
+        line-height: 25px;
+        color: @white;
+        border: 1px solid @colorCouleur2;
+        text-align: center;
+        border-radius: 2px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 10px auto;
+        
+        &:hover{
+          background: @colorCouleur2;
+        }
+      }
+    }
+  }
 }
+
+
+.footer-cabinet-desc{
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid @colorCouleur2;
+}
+
+.adresse-footer{
+  text-align: right;
+  font-size: 13px;
+  line-height: 18px;
+  color: @white;
+  border-bottom: 1px solid @colorCouleur2;
+  padding-bottom: 5px;
+  
+  h4{
+    font-size: 13px;
+    font-weight: bold;
+    margin: 2px auto;
+  }
+
+  i{
+    color: @colorCouleur2;
+  }
+}
+
+.footer-links{
+  font-size: 13px;
+  line-height: 18px;
+}
+
+footer.main-footer{
+  .itemprop .type [class^="icon"]:before, .itemprop .type [class*=" icon"]:before{
+    color: @colorCouleur2;
+  } 
+}
+
+footer.main-footer{
+  a{
+    color: fade(@white,80%);
+
+    &:hover{
+      color: @white;
+    }
+  }
+
+  .copyright{
+    font-size: 12px;
+    text-transform: uppercase;;
+  }
+}
+
 
 .sites-affilies{
   clear: both;
@@ -2385,6 +2510,65 @@ footer .max-width{
     }
   }
 }
+
+
+/*SITE MAP*/
+
+.sitemap_plan_du_site{
+  ul{
+
+      li{
+       
+          a{
+              background: transparent;
+              color: @colorCouleur1;
+            
+            &:hover{
+              color: darken(@colorCouleur1, 30%);
+            }
+
+          }
+
+        }
+
+        li:hover{
+        a{
+            background: transparent;
+            color: @colorCouleur1;
+        }
+      
+
+      }
+
+      
+          
+
+    
+   
+  }
+}
+
+
+///////// Fleche pour remonter en haut de page
+
+.backtotop{
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin: auto;
+}
+
+.backtotop a{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    line-height: 37px;
+    outline: none;
+}
+
+
 
 /*********************************************************************************ANIMATIONS*/
 
@@ -2546,8 +2730,8 @@ img{
 
 .box-actu{
     margin-bottom: 40px;
-    max-width: 97% !important;
-    width: 97% !important;
+    max-width: 92% !important;
+    width: 92% !important;
   }
 
 
@@ -2569,11 +2753,15 @@ h1{
   margin-top: 0px !important;
 }
 
+.header-page{
+  margin-top:50px;
+}
+
 .colonnes-list{
   .span8, .span4{
-    margin: auto;
-    max-width: 97%;
-    width: 97%;
+    margin: 20px auto;
+    max-width: 92%;
+    width: 92%;
 
       img{
         height: auto;
@@ -2586,9 +2774,6 @@ h1{
 
 @media all and (max-width: 780px){
   
-.header-page{
-  //margin-top:44px;
-}
 
 .menu-page.fixed{
   position: static;
@@ -2751,6 +2936,92 @@ float: left;
   height: auto;
 }
 
+
+article, .pres-cab {
+    
+    padding-bottom: 40px;
+
+    strong{
+    font-family: @sansFontFamily;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    }
+    
+    h1{
+      color: #000;
+      text-transform: none;
+      font-size: 22px !important;
+      font-weight: 400 !important;
+      margin-top: 20px;
+      }
+    
+    h4{
+      color: @grayDark;
+      margin: 30px 0 10px 0;
+      font-weight: bold;
+      font-size: 1.3em;
+   
+    }
+
+    p{
+       font-weight: 400;
+       font-size: 14px;
+    }
+
+    em{
+      padding-left: 7px;
+      border-left: 5px solid @grayLighter;
+      color: @grayLight;
+      font-style: normal;
+    }
+
+  blockquote.well{
+    h5{
+      font-weight: bold;
+      color: @gray;
+    }
+
+    span{
+      display: inline-block;
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: -30px;
+    }
+  
+    b{
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+  }
+
+}
+
+.generallink, .colonnes-list .generallink{
+  max-width: 92%;
+}
+
+.pres-cab, .content_quizz{
+  padding: 14px;
+}
+
+
+}
+
+
+@media all and (max-width: 768px){
+    footer.main-footer{
+    background: @couleur1Dark;
+    position: static;
+
+    .dm_zones{
+      position: static;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media all and (max-width: 680px){
@@ -2863,15 +3134,7 @@ form .controls, .form-horizontal .controls{
 
   }
 
-footer.main-footer{
-  background: @couleur1Dark;
-  position: static;
 
-  .dm_zones{
-    position: static;
-    margin: 0 auto;
-  }
-}
 
 .header-page-img {
   background: @couleur1Clair;
@@ -2927,23 +3190,23 @@ footer.main-footer{
 }
 
 
+.colonnes-list{
+  h2, h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  }
+}
+
 }
 
 @media all and (max-width: 435px){
  .bs-social-buttons {
     text-align: left;
     margin: 20px auto;
-    li{
-    //float: none;
-    width: 50%;
-    //margin: 0 auto;
-    border: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    //border-bottom: none;
-    }
-    
-    li.last{
-     // border-bottom: 1px solid #ccc;
+
+    i{
+      font-size: 18px;
     }
   } 
 }

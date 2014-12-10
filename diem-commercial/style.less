@@ -23,16 +23,123 @@ p{
 
 }
 
+.posRelative{
+	position: relative;
+}
 
 .underlined {
     border-bottom: 1px solid @grayDark;
 }
 
+.margedbottom{
+	margin-bottom: 20px;
+}
+
+.paddingbottom0{
+	padding-bottom:0 !important;
+}
+
+
 h1, h2, h3, h4, h5, h6, p, a{
 	font-family: @commercialFont;
 }
 
+h3{
+	font-weight: 400;
+	color: @black;
+}
+
+h4{
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 30px
+}
+
+.light-bg{
+	background: fade(@colorCouleur1, 4%);
+}
+
+.blanktext p{
+	color: @black;
+}
+
+.blanktext:hover p, .blanktext:focus p, .blanktext:active p {
+	color: @black;
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////// STYLES DES WIDGETS
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////// HEADER
+
+/////////////////////////////////////////////////////////// Le logo dans le header
+.content_image.logoFull {
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+
+/////////////////////////////////////////////////////////// Multi implantations dans le header
+
+.adresses_multi_implantation {
+    bottom: 20px;
+    margin-top: 20px;
+
+	.show-implantation b.caret{
+		border-top-color: @colorCouleur1;
+		margin-top: 13px;
+		margin-left: 7px;
+	}
+
+	.addressLocality i {
+	    color: @colorCouleur1;
+	    margin-right: 10px;
+	    margin-top: -26px;
+	    display: block;
+	    font-size: 47px !important;
+	}
+
+}
+
+
+
+
+/////////////////////////////////////////////////////////// Fil d'arianne
+
+.breadcrumb{
+	a{
+		color: @gray;
+
+		&:hover{
+			color: @colorCouleur3;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////Affichage d'une missions ( Mission show )
+
+.missions_mission_show{
+	article{
+		header{
+			img{
+				background: @colorCouleur1;
+				margin:auto;
+				border-radius: 50%;
+				display: block;
+			}
+
+			h1{
+				text-align: center;
+			}
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////// Opinion system
+
+.Global-sidebar-2 .color-opinion-system{
+	background: none repeat scroll 0% 0% rgba(76, 200, 236, 0.04);
+} 
 
 
 /////////////////////////////////////////////////////////// TOUS LES WIDGETS MULTICONTENT ET LIST BY MOTIF
@@ -55,7 +162,8 @@ h1, h2, h3, h4, h5, h6, p, a{
     text-align: left;
 }
 
-.content_multicontent .generallink a.link, .colonnes-list .generallink a.link {
+.generallink a.link, .content_multicontent .generallink a.link, .colonnes-list .generallink a.link, .affichage_list_by_motif .generallink a.link{
+    display: block;
     border-color: transparent;
     background: transparent;
     color: @colorCouleur3;
@@ -78,8 +186,21 @@ h1, h2, h3, h4, h5, h6, p, a{
     }
 
     &:hover{
-    	color: @colorCouleur2;
+    	color: @colorCouleur1;
     }
+}
+
+//Cas particulier : les widgets qui montrent un seul objet (cabinet, mission etc.) sur toute la largeur. Le lien est donc aligné à gauche en dessous du texte descriptif.
+.one-object-widget{
+
+	.generallink a.link{
+		text-align: left;
+	}
+
+	h2{
+		color: @black;
+		font-weight: bold;
+	}
 }
 
 .content_multicontent .subTitle, .colonnes-list .subTitle{
@@ -122,6 +243,7 @@ h1, h2, h3, h4, h5, h6, p, a{
 		font-size: 16px;
 		line-height: 21px;
 		color:@grayDark;
+		padding-top: 10px;
 	}
 
 	.picto{
@@ -135,30 +257,124 @@ h1, h2, h3, h4, h5, h6, p, a{
 		text-align: center;
 		line-height: 120px;
 		margin: auto;
+		.transition(all 200ms ease);
 
 		&:hover{
-			background: @grayDark;
+			background: darken(@colorCouleur1, 10%);
 		}
 	}
 
 }
 
 /////////////////////////////////////////////////////////////// Les listes d'articles PAS en colonnes
-ul.media-list{
-	padding-left:0;
-	border-left:none;
+.dm_page_content.span8 .affichage_list_by_motif{
+	padding-top: 0 !important;
+	padding-bottom: 0;
+	border-bottom: 1px solid fade(@colorCouleur2, 10%);
+	margin-bottom: 30px;
+
+	img{
+		border: none;
+	}
+
+	h3, h3.special_title{
+		font-size: 30px !important;
+		margin-bottom:0;
+		padding-bottom:0;
+		font-weight: 400;
+	}
+
+	h4, h4.media-heading{
+		font-weight: 600;
+		color: @grayDark;
+	}
+	
+	.media-body{
+		p{
+			font-weight: 400;
+			color:@grayDark;
+		}	
+	}
+
+
+	.content-data{
+		padding:0;
+	} 
+
+	ul.media-list{
+		padding-bottom: 0;
+		margin-bottom:0;
+
+		li, li.media{
+			
+			padding: 15px 0;
+
+			&:hover{
+				
+			}
+		}
+	}
+
+	
+		.link.link_list{
+		    display: block;
+		    border-color: transparent;
+		    background: transparent;
+		    color: @colorCouleur3;
+		    font-size: 16px;
+		    margin-bottom: 0;
+		    margin-top: 0;
+		    text-align: right;
+		    max-width: 100%;
+		   
+		    &:before{
+		    	content:"\f061";
+		    	font-family: FontAwesome;
+			  	font-weight: normal;
+			  	font-style: normal;
+			  	display: inline-block;
+			  	text-decoration: inherit;
+			  	color: @grayLight;
+			  	margin-right: 5px;
+			  	font-size: 14px;    
+		    }
+
+		    &:hover{
+		    	color: @colorCouleur2;
+		    }
+		}
+
+
+
 }
 
-h4.media-heading{
-	border-bottom: 1px solid @gray;
-	color: lighten(@colorCouleur2,10%);
-}
 
-.media-body p{
-		font-size: 16px;
-		line-height: 21px;
-		color:@grayDark;
-}
+		ul.media-list{
+			padding-left:0;
+			border-left:none;
+		}
+
+		h4.media-heading{
+			border-bottom: 1px solid @gray;
+			color: lighten(@colorCouleur2,10%);
+		}
+
+		.media-body p{
+				font-size: 16px;
+				line-height: 21px;
+				color:@grayDark;
+		}
+
+		ul.media-list li.media{
+			border-bottom: 1px solid @grayLighter;
+		}
+		
+		ul.media-list li.media:hover{
+			background: fade(@colorCouleur1, 4%);
+		} 
+
+
+
 
 
 ///////////////////////////////////////////////////////////Pagination
@@ -202,12 +418,19 @@ h4.media-heading{
 	img{
 		background: @colorCouleur1;
 		margin-bottom: 20px;
+		width: 120px;
+		height: 120px;	
+
+
+		&:hover{
+			background: darken(@colorCouleur1, 10%);
+		}
 	}
 
 }
 
 
-////////////////////////////////////////////////////////// Widget Opinion Systemsur la home
+////////////////////////////////////////////////////////// Widget Opinion System sur la home
 
 .widget-opinion-system{
 	h3{
@@ -218,7 +441,128 @@ h4.media-heading{
 }
 
 
-//////////////////////////////////////////////////////// Widget simulateurs
+/////////////////////////////////////////////////////////// Widget simulateurs liste
+
+.simulateur{
+
+		border-bottom: 1px solid fade(@black, 10%);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		.transition(all 0ms ease) !important;
+		
+
+	span{
+		color: @black;
+		background: transparent;
+		padding-top:0;
+	}
+
+	 i {
+	    font-size: 40px;
+		top: 50%;
+		margin-top: -60px;
+		text-align: center;
+		.transition(all 300ms ease);
+		width: 90px;
+		border-radius: 50%;
+		line-height: 90px;
+		height: 90px;
+		left: 3%;
+		color: fade(@white, 70%);
+	}
+
+
+}
+.simulateur[data-classe='emprunts']{
+	background: transparent;
+	i{
+	  background: @colorCouleur3;
+	
+	}
+	&:hover i{
+	    background: darken(@colorCouleur3, 10%);
+	}	
+
+}
+
+.simulateur[data-classe='placements']{
+	background: transparent;
+	i{
+		background: saturate(@colorCouleur1, 20%);
+
+	}
+    	&:hover i{
+    	background: darken(saturate(@colorCouleur1, 20%), 10%);
+  		}
+
+}
+
+.simulateur[data-classe='credit-bail']{
+	background: transparent;
+		i{
+			  background: @couleur1Dark;
+
+		}
+			  &:hover i{
+			    background: darken(@couleur1Dark, 10%);
+			  }
+
+
+}
+
+.simulateur[data-classe='conges-payes']{
+	background: transparent;
+
+	i{
+	  background: @colorCouleur2;
+	
+	}
+
+	   &:hover i{
+	    background: darken(@colorCouleur2, 10%);
+	  }	
+
+}
+
+.simulateur[data-classe='autres']{
+	background: transparent;
+
+	i{
+	  background: saturate(@colorCouleur3, 35%) + rgb(30,30,30);
+	
+	}
+
+		  &:hover i{
+	    background: darken(saturate(@colorCouleur3, 35%) + rgb(30,30,30), 10%);
+	  }	
+
+}
+
+.simulateur[data-classe]{
+
+	&:hover{
+		background: transparent;
+	}
+}
+
+
+.simulateurs-selector li:hover, .simulateurs-selector li.active{
+	background: transparent;
+	a{
+		color: @colorCouleur2;
+		
+		i{
+			color: @colorCouleur2;
+		}
+
+	}
+	
+
+}
+
+
+//////////////////////////////////////////////////////// Widget simulateurs multicontent
 .content_multicontent{
 
 	.icon-simulateur{
@@ -285,6 +629,62 @@ h4.media-heading{
 	}
 } 
 
+
+////////////////////////////////////////////////////////// Petit widget avec les liens base doc / éditoriale en pictos
+
+.menu-picto-base{
+
+	padding-top:20px;
+	padding-bottom:0;
+	
+	.container{
+		border-top: 1px solid fade(@black, 15%);
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+
+	.span2{
+		text-align: center;
+	}
+
+	img{
+		width: 60px;
+		height: 60px;
+		padding: 2px;
+		border-radius: 50%;
+		background: fade(@black, 15%);
+		.transition(all 200ms ease);
+	}
+
+	.span2:hover{
+		img{
+		 	background: @gray;
+		}
+
+		span{
+			color: @gray;
+		}
+	}
+
+
+
+	span{
+		display: block;
+		color: @grayLight;
+		text-align: center;
+		margin-top: 20px;
+		font-size: 22px;
+	}
+
+} 
+
+
+
+
+
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////// VERSION " BAS DE PAGE " DES WIDGETS // : les widgets qui s'affichent en bas de page dans les pages de contenu n'ont pas le même aspect que leur version en "page type home / sous-home"
 
 .widget-bas{
@@ -299,6 +699,10 @@ h4.media-heading{
 		 	margin-top: 40px;
 			
 		 	}
+		}
+
+		.subTitle, .generallink{
+			display: none;
 		}
 }
 
@@ -361,9 +765,10 @@ h4.media-heading{
 //////// Version mobile
 #open-left-mobile{
 	border: none;
+	margin-left:0;
 
 	&::after{
-		margin-top: -31px;
+		margin-top: -25px;
 		margin-right: -84px;
 	}
 }
@@ -373,6 +778,12 @@ h4.media-heading{
 }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LE MENU PRINCIPAL
+
+.dm_widget_navigation_menu_container{
+	max-width: 1170px;
+}
+
 //////////////////////////////////////////////////////// Le bouton recherche dans le menu en haut
 .navbar{
 	
@@ -381,6 +792,120 @@ h4.media-heading{
 	}
 
 }
+
+.searchbtn:hover, .searchbtn:focus {
+background-color: #1ebae7;
+color: @white;
+}
+
+
+////////////////////////////////////////////// Le menu caché sur la gauche qui se déplie
+
+.snap-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.snap-drawers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+
+.snap-drawer {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  max-width: 320px;
+  height: auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: width 0.3s ease;
+     -moz-transition: width 0.3s ease;
+      -ms-transition: width 0.3s ease;
+       -o-transition: width 0.3s ease;
+          transition: width 0.3s ease;
+
+	form{
+		padding:0;
+		border: none;
+		background: transparent;
+	}
+
+	h3{
+		margin: 25px;
+	}
+
+	h4{
+		padding: 0px 0px 0px 15px;
+		line-height: 40px;
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////LE MENU QUI SE DÉPLIE
+
+body.snapjs-left{
+	.snap-drawer {
+		display: block;
+	}	
+}
+
+.snap-drawer-left {
+  left: 0;
+  z-index: 1;
+}
+
+.snap-drawer-right {
+  right: 0;
+  z-index: 1;
+}
+
+.snapjs-left .snap-drawer-right,
+.snapjs-right .snap-drawer-left {
+  display: none;
+}
+
+.snapjs-expand-left .snap-drawer-left,
+.snapjs-expand-right .snap-drawer-right {
+  width: 100%;
+}
+
+.snap-drawer ul li ul li{
+	border-top: 1px solid @white;
+}
+
+.snap-drawer ul li ul li a, .snap-drawer ul li ul.deployed li a {
+	font-size: 13px;
+
+	&:before{
+		content: "-";
+		display: block;
+		float: left;
+		text-align: left;
+	}
+}
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////LES ARTICLES
 
@@ -450,11 +975,22 @@ article{
 
 
 .sidebar-adress h3 {
-    font-weight: 400;
+	font-size: 24px;
+    font-weight: 700;
     border-bottom: 1px solid @gray;
+    padding-bottom:0;
+    border: none;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Pack Création
+
+////////////////// Animation du pack Création
+
+.anim-crea-new{
+	padding-top:0 !important;
+	padding-bottom: 0 !important;
+}
+
 
 ////Menu création
 
@@ -482,7 +1018,8 @@ article{
 .dm_widget.menu-creation .dm_widget_navigation_menu_container .navbar .navbar-inner .container .nav-collapse .nav > li > a:focus,
 .dm_widget.menu-creation .dm_widget_navigation_menu_container .navbar .navbar-inner .container .nav-collapse .nav > li > a:active
  {
-    color: darken(@colorCouleur2, 5%);
+    background: darken(@colorCouleur2, 5%);
+    color: #fff;
 }
 
 .dm_widget.menu-creation .dm_widget_navigation_menu_container .navbar .navbar-inner .container .nav-collapse .nav-pills > .active > a{
@@ -493,6 +1030,10 @@ article{
 		background: darken(@colorCouleur2, 10%);
 		color: #fff;
 	}
+}
+
+.actus-creation .wrapper-link{
+	background: darken(@colorCouleur2, 5%);
 }
 
 /////////////////////////////////////////////////////////////////////////Nouveaux pictos pour le guide création
@@ -569,6 +1110,12 @@ article{
 	background-position: center !important;
 }
 
+.guide-creation div[data-motif="GCES"] {
+    background-image: url('/uploads/pictos-crea/crea-sites-internet.png');
+    background-size: 120px 120px !important;
+	background-position: center !important;
+}
+
 
 .guide-creation div.wrapper-link{
 	margin-bottom: 100px;
@@ -622,6 +1169,153 @@ article{
 }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FORMULAIRES
+
+form{
+	background: @white;
+	border: 1px solid fade(@colorCouleur2, 20%);
+	border-radius:2px;
+}
+
+
+form.form-horizontal .control-group {
+    width: 70%;
+    max-width: 490px;
+    float: none;
+    margin: 10px auto;
+}
+
+form.form-horizontal .controls input, form.form-horizontal .controls textarea, form.form-horizontal .controls select, form.form-horizontal textarea {
+    border-color: fade(@colorCouleur2, 20%);
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+form.form-horizontal input:focus, form.form-horizontal input:active, form.form-horizontal textarea:focus{
+	border-color: fade(@colorCouleur2, 80%);
+}
+
+form.form-horizontal .control-label {
+	text-transform: none;
+}
+
+
+form.form-horizontal input.captcha{
+	width: 260px !important;
+	margin-left:0;
+}
+
+
+form.form-horizontal a[title="Changer l\'image"] {
+	float: right;
+	position: relative;
+	top: -10px;
+}
+
+form.form-horizontal .controls textarea {
+	max-width: 480px;
+}
+
+form.form-horizontal .controls p.help-block {
+    margin-top: 0px;
+    clear: both;
+    font-size: 12px;
+}
+
+form.form-horizontal .control-label{
+	width: 100%;
+}
+
+.form-horizontal .form-actions{
+	padding-left: 0;
+}
+
+
+.vacpicpdd_form, .acs_form, .cce_form,
+.cd_form, .cjo_form, .cl_form,
+.cld_form, .ct_form, .ctr_form,
+.cvp_form, .fk_form, .hs_form,
+.srtb_form, .trc_form, .trsvc_form,
+.va_form, .vasvc_form, .vt_form{
+	
+	form{
+		padding-bottom:0;
+
+		fieldset, fieldset.well{
+			padding-bottom:0;
+			margin-bottom:0;	
+		}
+	}
+
+	 // Base for label styling 
+    [type="radio"]:not(:checked),
+    [type="radio"]:checked {
+      position: absolute;
+      left: -9999px;
+    }
+    [type="radio"]:not(:checked) + label,
+    [type="radio"]:checked + label {
+      position: relative;
+      padding-left: 25px;
+      cursor: pointer;
+    }
+
+    // radio aspect
+    [type="radio"]:not(:checked) + label:before,
+    [type="radio"]:checked + label:before {
+      content: '';
+      position: absolute;
+      left:0; top: 2px;
+      width: 17px; height: 17px;
+      border: 1px solid #aaa;
+      background: @grayLighter;
+      border-radius: 3px;
+      box-shadow: inset 0 1px 3px fade(@black, 30%);
+    }
+    // checked mark aspect
+    [type="radio"]:not(:checked) + label:after,
+    [type="radio"]:checked + label:after {
+      content: '✔';
+      position: absolute;
+      top: 0; left: 4px;
+      font-size: 14px;
+      color: #09ad7e;
+      transition: all .2s;
+    }
+    // checked mark aspect changes
+    [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      transform: scale(0);
+    }
+    [type="radio"]:checked + label:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+    // disabled radio
+    [type="radio"]:disabled:not(:checked) + label:before,
+    [type="radio"]:disabled:checked + label:before {
+      box-shadow: none;
+      border-color: #bbb;
+      background-color: #ddd;
+    }
+    [type="radio"]:disabled:checked + label:after {
+      color: #999;
+    }
+    [type="radio"]:disabled + label {
+      color: #aaa;
+    }
+    /* accessibility */
+    [type="radio"]:checked:focus + label:before,
+    [type="radio"]:not(:checked):focus + label:before {
+      border: 1px dotted blue;
+    }
+
+    //hover style just for information
+    label:hover:before {
+      border: 1px solid @colorCouleur1;
+    }
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////// Formulaires en modal ( "modalform" )
 
 .modalform{
@@ -633,18 +1327,44 @@ article{
 	}
 
 	.contentHeader{
+		
+		padding: 5px !important;
+
 		.wrapper{
 			display: block;
 			margin: 10px;
 			padding: 10px;
-			background: darken(@white, 10%);
+			background: transparent;
+
+			p{
+				font-size: 14px;
+				line-height: 18px;
+				strong{
+					font-weight: 500;
+				}
+			}
 		}
 	}
 
 	form{
 		display: block !important;
+		border: none;
+		border-top: 1px solid fade(@black, 10%);
+		border-radius: 0;
+
+		fieldset{
+			border-bottom-width: 1px;
+		}
 	}
+
+	form.form-horizontal .controls p.help-block {
+	margin-top: 0px;
+	clear: both;
+	font-size: 11px;
+	}
+
 }
+
 
 
 .modalform.formvisible{
@@ -657,6 +1377,22 @@ article{
 
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus{
 	color: @grayDark;
+}
+
+
+
+.form_visible_dev{
+  display: block !important;
+  position: static !important;
+  visibility: visible !important;
+}
+
+.modalform.form_visible_dev{
+  margin: 20px auto;
+
+  h2{
+  	margin-top: 0;
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -741,21 +1477,78 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////LE MENU QUI SE DÉPLIE
 
-body.snapjs-left{
-	.snap-drawer {
-		display: block;
-	}	
+
+
+////// Le bouton pour déplier le menu version mobile
+
+
+#open-left-mobile span {
+width: 25px;
+margin: 5px auto;
+height: 3px;
+border-radius: 50px;
 }
 
-.snap-drawer{
-	h3{
-		margin: 12px;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LA SIDEBAR
+
+/// Carousel dans la sidebar
+
+.sidebar-carousel{
+	
+	.carousel-control{
+		color: @black;
+		background: @white;
+		border-radius: 50%;
+		line-height: 30px !important;
+		text-align: center !important;
+		opacity: .5;
+		&:hover, &:focus{
+			color: @black;
+			background: @white;
+			opacity:.9;
+		}
 	}
 
-	h4{
-		padding: 10px;
+	h3{
+		font-size: 15px;
+		text-align: left;
+		line-height: 20px;
+		color: @white;
+		padding-left: 15px;
+		margin-top: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-top:35%;
+	}
+
+    .sidebar-slideimg-container{
+		max-width: 100%;
+		overflow:hidden;
+    }
+
+	.sidebar-slideimg, .sidebar-slide-desc{
+		max-width: 50%;
+	}
+
+	.sidebar-slide-desc{
+		background: @colorCouleur1;
+		min-height: 200px;
+	
+	}
+
+}
+
+
+
+
+/// Adresse dans la sidebar
+
+.sidebar-adress ul li{
+	font-size: 13px;
+
+	&:first-child{
+		border-top: 1px solid @gray;
 	}
 }
 
@@ -770,7 +1563,299 @@ fieldset.well{
     background-color: transparent;
 }
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LE FOOTER
+
+//// Le logo dans le footer
+
+.footer-logo{
+	max-width: 65%;
+	margin-bottom: 10px;
+}
+
+
+///// La derscription / le résumé du cabinet dans le footer
+
+.footer-cabinet-desc{
+	border-bottom: 2px solid @colorCouleur1;
+
+	p{
+			font-size: 12px;
+			line-height: 16px;
+
+		a{
+			color: fade(@white, 70%);
+		
+		
+			&:hover{
+				color: @colorCouleur1;
+			}
+
+		}
+
+	}
+}
+
+///// Les liens vers les réseaux sociaux dans le footer ET dans la sidebar
+
+.footer-social-links, .sidebar-social-links{
+	ul{
+		text-align: left;
+		padding: 0;
+		margin:0;
+
+		li{
+			display: inline-block;
+			margin: 10px;
+			a{
+				color: fade(@white, 50%);
+				font-size: 18px;
+				display: block;
+				width: 100%;
+
+				&:hover{
+					color: @white;
+				}
+			}
+
+		}
+	}
+}
+
+.sidebar-social-links{
+	ul{
+		li{
+			margin: 12px;
+			a{
+				color: @gray;
+
+				&:hover{
+					color: @black;
+				}
+			}			
+		}
+	}
+
+}
+
+.itemprop .type [class^="icon"]:before, .itemprop .type [class*=" icon"]:before{
+	color: @colorCouleur1;
+} 
+
+///// Les adresses dans le footer
+
+.adresse-footer{
+	h4{
+		color: @white;
+		padding-bottom: 0;
+		margin-top:0;
+		margin-bottom: 5px;
+	}
+
+	div, span, a{
+		color: fade(@white, 70%);
+		font-size: 12px;
+		line-height: 18px;
+	}
+	
+	i{
+		color: @colorCouleur1;
+		margin-right: 5px;
+	}
+
+	.addressLocality{
+		font-weight: 300;
+	}
+
+	a:hover{
+		color: @white;
+	}
+} 
+
+
+///// Le menu dans le footer
+
+.footer-menu{
+	font-size: 12px;
+	text-align: left;
+
+
+	ul{
+		margin:0;
+		padding:0;
+		padding-bottom: 10px;
+		border-bottom: 2px solid @colorCouleur1;
+
+		li{
+			margin: 0;
+			padding:0;
+
+			a{
+				color: fade(@white, 90%);
+				font-size: 12px;
+			
+				&:hover{
+					color: @white;
+				}
+			}
+
+			a.espace-client{
+				color: @colorCouleur1;
+			}
+		}
+	}
+
+	.copyright{
+		p{
+			font-size: 10px;
+			line-height: 12px;
+			text-transform: uppercase;
+			color: fade(@white, 50%);
+			font-weight: 300;
+			margin-bottom: 2px;
+
+			&:first-child{
+				padding-top: 5px;
+			}
+		}
+
+
+		a{
+			font-size: 10px;
+			color: fade(@white, 50%);
+
+			&:hover{
+				color: @white;
+			}
+		}
+	}
+}
+
+
+
+
+///// Réseaux sociaux
+
+.dm_widget .social_network_shared .dm_widget_inner ul, .bs-social-buttons {
+    padding: 0;
+    border-top: 1px solid #D9DFE4;
+    border-bottom: 1px solid #D9DFE4;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+
+.dm_widget .social_network_shared .dm_widget_inner ul li, .bs-social-buttons li {
+    display: block;
+    float: left;
+    margin-left: 0;
+    height: 30px;
+    padding: 2px;
+    line-height: 30px;
+    overflow: hidden;
+    background: none repeat scroll 0% 0% #FFF;
+    width: 100px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+
+    a{
+    	display: block;
+    	width: 100%;
+    	i{
+			color: @colorCouleur1;
+
+    	}
+
+    	&:hover{
+    		i{
+    			color: darken(@colorCouleur1, 10%);
+    		}
+    	}
+    }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Style en cas d'insertion du newmenu de image
+
+/*.newmenu{
+	background: @colorCouleur1;
+	position: relative;
+	z-index: 999999999;
+
+	.menu-logo-container{
+		display: none;
+	}
+	
+	ul.large-list{
+		overflow: hidden;
+	}
+
+	.large-list-group.span2{
+		margin-left:0;
+	}
+
+}
+
+.newmenu nav ul li{
+	border-bottom: none;
+	border-left: 1px solid @white;
+
+	&:hover{
+		border-bottom: none;
+	}
+}
+
+.newmenu nav ul li a{
+	padding:0;
+	line-height: 43px;
+	text-transform: uppercase;
+
+}
+
+.newmenu nav ul li ul{
+	margin-top:0;
+}
+
+.newmenu ul li ul li a, .newmenu ul li ul li ul li a{
+	text-transform: none;
+}
+
+
+.newmenu nav ul li ul li a{
+	padding:0;
+}
+
+.newmenu.mobilemenu a{
+	line-height: initial;
+}
+
+.newmenu.mobilemenu nav ul li a {
+	padding-bottom:0;
+	padding-left:10px;
+}
+
+.newmenu.mobilemenu nav ul li ul li ul li a {
+    padding: 15px 0px 5px 40px;
+}
+
+.nm-large-list-container ul li a {
+	color: lighten(@colorCouleur3, 30%);
+}
+*/
 //////////////////////////////////////////////////////////////////////////////////////////////////// MEDIAS QUERIES
+
+@media all and (max-width: 1280px){
+	.modalform{
+		bottom:0;
+		overflow-y: auto;
+
+		.dm_widget_inner{
+			margin-top:10px;
+		}
+	}
+}
+
 
 @media all and (max-width: 1200px){
 	.bandeau-container, .fb-buttons{
@@ -781,9 +1866,59 @@ fieldset.well{
 	.fb-buttons{
 		float: right;
 	}
+
+	.sidebar-carousel{
+		h3{
+			font-size: 15px;
+			line-height: 30px;
+			padding-left: 5px;
+			margin-top: 15%;
+		}
+	
+		.sidebar-slide-desc{
+			min-height: 163px;
+	
+		}
+
+	}
+
+	.simulateur {
+		font-size: 14px;
+		
+		span{
+			left: 35%;
+			top: 10px;
+		}
+
+		i {
+				left: 5%;
+		}
+    }
+
 }	
 
 @media all and (max-width: 980px){
+
+///// Correction du point de rupture pour les pages avec sidebar
+.span8.dm_page_content, .span4.dm_layout_right{
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0px;
+    box-sizing: border-box;
+	
+	ul.media-list li.media a{
+		display: block;
+		overflow: hidden;
+
+		h4.media-heading{
+			margin-top: 10px;
+		}
+	} 
+
+}
+
+
 
 	.fixed-bar{
 		.bandeau-container, .fb-buttons{
@@ -830,7 +1965,8 @@ fieldset.well{
 	.guide-creation div[data-motif="GCEF"],
 	.guide-creation div[data-motif="GCEPA"],
 	.guide-creation div[data-motif="GCEA"],
-	.guide-creation div[data-motif="GCEFO"]{
+	.guide-creation div[data-motif="GCEFO"],
+	.guide-creation div[data-motif="GCES"]{
 		
 		width: 100px !important;
 		height: 100px !important;
@@ -838,10 +1974,105 @@ fieldset.well{
 		
 	}
 
+	.sidebar-carousel{
+		h3{
+			font-size: 22px;
+			line-height: 40px;
+		}
+		
+		.sidebar-slideimg-container{
+			background: @colorCouleur1;
+		}
+		
+		.sidebar-slideimg{
+			width: 30%;
+			max-width: 30%;
+			
+		}
+
+
+		.sidebar-slide-desc{
+			width: 70%;	
+			max-width: 70%;
+		}
+		
+		img{
+			margin: auto;
+		}
+	
+
+	}
+
+	.simulateur{
+		width: 100%;
+		font-size: 17px;
+		padding-top:5%;
+
+		&:first-child{
+			border-top: 1px solid fade(@black, 10%);
+		}
+		
+		span{
+			top:0;
+			left: 30%;
+			padding-top: 10px;
+		}
+
+		i{
+			left: 2%;
+			margin-top: -45px;
+		}
+	}
+
+	.navigation_menu nav{
+		padding:0;
+	}
+
+	#open-left-mobile{
+		margin-top: 5px;
+	}
+
+	.snap-drawer{
+		
+		h3{
+			margin: 0;
+			padding-bottom: 4px;
+			padding-top: 4px;
+			border-top: 1px solid fade(@black, 5%);
+
+		}
+
+		h4{
+			display: none;
+		}
+
+		.search{
+			margin-top: 28px;
+			margin-bottom: 67px;
+		}
+	}
+
+
+	.sidebar-carousel{
+	
+		.sidebar-slide-desc{
+			min-height: 0;
+	
+		}
+
+	}
+
 }
 
 
 @media all and (max-width: 768px){
+
+
+	.content_multicontent, .affichage_list_by_motif, .colonnes-list{
+		img{
+			width: 100%;
+		}		
+	}
 
 	.generallink a {
 	    border: none !important;
@@ -910,9 +2141,84 @@ fieldset.well{
 		
 	}
 
+	.widget-solutions{
+		
+		img{
+			max-width: 200px;
+			height: auto;
+			margin: auto;
+		}
+	}
+
+
+	.content_multicontent, .affichage_list_by_motif, .colonnes-list{
+		h2{
+			font-size: 30px !important;
+		}
+	}
+
+	.simulateur{
+			font-size: 17px;
+		span{
+			font-size: 17px;
+
+
+		}
+		
+		i {
+		left: 7%;
+		
+		}
+	}
+
+	.idees-business{
+		text-align: center;
+	}
+	
+	.idees-business .wrapper-link{
+	  width: 170px;
+	  height: 147px;
+	  display: inline-block;
+	  float: none;
+	  margin: 10px;
+	  margin-bottom: 5px;
+	  margin-top: 5px;
+	}
+
 
 }
 
+@media all and (max-width: 748px){
+
+	form.form-horizontal .control-group{
+		width: 85%;
+		max-width: 85%;
+	}
+
+	form.form-horizontal input.captcha{
+		margin: 0px auto 20px;
+		display: block;
+		width: 97% !important;
+	}
+
+	form.form-horizontal a[title="Changer l\'image"] {
+		float: none;
+		clear: both;
+		display: block;
+		margin-top: -20px;
+		position: static;
+		width: 100%;
+		text-align: center;		
+	}
+
+	article{
+		h1{
+			font-size: 30px;
+			line-height: 36px;
+			font-weight: 400;
+		}
+	}
+}
 
 @media all and (max-width: 580px){
 	
@@ -923,6 +2229,17 @@ fieldset.well{
 	.content_multicontent h3.special_title, .affichage_list_by_motif h3.special_title, .colonnes-list h3.special_title{
 		font-size: 37px !important;
 		line-height: 40px;
+	}
+
+	.simulateur i {
+		left: 5px;
+	}
+
+	article{
+		h1{
+			font-size: 24px;
+			line-height: 30px;
+		}
 	}
 
 }
@@ -961,7 +2278,8 @@ fieldset.well{
 	.guide-creation div[data-motif="GCEF"],
 	.guide-creation div[data-motif="GCEPA"],
 	.guide-creation div[data-motif="GCEA"],
-	.guide-creation div[data-motif="GCEFO"]{
+	.guide-creation div[data-motif="GCEFO"],
+	.guide-creation div[data-motif="GCES"]{
 		
 		width: 200px !important;
 		height: 200px !important;
@@ -969,15 +2287,48 @@ fieldset.well{
 		
 	}
 
+	.adresses_multi_implantation.liste-villes{
+		display: none;
+	}
 
 
+	.snap-drawer{
 
+		.search{
+			margin-top: 28px;
+			margin-bottom: 27px;
+		}
+
+	}
+
+}
+
+@media all and (max-width: 360px){
+
+	.simulateurs-selector{
+		margin-left:0;
+		padding-left:0;
+	}
+
+	.simulateur{
+		
+		min-height: 120px;
+
+		span{
+			left: 35%;
+		}
+
+		i{
+			left:0;
+		}
+	}
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////CODE POUR CORRIGER LES WIDGETS "INSERT CODE"
 
-.source_code_insert_form{
+.source_code_insert_form,
+.dm_widget_edit_dialog_wrap{
 	
 	font-family: arial, sans-serif !important;
 	
@@ -1042,23 +2393,47 @@ fieldset.well{
 	  font-size: 11.9px;
 	}
 
-
-	.accordion-heading {
-	  background: #447294;
-	  border-bottom-color: #ffffff;
+	p{
+		font-size: 14px;
 	}
+
+	
+	.alert{
+		padding-bottom: 5px;
+		background: #fcf8e3;
+		color: #C09853;
+	}
+
+	.alert-info{
+		background: #D9EDF7;
+		border-color: #BCE8F1;
+		color: #3A87AD;
+	}
+
+	.alert-success{
+		background: #DFF0D8;
+		color: #468847;
+	}
+
+	.alert-error, .alert-danger{
+		background: #F2DEDE;
+		color: #b94a48;
+	}
+
+
+	.accordion-group{
+	  background: transparent;
+	}
+
 	.accordion-heading .accordion-toggle {
 	  padding: 13px 15px;
-	  color: #ffffff;
 	  transition: color 0.3s;
 	  -o-transition: color 0.3s;
 	  -webkit-transition: color 0.3s;
 	  -moz-transition: color 0.3s;
 	}
 	.accordion-heading .accordion-toggle:hover {
-	  color: #447294;
 	  text-decoration: none;
-	  background: #74A6BD;
 	}
 	.accordion-heading .accordion-group {
 	  border: none;
@@ -1071,6 +2446,64 @@ fieldset.well{
 	}
 
 	*.well{
-		background-color: #F4F4F4;
+		background-color: #f7f7f7;
+	}
+
+	form, form.form-horizontal, form.form-horizontal .controls{
+		border: none;
+		border-radius: 0;
+
+		input{
+			height: 26px;
+
+			&:focus{
+				height: 26px;
+			}
+		}
+
+		input, input.submit, input:focus, select, select:focus, textarea, textarea:focus {
+			height: 26px;
+			font-size: 12px;
+			border-radius: 0;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			padding-left: 6px;
+			padding-right: 6px;
+			margin-bottom: 10px;
+		}
+	}
+
+	div.formtag span.labelform{
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	div.formtag input[type="text"]{
+		height: 20px;
+	}
+	
+
+	.accordion-heading, .dm_widget_edit_dialog_wrap .accordion-heading {
+		background: transparent;
+		color: #343434;
+		border: 1px solid #ccc;
+		height: 24px;
+		line-height: 24px;
+
+		.accordion-toggle{
+			color: #343434;
+
+			&:hover{
+				background: transparent;
+			}
+		}
+
+		&:hover{
+			background: #fff;
+
+			.accordion-toggle{
+				color: #212121;
+			}
+		}
 	}
 }

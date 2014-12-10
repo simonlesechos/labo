@@ -1,19 +1,66 @@
+@import "new-widgets-themes/expertscalendar.less";
+@import "new-widgets-themes/widget_googleMaps.less";
+@import "new-widgets-themes/widget-simulateurs.less";
+@import "new-widgets-themes/widget_sliderRev.less";
+//@import "new-widgets-themes/newmenu.less"; Décommenter pour importer les styles du menu de image
+@import "widget_calendar-commercial.less";
 // extends theme's variables.less file here
 body.page_main_pratique .content_quizz{
   text-align:center
 }
-
 @colorCouleur3: #f26125;
 
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 
-@commercialFont: 'Open Sans', sans-serif;
+//Variantes des couleurs de base :
+@couleur1Clair: lighten(@colorCouleur1, 30%);
+@couleur1Medium: lighten(@colorCouleur1, 20%);
+@couleur1Dark: darken(@colorCouleur1, 20%);
 
-@baseFontSize: 14px;
-@baseFontFamily: @commercialFont;
-@baseLineHeight: 20px;
-@altFontFamily: @commercialFont;
+@couleur2Clair: lighten(@colorCouleur2, 30%);
+@couleur2Medium: lighten(@colorCouleur2, 10%);
+@couleur2Dark: darken(@colorCouleur2, 30%);
 
-@headingsFontFamily: @commercialFont;
-@headingsFontWeight: normal;
-@headingsColor: inherit;*/
+@couleur3Clair: lighten(@colorCouleur3, 30%);
+@couleur3Medium: lighten(@colorCouleur3, 10%);
+@couleur3Dark: darken(@colorCouleur3, 30%);
+
+
+///////////////////////////////////////////////////////////////////////////// Widgets
+
+
+///Simulateurs
+
+////hauteur du container des simulateurs
+@widgetSimulateurMinHeight: 1000px;
+
+////Padding du widget
+@widgetSimulateurPaddingBottom: 60px;
+@widgetSimulateurPaddingTop: 0px;
+
+////Hauteur des blocs
+@widgetSimulateurHeight1200: 100px;
+@widgetSimulateurHeight1080: 140px;
+@widgetSimulateurHeight940:  120px;
+@widgetSimulateurHeight768:  100px;
+
+////Couleurs des liens des catégories de simulateurs
+@simulateurSelectorLinkColor: @couleur1Dark;
+
+/////borders des boutons liens des catégories: 
+@simulateurSelectorBorderColor: transparent;
+@simulateurSelectorSelectedBorderColor: darken(@white, 10%);
+
+////padding des Boutons liens des catégories par defaut
+@widgetSimulateurSelectorPadding: 15px 10px;
+
+////Taille de la police des blocs simulateurs
+@widgetSimulateurFontsize: 17px;
+/////Taille de la police sur petits écrans
+@widgetSimulateurFontsizeMobile: 14px;
+
+////Taille des icones des blocs simulateurs
+@widgetSimulateurIconFontsize: 20px;
+
+///border-radius des boutons de selection
+@simulateurSelectorBorderRadius : 0px;
+
