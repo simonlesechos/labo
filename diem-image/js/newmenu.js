@@ -193,5 +193,33 @@ function transformMenu(){
      
 });
 
+/*
+var lapage =  dm.currentPage.pagelink;
+var lapagemere =  dm.parentCurrentPage.pagelink;
+var lapagegrandmere =  dm.grandParentCurrentPage.pagelink;
+var lapagearrieregrandmere =  dm.rearGrandParentCurrentPage.pagelink;
+
+console.log(lapagearrieregrandmere +' || '+ lapagegrandmere +' || ' + lapagemere +' || '+ lapage +' || ')
+*/
+
+$(function(){
+    var currentPageLink = dm.currentPage.pagelink;
+  currentPageLink.indexOf(1);
+  currentPageLink = currentPageLink.split("/")[1];
+  currentPageLink = new RegExp(currentPageLink);
+    var menuActiveLink = $(this).attr('href');
+  
+  
+    $('.newmenu nav > ul > li > a').each(function(){
+ 
+      if(currentPageLink.test(this.href)){
+                $(this).addClass('active');
+                $(this).parents('li').addClass('active');
+      }
+     
+
+    });
+  
+});
 
 /*FIN DU CODE DU MENU*/

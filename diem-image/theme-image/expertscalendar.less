@@ -1,6 +1,15 @@
 .expertscalendar{
 .hidden { display:none; }
 
+strong{
+	&::before{
+		content:'•';
+		display: block;
+		float: left;
+		margin-right: 5px;
+	}
+}
+
 .eventCalendar-wrap { 
 	position:relative; 
 	overflow:hidden;
@@ -388,7 +397,7 @@ h2{
 		.eventsCalendar-list li time em {
 			font-style:normal;
 			color: #fff;
-			font-size: 20px;
+			font-size: 16px;
 			line-height: 50px;
 		}
 		.eventsCalendar-list li time small {

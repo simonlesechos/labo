@@ -67,6 +67,7 @@ color: @white;
   cursor: pointer;
   font-size: @widgetSimulateurFontsize;
   color: @white;
+  border-radius: @simulateurBorderRadius;
 }
 
 .simulateur i{
@@ -85,7 +86,7 @@ color: @white;
   -ms-transform: scale(1) skew(0) rotateY(0) rotateX(0);
   -o-transform: scale(1) skew(0) rotateY(0) rotateX(0);
   transform: scale(1) skew(0) rotateY(0) rotateX(0);
-  .transition(all 300ms ease 0s);
+  .transition(all 100ms ease 0s);
 }
 
 .simulateur span{
@@ -122,11 +123,11 @@ color: @white;
 }
 
 .simulateur.filter-hide{
-  -moz-transform: scale(0) skew(0eg) rotateY(0deg);
-  -webkit-transform: scale(0) skew(0deg) rotateY(0deg);
-  -ms-transform: scale(0) skew(0deg) rotateY(0deg);
-  -o-transform: scale(0) skew(0deg) rotateY(0deg);
-  transform: scale(0) skew(0deg) rotateY(0deg);
+  -moz-transform: skew(0deg) rotateY(0deg) scale(0);
+  -webkit-transform: skew(0deg) rotateY(0deg) scale(0);
+  -ms-transform: skew(0deg) rotateY(0deg) scale(0);
+  -o-transform: skew(0deg) rotateY(0deg) scale(0);
+  transform: skew(0deg) rotateY(0deg) scale(0);
   width:0;
   height:0;
   margin:0;
@@ -141,9 +142,6 @@ color: @white;
   -ms-transform: scale(0) skew(0deg) rotateY(0deg);
   -o-transform: scale(0) skew(0deg) rotateY(0deg);
   transform: scale(0) skew(0deg) rotateY(0deg);
-  width:0;
-  height:0;
-  margin:0;
   opacity:0;
   visibility: hidden;
   .transition(all 500ms ease 0s);
@@ -223,7 +221,7 @@ color: @white;
     height: @widgetSimulateurHeight1080;
   }
 
-.simulateur.span3, .simulateur.span2{
+.simulateur.span6, .simulateur.span4, .simulateur.span3, .simulateur.span2{
 
             span{
               font-size: 14px;
@@ -235,12 +233,13 @@ color: @white;
 
 @media all and (max-width: 980px){  
 
-  .simulateur.span3, .simulateur.span2{
+
+  .simulateur.span6, .simulateur.span4, .simulateur.span3, .simulateur.span2{
 
     width: 538px;
 
             span{
-              font-size: 16px;
+              font-size: 14px;
               text-transform: none;
             }
     }
@@ -276,15 +275,19 @@ color: @white;
   }
 
 
-  .simulateur.span3, .simulateur.span2{
-
-      width: 95%;
-
-    }
+  .simulateur.span6, .simulateur.span4, .simulateur.span3, .simulateur.span2 {
+      width: 95% !important;
+      height: 100px;
+  }
+  .simulateur.filter-hide{
+    height:0;
+  }
   
   .simulateurs-container{
   min-height: 420px;
   }
+
+  
 
 }
 

@@ -19,9 +19,6 @@ $('.scrollbtn, .scrollshadow').click(function(){
 $(document).ready(function(){
 
 
-
-
-
 //Todo : cas sans ajax
 //resizeBoxes();
 
@@ -115,7 +112,7 @@ $('.pagebody .littlebox').each(function(i){
 
 //Regex permettant d'appliquer la classe active aux li en fonction de la correspondance de l'URL dans la barre d'adresse avec le lien contenu par la balise li
     
-$(function(){
+/*$(function(){
 
     var url = window.location.pathname, 
         urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
@@ -137,7 +134,7 @@ $(function(){
 
 });
 
-
+*/
 
 //Redimensionnement automatique des titres dans les box-menus (pages sous-home) en fonction nde la longueur du texte et de la largeur de la box
 

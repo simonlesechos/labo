@@ -1,7 +1,6 @@
 // theme's imports
 @import "import.less";
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////// STYLES GENERAUX
 html, body{
 	font-family: @commercialFont !important;
@@ -9,6 +8,8 @@ html, body{
 
 body{
 	font: inherit;
+	overflow-x: hidden;
+	padding:0;
 }
 
 h1{
@@ -20,11 +21,15 @@ p{
 	font-size: 17px;
 	line-height: 28px;
 	
-
 }
 
 .posRelative{
 	position: relative;
+}
+
+.specialTop{
+	width: 100%;
+	display: inline-block;
 }
 
 .underlined {
@@ -55,6 +60,10 @@ h4{
   margin-top: 30px
 }
 
+h4.media-heading{
+  margin-top:30px;		
+}
+
 .light-bg{
 	background: fade(@colorCouleur1, 4%);
 }
@@ -67,8 +76,15 @@ h4{
 	color: @black;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////// STYLES DES WIDGETS
 
+///////////////////////////////////////////////////////////////////////////////////////////////////// dm_page
+
+#dm_page{
+	//overflow: auto;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////// STYLES DES WIDGETS
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////// HEADER
 
@@ -141,6 +157,13 @@ h4{
 	background: none repeat scroll 0% 0% rgba(76, 200, 236, 0.04);
 } 
 
+//// Le petit opinion system en haut à droite du site
+
+//hauteur fixe nécessaire pour calculer le margin du titre du menu de gauche
+.content_opinion_system{
+	height: 27px;
+	display: block;
+}
 
 /////////////////////////////////////////////////////////// TOUS LES WIDGETS MULTICONTENT ET LIST BY MOTIF
 #dm_page_content_bottom .content_multicontent.colonnes-list .title,
@@ -290,9 +313,15 @@ h4{
 	}
 	
 	.media-body{
-		p{
+
+		p{	
+			font-size: 15px;
 			font-weight: 400;
 			color:@grayDark;
+
+			em{
+				font-size: 14px;
+			}
 		}	
 	}
 
@@ -767,15 +796,40 @@ h4{
 	border: none;
 	margin-left:0;
 
-	&::after{
-		margin-top: -25px;
-		margin-right: -84px;
+	&::after {
+		content: "Rubriques";
+		float: right;
+		color: #fff;
+		margin-top: -26px;
+		margin-right: 44px;
 	}
 }
+
+
 
 #open-left-mobile:hover {
     border: none;
 }
+
+#open-left-mobile {
+    float: right;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LE SLIDER DE L'ACCUEIL
+
+//Slider styles
+.tp-caption.echos_big_bluebg {
+background-color: @colorCouleur1;
+color: @white ;
+}
+
+.tp-caption.echos_orange{
+//background-color: @colorCouleur3;
+//color: @white;
+}
+
+//find des styles du slider
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LE MENU PRINCIPAL
@@ -794,7 +848,7 @@ h4{
 }
 
 .searchbtn:hover, .searchbtn:focus {
-background-color: #1ebae7;
+background-color: @couleur1Dark;
 color: @white;
 }
 
@@ -1320,7 +1374,7 @@ form.form-horizontal .control-label{
 
 .modalform{
 	bottom:0;
-	overflow-y: auto;
+	//overflow-y: auto;
 
 	.dm_widget_inner{
 		margin-top:5%;
@@ -1848,11 +1902,15 @@ fieldset.well{
 @media all and (max-width: 1280px){
 	.modalform{
 		bottom:0;
-		overflow-y: auto;
+		//overflow-y: auto;
 
 		.dm_widget_inner{
 			margin-top:10px;
 		}
+	}
+
+	.modalform.formvisible{
+		overflow-y: auto;
 	}
 }
 
@@ -1895,9 +1953,24 @@ fieldset.well{
 		}
     }
 
+	.media-list{
+
+		.media-object{
+			max-width: 40%;
+		}
+	}
+
+	.width_full{
+		.dm_widget_inner{
+			margin-right: auto;
+			margin-left: auto;
+			width: 940px;
+		}
+	}
+
 }	
 
-@media all and (max-width: 980px){
+@media all and (max-width: 979px){
 
 ///// Correction du point de rupture pour les pages avec sidebar
 .span8.dm_page_content, .span4.dm_layout_right{
@@ -2062,11 +2135,48 @@ fieldset.well{
 
 	}
 
+	.media-list{
+
+	.media-object{
+			max-width: 100%;
+		}
+	}
+
+	.width_full{
+		.dm_widget_inner{
+			margin-right: auto;
+			margin-left: auto;
+			width: 724px;
+		}
+	}
+
 }
 
 
 @media all and (max-width: 768px){
 
+.container{
+	width: auto;
+	margin: 0 auto;
+
+	.row{
+		width: 100%;
+		margin: 0 auto;
+
+
+	}
+}
+
+[class*="span"]{
+	float: none;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.simulateur{
+		float: left;
+	}
+}
 
 	.content_multicontent, .affichage_list_by_motif, .colonnes-list{
 		img{
@@ -2106,7 +2216,7 @@ fieldset.well{
 	}
 
 	.guide-creation div.wrapper-link{
-		width: 49%;
+		width: 48%;
 		float: left;
 		text-align: center;
 	}
@@ -2185,7 +2295,27 @@ fieldset.well{
 	  margin-top: 5px;
 	}
 
+	.menu-picto-base{
 
+		.span2{
+			border-bottom: 1px solid @grayLighter;
+	        padding-top: 20px;
+	        padding-bottom: 20px;
+	
+	        &:first-child{
+	            border-top: 1px solid @grayLighter;
+	        }  
+		}
+	
+	}	
+
+	.width_full{
+		.dm_widget_inner{
+			margin-right: auto;
+			margin-left: auto;
+			width: auto;
+		}
+	}
 }
 
 @media all and (max-width: 748px){
