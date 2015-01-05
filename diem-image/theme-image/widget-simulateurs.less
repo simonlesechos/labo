@@ -287,7 +287,7 @@ color: @white;
   min-height: 420px;
   }
 
-  
+
 
 }
 
@@ -295,13 +295,14 @@ color: @white;
 @media all and (max-width: 420px){
 
   .simulateurs-selector li{
-    width: 95%;
-    margin: 5px auto;
-    margin-left:0;
+    width: 45%;
+    margin: 1%;
     display: block;
+    float: left;
 
     a{
       padding: 5px;
+      font-size: 13px;
     }
   }
 
@@ -311,5 +312,21 @@ color: @white;
   text-transform: none;
   }
 
+
+}
+
+@media all and (max-width: 300px){
+
+  .simulateurs-selector li{
+    width: 95%;
+    margin: 5px auto;
+    display: block;
+    float: none;
+    
+    a{
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
 
 }

@@ -97,6 +97,13 @@ h1 a{
 	text-decoration: none !important;
 }
 
+.title{
+  font-weight: 300 !important;
+  font-size: 32px;
+  line-height: 20px;
+  height: auto;
+}
+
 .exergue{
   color:@colorCouleur1;
 }
@@ -124,6 +131,7 @@ h1 a{
 .hidden-title-content-box h3{
   display: none;
 }
+
 
 article {
     
@@ -195,6 +203,7 @@ article {
   background: @white;
   white-space: pre-wrap;
   overflow: hidden;
+  //padding-top:0;
 }
 
 .votre-information .breadcrumb, .nos-expertises .breadcrumb, .le-cabinet .breadcrumb, .page_main_testLayout .breadcrumb, .page_missions_list .breadcrumb, .page_main_leCabinet.breadcrumb{
@@ -1971,6 +1980,7 @@ a.homelink.active:hover{
   margin-bottom: 60px;
   padding: 10px;
   padding-top:0;
+  min-height: 450px;
 }
 
 .dessin-semaine{
@@ -2617,7 +2627,7 @@ footer.main-footer{
 }
 
 
-/*SITE MAP*/
+//SITE MAP//
 
 .sitemap_plan_du_site{
   ul{
@@ -2847,6 +2857,11 @@ img{
   text-align: center;
 }
 
+.carte-de-voeux.row{
+  width: 100%;
+  margin-left:0;
+}
+
 .carte-de-voeux a{
   display: block;
   text-align: center;
@@ -2898,16 +2913,20 @@ h1{
 }
 
 .colonnes-list{
-  .span8, .span4{
+  .row.media-list .span4, .span8, .span4{
     margin: 20px auto;
-    max-width: 92%;
-    width: 92%;
+    max-width: 84%;
+    width: 84%;
+    float: none;
 
       img{
         height: auto;
       }
   }
 }
+
+
+
 
 }
 
@@ -3118,6 +3137,11 @@ article, .pres-cab {
       font-style: normal;
     }
 
+    .eventsCalendar-list li time em {
+      padding-left:0;
+      border-left: none;
+    }
+
   blockquote.well{
     h5{
       font-weight: bold;
@@ -3162,7 +3186,34 @@ article, .pres-cab {
       position: static;
       margin: 0 auto;
     }
+
+    .copyright{
+      text-align: center;
+    }
   }
+
+  .box-menu .titre-page, .dark-background .titre-page {
+    margin-top:20px;
+    margin-bottom: 30px;
+
+    h2{
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-menu ul li a{
+    background: @colorCouleur2;
+    color: @gray;
+  }
+
+  .footer-box{
+    padding: 5%;
+  }
+  
+  .backtotop{
+    margin-bottom: 20px;
+  }
+
 }
 
 @media all and (max-width: 680px){
@@ -3170,7 +3221,7 @@ article, .pres-cab {
 .main-contact-form .dm_widget_inner .control-group-container, .main-contact-form .dm_widget_inner .main-textarea, .main-contact-form .dm_widget_inner .control-group-container-center{
   float: none;
   clear: both;
-  width: 90%;
+  width: 100%;
   margin: auto;
 
   textarea{
@@ -3298,6 +3349,19 @@ form .controls, .form-horizontal .controls{
 
 
 }
+
+
+@media all and (max-width: 620px){
+      .colonnes-list{
+      .row.media-list .span4, .span8, .span4{
+        max-width: 95%;
+        width: 95%;
+       
+      }
+    }
+
+}
+
 @media all and (max-width: 480px){
 
   img.captcha{

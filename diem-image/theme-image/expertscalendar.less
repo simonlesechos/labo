@@ -399,7 +399,10 @@ h2{
 			color: #fff;
 			font-size: 16px;
 			line-height: 50px;
+			padding-left:0;
+			borde-left: none;
 		}
+
 		.eventsCalendar-list li time small {
 			display: none;
 			font-size:10px;
@@ -544,6 +547,22 @@ pre {
     	.eventsCalendar-currentTitle .monthTitle{
 			max-width: 80%;
     	}
+	}
+}
+
+
+@media all and (max-width: 480px){
+	.expertscalendar .eventsCalendar-list-wrap{
+		padding-top:0;
+	}
+
+	.expertscalendar .eventsCalendar-list li time{
+		width: 100%;
+	}
+
+	.expertscalendar .eventDescWrapper {
+		float: none;
+		width: 100%;
 	}
 }
 

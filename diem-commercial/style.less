@@ -60,8 +60,15 @@ h4{
   margin-top: 30px
 }
 
+.colonnes-list{
+	h4.media-heading{
+	  margin-top:30px;
+	  font-weight: 600;		
+	}
+}
+
 h4.media-heading{
-  margin-top:30px;		
+	  font-weight: 600;		
 }
 
 .light-bg{
@@ -310,6 +317,7 @@ h4.media-heading{
 	h4, h4.media-heading{
 		font-weight: 600;
 		color: @grayDark;
+		margin-bottom:0;
 	}
 	
 	.media-body{
@@ -318,10 +326,19 @@ h4.media-heading{
 			font-size: 15px;
 			font-weight: 400;
 			color:@grayDark;
+			padding-top:0;
+		
+		&.show-date{
+			
+			padding:0;
+			margin-bottom:0;
 
 			em{
-				font-size: 14px;
+				font-size: 12px;
+				padding:0;
 			}
+		}	
+
 		}	
 	}
 
@@ -392,6 +409,7 @@ h4.media-heading{
 				font-size: 16px;
 				line-height: 21px;
 				color:@grayDark;
+				font-weight: 400;
 		}
 
 		ul.media-list li.media{
@@ -402,6 +420,10 @@ h4.media-heading{
 			background: fade(@colorCouleur1, 4%);
 		} 
 
+
+		.affichage_list_by_motif .show-date{
+			border: none;
+		}
 
 
 

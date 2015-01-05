@@ -3,7 +3,8 @@
 @color1: @colorCouleur1;
 @color2: @colorCouleur2;
 @color3: @white;
-
+@widgetImageMenuMobileViewBorderLight : none ;
+//@widgetImageMenuMobileViewBorderLight;
 
 .marginreset{
   margin:0;
@@ -161,11 +162,11 @@
 
           li{
             float: none;
-            border-bottom: 1px solid fade(@black, 10%);
+            border-bottom: @widgetImageMenuMobileViewBorderLight;
 
             &:hover{
               background: fade(@black, 10%);
-              border-bottom: 1px solid fade(@black, 10%);
+              border-bottom: @widgetImageMenuMobileViewBorderLight;
             }
 
             a{
@@ -189,14 +190,14 @@
               z-index: -1;
               overflow: hidden;
               border-top:4px solid @color2;
-              border-right: 1px solid fade(@black, 10%);
-              border-left: 1px solid fade(@black, 10%);
+              border-right: @widgetImageMenuMobileViewBorderLight;
+              border-left: @widgetImageMenuMobileViewBorderLight;
 
               li{
-                border-bottom: 1px solid fade(@black, 10%);
+                border-bottom: @widgetImageMenuMobileViewBorderLight;
 
                 &:hover{
-                  border-bottom: 1px solid fade(@black, 10%);
+                  border-bottom: @widgetImageMenuMobileViewBorderLight;
 
                 }
 
@@ -261,15 +262,20 @@ li.large-list-deployer.active{
   top: 0px !important;
   left: auto !important;
   right: 0px;
-  border-left: 1px solid #eee !important;
+  border-left: @widgetImageMenuMobileViewBorderLight !important;
   z-index: 12;
   text-align: center !important;
   background: @color3 !important;
   padding-left:0 !important;
   padding-right: 0 !important;
+  font-size: 12px !important;
 
   &:hover{
     color: @color1 !important;
+  }
+
+  &:before{
+    display: none;
   }
 }
 
@@ -548,6 +554,8 @@ ul.main-social-list{
     overflow: hidden;
     text-align: center;
     font-size:0;
+    margin-top: 60px;
+    
     li{
       display: inline-block;
      
@@ -557,11 +565,16 @@ ul.main-social-list{
       a{
         text-align: center;
         font-size: 19px;
-      
+        padding:0;
+
         
       &::before{
         display: none;
       }  
+
+      i{
+        line-height: 40px;
+      }
 
       }
 
@@ -587,6 +600,11 @@ ul.main-social-list{
 
     li.menu-logo-container a{
       display: none !important;
+    }
+
+    .image-breadcrumb .breadcrumb, .breadcrumb{
+      margin-top: 10px;
+      padding-top:0;
     }
 } 
 
@@ -635,7 +653,16 @@ ul.main-social-list{
   .header-logo {
     max-width: 170px;
     float: left;
+    margin-right: 0;
   }
+
+  .deployer-btn{
+    overflow: hidden;
+    float: right;
+    width: 30%;
+    height: 30px;
+  }
+
 }
 
 .no-touch .deployer{
@@ -695,11 +722,17 @@ li.social a{
   
    nav ul li{
     
-    border-bottom: 1px solid fade(@black, 10%) !important;
+    border-bottom: @widgetImageMenuMobileViewBorderLight !important;
     //box-shadow: inset 0px 0px 30px 0px fade(darken(@color1, 70%), 10%);
     line-height: 1.7em;
     background: @color3;
     margin: 0 !important;
+    position: relative;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
     
    
     &.active{
@@ -729,13 +762,18 @@ li.social a{
     }  
 
     a:hover{
-      background: @color1;
-      color: @color3;
+      background: @color3;
+      color: saturate(@color1,20%);
     }
 
     a.active{
-      background: darken(@color3,5%);
+      background: @color3;
       color: @black;
+      font-weight: bold;
+
+      &:hover{
+        color: saturate(@color1,20%);
+      }
     }
     
     &:last-child{
@@ -744,18 +782,24 @@ li.social a{
   }
   
    nav ul li ul{
-    //border-top: 1px solid fade(@black, 10%);
+    //border-top: @widgetImageMenuMobileViewBorderLight;
     background: @color3;
    }
 
 
-  nav ul li ul, nav ul li ul li ul{
+  nav ul li ul{
     background: transparent;
+    overflow: auto;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
   }
 
   nav ul li ul li{
        position: relative;
-       background: @color3;
+       background: darken(@color3, 4%);
      
     &::before{
       content:'';
@@ -773,17 +817,17 @@ li.social a{
       top:0;
       left: 10px;
       height: 100%;
-      line-height: 48px;
+      line-height: 55px;
       font-size: 0.8em;
       color: lighten(@color1, 10%);
     }
     
     &:first-child{
-      border-top: 1px solid fade(@black, 10%);
+      border-top: @widgetImageMenuMobileViewBorderLight;
     }  
 
     &:hover{
-      background: @color3;
+      
     }   
 
     a{
@@ -798,8 +842,8 @@ li.social a{
        }
 
         &:hover{
-        background: lighten(@color1, 10%);
-        color: @color3;
+          background: transparent;
+          color: saturate(darken(@color1, 10%), 20%);
         }
      }
   }
@@ -808,7 +852,7 @@ li.social a{
 
  nav ul li ul li ul li{
     position: relative;
-    background: @color1;
+   
     background: darken(@color3, 5%);
     &::before{
       content:'';
@@ -853,6 +897,7 @@ li.social a{
     background: @color3;
     a.active{
       background: @color3; 
+      font-weight: 400;
     }
   }
 
@@ -869,7 +914,7 @@ li.social a{
    transition: all 300ms ease;
 }  
 
-   .mobilemenu nav ul li ul li a i.icon-chevron-down::before{
+   .mobilemenu nav ul li a i.icon-chevron-down::before, .mobilemenu nav ul li ul li a i.icon-chevron-down::before{
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -ms-transition: all 300ms ease;
@@ -882,7 +927,7 @@ li.social a{
     transform: rotate(0deg);
    }
 
-   .mobilemenu nav ul li ul li a i.icon-chevron-down.rotate::before{
+   .mobilemenu nav ul li a i.icon-chevron-down.rotate::before, .mobilemenu nav ul li ul li a i.icon-chevron-down.rotate::before{
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -ms-transition: all 300ms ease;
@@ -896,7 +941,7 @@ li.social a{
    }
 
 
-.mobilemenu nav ul li ul li ul{
+.mobilemenu nav ul li ul, .mobilemenu nav ul li ul li ul{
   visibility:hidden;
   max-height:0;
   min-height:0;
@@ -909,10 +954,11 @@ li.social a{
 
 }
 
-.mobilemenu nav ul li ul li ul.list-opened{
+.mobilemenu nav ul li > ul.list-opened{
   visibility:visible;
   z-index: 2;
-  max-height: 500px;
+  max-height: none;
+  min-height: 350px;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
@@ -1031,6 +1077,20 @@ li.social a{
     display: none !important;
   }
 
+  body.contact {
+    .image-breadcrumb .breadcrumb, .breadcrumb{
+      padding-top:0;
+      margin-top: 62px;
+    }   
+  }
+  .touch-screen{
+    body.contact {
+      .image-breadcrumb .breadcrumb, .breadcrumb{
+        padding-top:0;
+        margin-top: 62px;
+      }  
+    }    
+  }
 
 
 }
