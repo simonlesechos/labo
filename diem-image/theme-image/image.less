@@ -346,6 +346,9 @@ display: none;
   color: @gray;
 }
 
+
+//////////////////////////////////////////////////////////////////////////////// FORMULAIRES
+
 .inpage-contact-form{
     max-width: 800px;
     margin: auto;
@@ -428,7 +431,6 @@ input, .form-horizontal input{
   border-radius: 0px;
   background: @white;
   font-size: 16px;
-  line-height: 40px;
   padding-left: 10px;
 }
 
@@ -456,6 +458,16 @@ width: 100%;
   font-size: 0.8em;
 }
 
+.form_valid{
+  background: @colorFormValid;
+  height: 70px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  padding-top: 25px;
+  margin-top: 20px;
+}
+
     textarea{
       width: 100%;
       max-width: 495px;
@@ -478,6 +490,10 @@ fieldset.well, form .well, .form-actions{
         font-size: 10px;
       }
     }
+
+form label.required:after{
+  margin-left: 5px;
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////Le formulaire principal
@@ -873,24 +889,29 @@ fieldset.well, form .well, .form-actions{
         margin:0;
         z-index: 1;
         background: @colorCouleur2;
+        .transition(all 200ms ease 0s);
 
         &:hover, &:focus{
-          background: @couleur2Dark;
+          background: lighten(@couleur2Dark, 10%);
+        }
+
+        &.valid-file{
+          background: @colorFormValid;
         }
 
 
         label{
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         margin:0;
-         padding:0;
-         text-align: center;
-         line-height: 50px;
-         z-index: 2;
-         color: @white;
-         font-size: 12px;
-         font-weight: bold;
+          position: absolute;
+          width: 90%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          line-height: 50px;
+          z-index: 2;
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: bold;
         }
     
         .controls{
@@ -899,7 +920,17 @@ fieldset.well, form .well, .form-actions{
             opacity: 0.01;
             }          
         }
-
+    
+      i{
+        color: @white;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        border-left: 1px solid fade(@white, 30%);
+        padding-left: 10px;
+        line-height: 50px;
+        margin-top: -20px;
+      }
 
     }
 }
@@ -1980,7 +2011,7 @@ a.homelink.active:hover{
   margin-bottom: 60px;
   padding: 10px;
   padding-top:0;
-  min-height: 450px;
+  //min-height: 450px;
 }
 
 .dessin-semaine{
@@ -2551,7 +2582,7 @@ footer.main-footer{
   background: @colorCouleur2;
   border-radius: 2px;
   padding: 5px 10px;
-  color: @grayDark;
+  //color: @grayDark;
   text-decoration: none;
   font-size: 16px;
 }
@@ -2674,7 +2705,7 @@ footer.main-footer{
 .backtotop a{
     display: block;
     width: 100%;
-    font-size: 20px;
+    font-size: 12px;
     line-height: 37px;
     outline: none;
 }

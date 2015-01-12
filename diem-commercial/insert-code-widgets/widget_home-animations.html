@@ -1,0 +1,52 @@
+<!--JS-->
+<script type="text/javascript">
+
+//Au chargement de la fenêtre (donc après le "$(document).ready")
+//Je lance la fonction qui anime les objets choisis
+  $(window).load(function(){
+    animateHomeImages();
+  });
+
+//Lorsque la fenêtre scroll
+  $(window).scroll(function(){
+    //Si la taille de celle-ci est supérieure à 800 pixels,
+    if($(window).width() > 800){
+        //je récupère dans une variable "offset" la position top et left du conteneur des éléments à animer (ici : ".anim-scale-scroll"), 
+        var offset = $(".anim-scale-scroll").offset();
+        //je stocke dans une variable "w" l'objet window (la fenêtre du navigateur),
+        var w = $(window);
+        //puis, enfin, je crée une nouvelle variable qui stocke le résultat du calcul position "top" de l'élément concerné - position du haut de la fenêtre au scroll (en gros où est l'objet concerné dans la page par rapport au haut de la fenêtre)
+        var newPosition = offset.top-w.scrollTop();
+
+        //Si cette dernière l'objet qui contient les animations est sorti du haut de la fenêtre de + de 480 pixels,
+        if(newPosition < -480){
+          //alors je vais chercher les images qu'il contient et je leur enlève la classe qui déclenche leur animation (ainsi,ici je remet leur taille et leur opacité à 0).
+          $('.anim-scale-scroll img').removeClass('animated');
+          //Sinon, si la l'objet est un peu rentré dans le cadre de la fenêtre (ici -280 pixels),
+        }else if(newPosition >= -280){
+          //j'execute la fonction d'animation des images.
+          animateHomeImages();
+        } 
+    //Sinon (si la fenêtre fait plus de 800 pixels de large)
+    }else{
+        //j'execute la fonction qui anime les images (en gros je les montre par defaut en mode mobile)
+        animateHomeImages();  
+    }
+
+
+    
+    });
+
+  //la fonction qui anime les images :
+  function animateHomeImages(){
+    $('.anim-scale-scroll img').each(function(i){
+            var animatedimg = $(this);
+            setTimeout(function(){
+
+              animatedimg.addClass('animated');
+              }, 160*i);
+
+    });
+
+  } 
+</script>

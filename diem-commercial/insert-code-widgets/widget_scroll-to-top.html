@@ -1,0 +1,39 @@
+<!--HTML-->
+
+<div class="scrolltotop"><i class="icon-chevron-up"></i></div>
+
+<!--JS-->
+
+<script>
+
+//Lorsque la fenêtre scrolle
+
+$(window).scroll(function(){
+		//on récupère dans une variable la position "top" du document (la page),  
+        posScroll = $(document).scrollTop();  
+
+        //et si cette potion est supérieure ou égale à 400 pixels 
+  if(posScroll >=400){ 
+  		// j'ajoute la classe visible à la div ".scrolltotop" qui va déclencher les styles css correspondants (display: block) 
+  		$('.scrolltotop').addClass('visible');
+  }else{
+  		//Sinon :
+  		$('.scrolltotop').removeClass('visible');
+  		// je retire la classe visible à la div ".scrolltotop" qui va remettre les css par defaut sur l'element ".scrolltoptop" (display: none) 
+  }
+});
+
+//Lorsque je clique sur l'élément ".scrolltotop",
+$('.scrolltotop').click(function(){
+	
+  //j'anime le scroll du html et du body jusqu'à leur position d'origine (0), pendant 1000 millisecondes (1 seconde quoi!)	
+  $("html,body").animate({
+  
+  	scrollTop : 0
+  },1000);
+	
+});
+
+
+
+</script>

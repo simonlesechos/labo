@@ -89,16 +89,16 @@ tl.from($('.perso-cabinet h3'), 1.7, {top: "40px", opacity:0, ease: Power2.easeO
 tl.from($('.perso-cabinet p'), 1.7, {top: "40px", opacity:0, ease: Power2.easeOut}, 12.6);
 
 //Face 3 :
-tl.to($('.carte-back'), 0.7, {opacity:1, ease: Quad.easeOut}, 19);
+/*tl.to($('.carte-back'), 0.7, {opacity:1, ease: Quad.easeOut}, 19);
 tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 19.2);
 tl.from($('.mots-back'),2.2, {opacity:0, scale: 0, ease: Elastic.easeOut},19.5);
 tl.from($('.fdf'), 0.5, {scale: 0, rotation: 120, opacity: 0, ease: Quad.easeOut}, 20.7);
-tl.from($('.fdf-desc'), 1.2, {opacity: 0, ease: Quad.easeOut}, 21.2);
+tl.from($('.fdf-desc'), 1.2, {opacity: 0, ease: Quad.easeOut}, 21.2);*/
 
-tl.to($('.couleur-bas2'), 1.2, {bottom:0, ease: Power2.easeOut},25);
-tl.to($('.perso-cabinet2'), 2.2, {top: 0, ease: Strong.easeOut},25.1);
-tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 25.2);
-tl.to($('.bandeau-texte'), 7.7,{right: 0, opacity: 1, ease:Quad.easeOut},25.2);
+tl.to($('.couleur-bas2'), 1.2, {bottom:0, ease: Power2.easeOut},19);
+tl.to($('.perso-cabinet2'), 2.2, {top: 0, ease: Strong.easeOut},19.1);
+tl.to($('.logo-cabinet'),0.7,{opacity:1, ease: Quad.easeOut}, 19.2);
+tl.to($('.bandeau-texte'), 7.7,{right: 0, opacity: 1, ease:Quad.easeOut},19.2);
 
 
 
@@ -170,7 +170,7 @@ $(document).ready(function(){
 
   //calculer la taille de police sur la face 1 en fonction de la largeur de la carte
   //(ici pour environ 32px -> 680/32 = 21.25, donc pour avoir 32px on divise la largeur de la carte par 21.25)
-  var fontsize = $('.carte').width()/28.7 + "px";
+  var fontsize = $('.carte').width()/17.7 + "px";
   $('.perso-face').css('font-size', fontsize);
   
   //lancer la timeline
@@ -182,7 +182,7 @@ $(document).ready(function(){
 //au redimensionnement de la fenêtre
 $(window).resize(function(){
    //calculer la taille de police sur la face 1 en fonction de la largeur de la carte
-          var fontsize = $('.carte').width()/30.4 + "px";
+          var fontsize = $('.carte').width()/17.7 + "px";
         $('.perso-face').css('font-size', fontsize);
 });
  

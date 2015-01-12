@@ -1,0 +1,93 @@
+<div class="nos-equipes-pres">
+	<h3 class="text-center special_title">Nos équipes</h3>
+	[|SidCoordName|sid_coord_name.id|desc|-|-||
+
+	<div class="title-border">
+		<h3 class="text-left nos-equipes-cabinet-name">##L|title##</h3>
+	</div>
+	
+	<ul class="row list-col-cab">
+	[2|SidCabinetEquipe|sid_cabinet_equipe.id|desc|-|coord_name_id = ##L|sid_coord_name.id##|2| 
+	<li class="fiche-col span3 text-center">
+		<img src="#2#L|image#2#">
+		<div class="col-desc">
+			<h5>#2#L|first_name#2# #2#L|name#2#</h5>
+
+			<small>#2#L|statut#2#</small>
+
+			<div class="itemprop mail">
+				<span class="type" title="Email"><i class="icon-envelope"></i></span>
+				<span class="small-email"><a class="link value" href="mailto:#2#L|email#2#" itemprop="email">Contact</a></span>
+			</div>
+
+			<div class="itemprop telephone">
+				<span class="type" title="Téléphone"><i class="icon-phone"></i></span>
+				<span class="value" itemprop="telephone">#2#L|tel#2#</span><br>
+			</div>
+		</div>
+
+
+	</li>
+	|2]
+	</ul>
+
+	<div class="row">
+	
+	<div class="title-border span12">
+		<h3 class="text-left light-title">Contacter le cabinet ##L|title##</h3>
+	</div>
+			
+
+
+
+			<div class="equipes-cabinet-desc span4">
+								
+				<div class="equipe-cab-image">
+					<img src="##L|image##">
+				</div>
+
+				<section>
+								<div itemtype="http://schema.org/PostalAddress" itemscope="itemscope" class="address itemscope PostalAddress" itemprop="address">
+									<div class="itemprop streetAddress" itemprop="streetAddress">##L|adresse##</div>
+									<span class="itemprop postalCode" itemprop="postalCode">##L|code_postal##</span>
+									<span class="itemprop addressLocality" itemprop="addressLocality">##L|ville##</span>
+								</div>		
+
+								<div class="itemprop mail">
+									<span class="type" title="Email"><i class="icon-envelope"></i></span>
+									<a class="link value" href="/contact?dest=[2|SidCabinetEquipe|sid_cabinet_equipe.id|-|1|coord_name_id = ##L|sid_coord_name.id##|2|#2#L|sid_cabinet_equipe.id#2#|2]" itemprop="email">Contact</a>
+
+
+
+
+
+								</div>
+
+								<div class="itemprop telephone">
+									<span class="type" title="Téléphone"><i class="icon-phone"></i></span>
+									<span class="value" itemprop="telephone">##L|tel##</span><br>
+									<span class="value" itemprop="fax">##L|fax##</span>
+								</div> 
+
+								<div class="itemprop fax">
+									<span class="type" title="Fax"><i class="icon-print"></i></span>
+									<span class="value" itemprop="fax">##L|fax##</span>
+								</div>
+
+					</section>	
+			</div>
+
+
+
+			<div class="equipe-gmap span8">
+
+				<div class="map-canvas" data-adr="##L|adresse_google##"></div>
+
+				<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+			</div>
+	</div>
+	<div class="list-col-cab-separator"></div>
+
+	|]
+
+</div>

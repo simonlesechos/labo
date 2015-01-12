@@ -12,4 +12,30 @@
 @mainTheme: "commercial";
 
 //import theme's elements
-@import "_themes/commercial/import.less";
+//@import "_themes/commercial/import.less"; À DECOMMENTER ET LAISSER SEUL À LA FIN
+
+// CSS Reset
+@import "bootstrap/less/reset.less";
+
+// Core variables 
+@import "bootstrap/less/variables.less";
+@import "bootstrap/less/extend/variables.less"; // Extension of global variables
+//@import "_themes/commercial/variables.less";		// Modify this for custom colors in bootstrap theme, font-sizes, etc 			!!!!!!!A DECOMMENTER
+@import "variables.less";					// Modify this for custom colors in site, font-sizes, etc
+
+// Core less files
+@import "bootstrap/less/import-all.less";
+
+// Core less files
+@import "bootstrap/less/import-extend.less";
+
+// added this cause media-body with <a> have issue
+@import "bootstrap/less/extend/mixins.less";
+@import "bootstrap/less/extend/media.less"; 
+
+// AFlat import
+//@import "bootstrap/AFlat/css/aflat.less";
+@import "aflat.less";
+
+// the theme commercial less file
+//@import "_themes/commercial/theme.less";  		// to overide all 																!!!!!!!A DECOMMENTER
