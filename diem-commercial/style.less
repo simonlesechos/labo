@@ -247,6 +247,14 @@ h6 {
   color: @colorH ;
 }
 
+.link_bold{
+	font-weight: 600;	
+}
+
+.sub_title{
+font-size: 24px;
+
+}
 
 /*
   ==================
@@ -429,10 +437,16 @@ ul.media-list{
 
 
 .dm_page_content{
+padding-top: 30px;
 padding-bottom: 80px;
 }
 
+.dm_layout_right{
+  padding-top: 30px;
+}
+
 .Wide .dm_page_content{
+padding-top:0;
 padding-bottom: 0px;
 }
 
@@ -454,15 +468,15 @@ outline: none;
 
 a.btn, .btn, .btn.btn-primary{
   background: @colorCouleur3;
-  color: #fff;
+  color: @white;
   border-radius: 0;
 } 
 
-a.btn, .btn, .btn.btn-primary:hover{
+a.btn:hover, .btn:hover, .btn.btn-primary:hover{
   background: @colorCouleur3Moyen;
 }
 
- a.btn, .btn, .btn.btn-primary:focus{
+ a.btn:focus, .btn:focus, .btn.btn-primary:focus{
    background: @colorCouleur3Clair;
 }
 
@@ -553,6 +567,8 @@ ul{
 .navigation_menu.menu-creation{
   margin-left: 0;
   margin-right: 0;
+  padding-top: 15px;
+  border-top: 1px solid @grayLighter;
   clear: both;
   /*background-color: @colorCouleur1;
   margin-top: 20px;*/
@@ -656,8 +672,8 @@ ul{
 .navbar .nav > li  a{
   padding-bottom: 10px;
   padding-top: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-transform: uppercase;
   text-align: center;
   transition: all 300ms ease-in-out;
@@ -848,11 +864,7 @@ ul{
 
 /*LE WIDGET PAGE-OPINION-SYSTEM*/
 .content_page_opinion_system{
-  // padding-top: 80px;
-  padding-top: 0;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
+
 
   .title-text-center{
     h3.title{
@@ -867,7 +879,15 @@ ul{
     article{
       margin-left: 10px;
     }
+
   }
+
+   ul{
+
+    	li{
+    		line-height: 30px;
+    	}
+    }
 }
 
 
@@ -1212,6 +1232,7 @@ font-weight: 700;
     display: block;
     max-width: 497px;
     margin: auto;
+    line-height: 40px;
     }
   a:hover{
     color: @colorCouleur1;
@@ -1388,8 +1409,9 @@ article{
   }
 
   footer{
-    font-size: 12;
+    font-size: 14px;
     font-style: italic;
+    border-top: 1px solid @gray;
   }
 }
 
@@ -1450,9 +1472,14 @@ z-index: 2;
     border-bottom: 1px dotted @colorBorderSideBarAdress;
   }
 
+  h5{
+    margin-top:0;
+    padding-bottom:0;
+  }
+
   strong{
     color: #000;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   i{
@@ -3458,7 +3485,7 @@ body.page_main_pratique .content_quizz{
 
 
 p{
-	font-size: 17px;
+	font-size: 15px;
 	line-height: 28px;
 	
 }
@@ -3705,6 +3732,7 @@ background: @colorCouleur2;
 		color: darken(@grayLight, 10%);
 		border-top: 1px solid darken(@grayLight, 10%);
 		padding-top:5px;
+    font-size: 14px;
 	}
 
 	a.link.no-wrap{
@@ -3740,6 +3768,15 @@ background: @colorCouleur2;
 
 }
 
+.colonnes-list{
+    .show-date{
+    color: darken(@grayLight, 10%) !important;
+    border-top: 1px solid darken(@grayLight, 10%) !important;
+    padding-top:5px;
+    font-size: 14px;
+  }
+}
+
 /////////////////////////////////////////////////////////////// Les listes d'articles PAS en colonnes
 .dm_page_content.span8 .affichage_list_by_motif{
 	padding-top: 0 !important;
@@ -3765,7 +3802,7 @@ background: @colorCouleur2;
 	}
 	
 	.media-body{
-
+      
 		p{	
 			font-size: 15px;
 			font-weight: 400;
@@ -3870,7 +3907,11 @@ background: @colorCouleur2;
 		}
 
 
-
+@media all and (max-width: 768px){
+  .media-body{
+    width: 100%;
+  }
+}
 
 ///////////////////////////////////////////////////////////Pagination
 
@@ -4119,11 +4160,31 @@ background: @colorCouleur2;
 
 		p{
 			
-			color: @white;
+			color: @white !important;
 		}
+
 	}
 } 
 
+
+    // Pour faire automatiquement prendre la pleine largeur à chaque vidéo dans les interviews d'entrepreneurs
+    p.interviewVideoPlayer{
+      display: block;
+      position: relative;
+      padding-top: 50%;
+      width: 100%;
+      margin: auto;
+
+      iframe{
+        position: absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        width: 100%;
+        height: 100%;
+      }
+    }
 
 ////////////////////////////////////////////////////////// Petit widget avec les liens base doc / éditoriale en pictos
 
@@ -4243,6 +4304,14 @@ background: @colorCouleur2;
 	border-top: 1px solid @colorCouleur2;
 }
 
+.table .caption{
+  display: block;
+  background: @colorCouleur1;
+  color: @white;
+  line-height: 30px;
+  padding-left: 10px;
+  font-weight: bold;
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LE MENU
 
@@ -4338,6 +4407,22 @@ color: @white ;
 .searchbtn:hover, .searchbtn:focus {
 background-color: @colorCouleur1Moyen;
 color: @white;
+}
+
+////////////////////////////////////////////// Résultats de recherche
+.media-heading{
+	.score{
+		color: @gray;
+		font-size: 12px;
+		line-height: 30px;
+		margin-right: 10px;
+		font-weight: bold;
+		border: 1px solid @gray;
+		width: 30px;
+		display: inline-block;
+		text-align: center;
+		background: @white;
+	}
 }
 
 
@@ -4477,7 +4562,6 @@ article{
 
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Sidebar
 
 //////// Sidebar adresse
@@ -4518,7 +4602,7 @@ article{
 .menu-creation{
 	ul.menu-navbar{
 		background: transparent;
-		max-width: 675px;
+		max-width: 690px;
 		margin: 0 auto;
 		float: none;
 	}
@@ -4690,11 +4774,25 @@ article{
 }
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// calendrier vacances scolaires
+
+.vacances-scolaires{
+  margin-top: 40px;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////// Pack création : les idées business
+
+.idees-business div.wrapper-link .background .fond-titre-section .section-idees-business{
+  color: @white !important;
+}
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// FORMULAIRES
 
 form{
-	background: @white;
-	border: 1px solid fade(@grayDark, 20%);
+	background: fade(@colorCouleur1,10%);
+	//border: 1px solid fade(@grayDark, 20%);
 	border-radius:2px;
 }
 
@@ -4835,6 +4933,45 @@ form.form-horizontal .controls p.help-block {
       border: 1px solid @colorCouleur1;
     }
 }
+
+.form_valid{
+	background: #4cc8ec;
+	padding: 10px;
+	color: #fff;
+	margin-bottom: 10px;
+	text-align: center;
+	font-weight: 600;
+}
+
+//// fomulaire de commentaires
+
+	.comment-form{
+
+		.cancel-button{
+			display: block;
+			float: none;
+			margin: 10px auto;
+		} 
+	
+	}
+
+@media all and (min-width: 980px) and (max-width: 1200px){
+	
+	.comment-form{
+
+		.cancel-button{
+			float: right;
+			margin-top: -40px;
+		} 
+	
+		img.captcha{
+			max-width: 84%;
+			margin-top: -25px;
+			float: right;
+		}
+	}
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////// Formulaires en modal ( "modalform" )
 
@@ -5371,6 +5508,14 @@ h3.special_title {
   box-sizing: border-box;
   overflow: hidden;
   min-height: 290px;
+
+  &.no-height{
+    min-height: 0;
+
+    h5{
+      min-height: 60px;
+      }
+  }
 }
 
 .fiche-col img{
@@ -5382,6 +5527,10 @@ h3.special_title {
   width: 100%;
   margin: 30px auto;
   margin-top: 50px;     
+}
+
+.list-col-cab.undermap{
+  padding-top: 30px;
 }
 
 .small-email a{
@@ -5490,6 +5639,61 @@ position: relative;
 color: @grayLight;
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////// La page nos bureaux
+
+.nos-bureaux-select{
+  ul{
+    text-align: center;
+    font-size:0;
+    margin:0 auto;
+    li{
+      display: inline-block;
+      margin:2px;
+      background: @grayLighter;
+      overflow: hidden;
+      a{
+        display: block;
+        //width: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: @colorCouleur2;
+        line-height: 30px;
+        padding-left: 12px;
+        padding-right: 12px;
+        transition: none;
+        //min-width: 84px;
+        text-align: right;
+        float: right;
+
+      }
+      
+      i{
+        font-size: 16px;
+        line-height: 30px;
+        color: @grayLight;
+        text-align: left;
+        border-right: 1px solid fade(@black, 10%);
+        float: left;
+        padding-left: 10px;
+        padding-right:10px;
+      }
+
+      &:hover{
+        background: @colorCouleur2;
+
+        a{
+          color: @white;
+
+        }
+        
+        i{
+          color: @white;
+        } 
+      }
+    }
+  }
+}
+
 
 @media (max-width: 767px){
   .col-desc small, .col-desc .itemprop i, .equipes-cabinet-desc section div{
@@ -5511,6 +5715,219 @@ color: @grayLight;
     font-size: 22px;
   }
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Le bloc lien vers le quiz sur la page pratique
+
+.quiz-link-panel{
+
+	padding-top: 30px;
+	padding-bottom: 60px;
+
+	a [class^="icon-"], a [class*=" icon-"]{
+		margin-right: 5px;
+	}
+}
+
+.picto-quiz{
+	width: 180px;
+	height: 180px;
+	background-color: @colorCouleur3;
+	border-radius: 50%;
+	margin: 20px auto;
+	.transition(all 200ms ease);
+
+	&:hover{
+		background-color: lighten(@colorCouleur3,10%);
+	}
+}
+
+.quiz-btn-container{
+	margin-top: 20px;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// La page Quiz
+
+.slickquiz{
+
+		//Base for label styling
+		[type="checkbox"]:not(:checked),
+		[type="checkbox"]:checked {
+		  position: absolute;
+		  left: -9999px;
+		}
+		[type="checkbox"]:not(:checked) + label,
+		[type="checkbox"]:checked + label {
+		  position: relative;
+		  padding-left: 25px;
+		  cursor: pointer;
+		}
+
+		// checkbox aspect 
+		[type="checkbox"]:not(:checked) + label:before,
+		[type="checkbox"]:checked + label:before {
+		  content: '';
+		  position: absolute;
+		  left:0; top: 2px;
+		  width: 17px; height: 17px;
+		  border: 1px solid #aaa;
+		  background: #f8f8f8;
+		  border-radius: 3px;
+		  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+		}
+		// checked mark aspect 
+		[type="checkbox"]:not(:checked) + label:after,
+		[type="checkbox"]:checked + label:after {
+		  content: '✔';
+		  position: absolute;
+		  top: 0; left: 4px;
+		  font-size: 14px;
+		  color: #09ad7e;
+		  transition: all .2s;
+		}
+		// checked mark aspect changes
+		[type="checkbox"]:not(:checked) + label:after {
+		  opacity: 0;
+		  transform: scale(0);
+		}
+		[type="checkbox"]:checked + label:after {
+		  opacity: 1;
+		  transform: scale(1);
+		}
+		// disabled checkbox
+		[type="checkbox"]:disabled:not(:checked) + label:before,
+		[type="checkbox"]:disabled:checked + label:before {
+		  box-shadow: none;
+		  border-color: #bbb;
+		  background-color: #ddd;
+		}
+		[type="checkbox"]:disabled:checked + label:after {
+		  color: #999;
+		}
+		[type="checkbox"]:disabled + label {
+		  color: #aaa;
+		}
+		// accessibility 
+		[type="checkbox"]:checked:focus + label:before,
+		[type="checkbox"]:not(:checked):focus + label:before {
+		  border: 1px dotted blue;
+		}
+/////////////////////////////////////////////////////////////////////////////// Radio input
+		// hover style just for information 
+		label:hover:before {
+		  border: 1px solid #4778d9!important;
+		}
+
+		//Base for label styling
+		[type="radio"]:not(:checked),
+		[type="radio"]:checked {
+		  position: absolute;
+		  left: -9999px;
+		}
+		[type="radio"]:not(:checked) + label,
+		[type="radio"]:checked + label {
+		  position: relative;
+		  padding-left: 25px;
+		  cursor: pointer;
+		}
+
+		// radio aspect 
+		[type="radio"]:not(:checked) + label:before,
+		[type="radio"]:checked + label:before {
+		  content: '';
+		  position: absolute;
+		  left:0; top: 2px;
+		  width: 17px; height: 17px;
+		  border: 1px solid #aaa;
+		  background: #f8f8f8;
+		  border-radius: 50%;
+		  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+		}
+		// checked mark aspect 
+		[type="radio"]:not(:checked) + label:after,
+		[type="radio"]:checked + label:after {
+		  content: '•';
+		  position: absolute;
+		  top: 1px; left: 4px;
+		  font-size: 30px;
+		  color: #09ad7e;
+		  transition: all .2s;
+		}
+		// checked mark aspect changes
+		[type="radio"]:not(:checked) + label:after {
+		  opacity: 0;
+		  transform: scale(0);
+		}
+		[type="radio"]:checked + label:after {
+		  opacity: 1;
+		  transform: scale(1);
+		}
+		// disabled checkbox
+		[type="radio"]:disabled:not(:checked) + label:before,
+		[type="radio"]:disabled:checked + label:before {
+		  box-shadow: none;
+		  border-color: #bbb;
+		  background-color: #ddd;
+		}
+		[type="radio"]:disabled:checked + label:after {
+		  color: #999;
+		}
+		[type="radio"]:disabled + label {
+		  color: #aaa;
+		}
+		// accessibility 
+		[type="radio"]:checked:focus + label:before,
+		[type="radio"]:not(:checked):focus + label:before {
+		  border: 1px dotted blue;
+		}
+
+
+		ul.answers{
+			li{
+				display: inline-block;
+				margin: 10px;
+				padding: 10px;
+			}
+		}
+
+} 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Plan du site
+
+
+.sitemap_plan_du_site{
+
+	ul {
+		background: transparent;
+		li{
+			background: transparent;
+			a{
+				color: @gray;
+				background: transparent !important;
+				&:hover{
+					color: @colorCouleur1;
+					background: transparent;
+				}
+
+				&:after{
+					display: none;
+				}
+			}
+			
+			&:hover{
+				a{
+					color: @gray;
+				
+					&:hover{
+						color: @colorCouleur1;
+					}
+				}
+			}		
+		}
+	}
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////// La flêche pour retourner en haut de page ("scrolltotop")
 

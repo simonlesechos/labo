@@ -1,0 +1,23 @@
+[|SidCabinetMission|-|-|-|is_active = 1; sid_cabinet_mission.id = $$getID$$||
+#[<h3 class="title">$$title$$</h3>]#
+<div class="content-data">
+    <ul class="media-list">
+        <li class="media first last">
+            <a href="##L|pagelink##" title="##L|title##" class="link">
+                <picture class="media-object $$mediaObjectPosition$$">
+                    <source media="(max-width: 480px)" srcset="
+                    img#{$$phone_width$$|$$phone_height$$|##APPARTIAL|quality_high##|center||##L|image##}# 1x,
+                    img#{##MATH|$$phone_width$$*2##|##MATH|$$phone_height$$*2##|##APPARTIAL|quality_low##|center||##L|image##}# 2x
+                    "/>
+                    <img src="img#{$$width$$|$$height$$|##APPARTIAL|quality_high##|center||##L|image##}#" srcset="img#{##MATH|$$width$$*2##|##MATH|$$height$$*2##|##APPARTIAL|quality_low##|center||##L|image##}# 2x" alt="" />
+                </picture>
+                <div class="media-body">
+                    <h3 class="media-heading">##L|title##</h3>
+                    #[<p>trunc#{$$length$$|##APPARTIAL|ellipsis##|true|##L|resume##}#</p>]#
+                </div>
+            </a>
+        </li>
+    </ul>
+    #[<ul class="nav nav-list"><li class="first last"><a title="##L|title##" href="##L|pagelink##" class="link link_list">$$linkText$$</a></li></ul>]#
+</div>
+|]

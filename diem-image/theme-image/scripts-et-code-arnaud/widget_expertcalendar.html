@@ -1,0 +1,44 @@
+<!--Fichiers à intégrer
+
+/lioshiPlugin/js/jquery/jquery.eventCalendar.js|
+/lioshiPlugin/js/jquery/moment.js|
+/lioshiPlugin/js/various/dmloader.js
+
+-->
+
+
+///
+
+<div class="expertscalendar">
+
+            <div id="eventCalendar-fullCal"></div>
+
+</div>
+
+
+<script>
+	
+	$(document).ready(function(){
+	    $("#eventCalendar-fullCal").eventCalendar({
+	        eventsLimit: 10,
+	        eventsjson: '/ajax/testa/calendar',
+	        nbMonthBefore:0,
+	        nbMonthAfter:2,
+	        monthNames: [ "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre" ],
+	        dayNames: [ 'Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi' ],
+	        dayNamesShort: [ 'Dim','Lun','Mar','Mer', 'Jeu','Ven','Sam' ],
+	        txt_noEvents: "Il n'y a pas d'évènement à cette date",
+	        txt_SpecificEvents_prev: "",
+	        txt_SpecificEvents_after: "évènements :",
+	        txt_next: "suivant",
+	        txt_prev: "précédent",
+	        txt_NextEvents: "Prochains évènements:",
+	        txt_GoToEventUrl: "Aller à l'évènement",
+	        showDescription: true,
+	        showDayAsWeeks: true,
+	        dateFormat: "D-MM"
+	    });
+	});
+
+	
+</script>

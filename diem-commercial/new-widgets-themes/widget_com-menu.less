@@ -165,6 +165,10 @@
 }
 
 
+ul.deployed{
+	background: fade(@black, 5%);
+}
+
 @media all and (max-width: 768px){
 	.com-menu{
 		h4 {
@@ -180,5 +184,20 @@
 @media all and (max-width: 460px){
 	.com-menu{
 		max-width: 100%;
+
+		ul{
+			li{
+				a{
+				  line-height: 60px;
+				}
+
+				span.deployer{
+					height: 60px;
+					i{
+						line-height: 60px;
+					}
+				}
+			}
+		}
 	}
 }

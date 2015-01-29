@@ -3,8 +3,7 @@
 @color1: @colorCouleur1;
 @color2: @colorCouleur2;
 @color3: @white;
-@widgetImageMenuMobileViewBorderLight : none ;
-//@widgetImageMenuMobileViewBorderLight;
+
 
 .marginreset{
   margin:0;
@@ -19,11 +18,11 @@
 
 ///Transparence du fond du menu sur la home
 .pagebody .main-header .newmenu{
-  background: @colorCouleur1;
+  background: @menuBgBaseColor;
 }
 
 .homebody .main-header .newmenu{
-  background: fade(@colorCouleur1, 20%);
+  background: fade(@menuBgBaseColor, 20%);
   
   nav ul li{
     line-height: 50px;
@@ -42,7 +41,7 @@
 }
 
 .main-header.scrollhead .newmenu, .homebody .main-header.scrollhead .newmenu{
-  background: @colorCouleur1;
+  background: @menuBgBaseColor;
  .transition(all 200ms ease);
 
  li{
@@ -107,31 +106,32 @@
          border-bottom: 4px solid transparent;
          
         &:hover, &.active{
-           border-bottom: 4px solid @color2;
+           border-bottom: 4px solid @menuLiBorderColorOnHover;
          }
        
      
 
          a{
            display: block;
-           font-size: 0.9em;
+           font-size: @menuBaseFontSize;
            padding-bottom: 10px;
            padding-top:12px;
            //width: 100%;
-           min-width: 130px;
+           min-width: 1px;
            min-height: 43px;
            text-align: center;
-           color:lighten(saturate(@colorCouleur1, 30%), 30%);
+           padding: 12px 0.7em 0.7em;
+           color:@menuLinkBaseColor;
            
 
            &:hover{
              //background: darken(@color1, 20%);
-             color:@color3;
+             color:@menuLinkOnHover;
             
            }
 
            &.active{
-            color: @color3;
+            color: @menuLinkActive;
            }
 
            
@@ -141,8 +141,7 @@
           width: 200px !important;
           margin:0;
           //margin-left: 30px;
-          padding:0;
-          padding-right: 10px;
+          padding: 0px @headerLogoPaddingRight 0px 0px;
           border-bottom: none !important;
           position: relative;
           top: 3px;
@@ -156,7 +155,7 @@
           left:0;
           position: absolute;
           z-index: 2;
-          min-width: 100%;
+          min-width: 150px;
           margin-top: 4px;
           //border-top: 3px solid @color2;
 
@@ -165,7 +164,7 @@
             border-bottom: @widgetImageMenuMobileViewBorderLight;
 
             &:hover{
-              background: fade(@black, 10%);
+              background: @menuSecondUlLiBackgroundHover;
               border-bottom: @widgetImageMenuMobileViewBorderLight;
             }
 
@@ -174,6 +173,7 @@
               padding: 5px;
               min-height: 10px;
               border: none;
+              text-align: left;
               
               &:hover{
                 border: none;
@@ -189,7 +189,7 @@
               margin-top:0;
               z-index: -1;
               overflow: hidden;
-              border-top:4px solid @color2;
+              border-top:4px solid @menuLiBorderColorOnHover;
               border-right: @widgetImageMenuMobileViewBorderLight;
               border-left: @widgetImageMenuMobileViewBorderLight;
 
@@ -228,7 +228,7 @@
   border-bottom: 4px solid transparent;
 
   &:hover{
-    border-bottom: 4px solid @color2;
+    border-bottom: 4px solid @menuLiBorderColorOnHover;
   }
 }
 
@@ -244,11 +244,11 @@ li.menu-logo-container{
 }
 
 li.large-list-deployer.active{
-  border-bottom: 4px solid @color2;
+  border-bottom: 4px solid @menuLiBorderColorOnHover;
 }
 
 .newmenu a{
-  color:@color2;
+  
   text-decoration: none;
   font-family: @sansFontFamily;
   position: relative;
@@ -265,13 +265,13 @@ li.large-list-deployer.active{
   border-left: @widgetImageMenuMobileViewBorderLight !important;
   z-index: 12;
   text-align: center !important;
-  background: @color3 !important;
+  background: @menuMobileDeployerBackgroundColor !important;
   padding-left:0 !important;
   padding-right: 0 !important;
   font-size: 12px !important;
 
   &:hover{
-    color: @color1 !important;
+    color: @menuMobileDeployerColorOnHover !important;
   }
 
   &:before{
@@ -286,7 +286,7 @@ li.large-list-deployer.active{
 
 
 .newmenu nav ul li ul{
-  background:darken(@color1, 20%);
+  background: @menuSubMenuUlBackgroundColor;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
@@ -312,7 +312,7 @@ li.large-list-deployer.active{
 } 
 
 .newmenu nav ul li ul li ul{
-  background:darken(@color1, 20%);
+  background:@menuSubMenuUlBackgroundColor;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
@@ -343,12 +343,12 @@ li.large-list-deployer.active{
 
 
 ul.large-list{
-  text-align: center;
+  text-align: left;
 }
 
 .nm-large-list-container{
   width: 100%;
-  background: darken(@color1, 30%);
+  background: @menuLargeListContainerBackgroundColor;
   position: absolute;
   visibility: hidden;
   opacity:0;
@@ -371,15 +371,16 @@ ul.large-list{
           
         a{
           display: block;
-          color: lighten(@colorCouleur2, 25%);
+          color: @menuLargeListFirstLevelLInkColor;
           font-size: 0.9em;
           text-transform: uppercase;
           font-weight: 700;
           padding-top: 3px;
           padding-bottom: 3px;
+          padding-left:7px;
 
           &:hover{
-            color:@color3;
+            color: @menuLargeListFirstLevelLInkColorOnHover;
           
           }
 
@@ -404,7 +405,7 @@ ul.large-list{
             position: relative;
             
             &:first-child{
-              border-top: 1px solid fade(@color3, 10%);
+              border-top: @menuLargeListContainerSecondLevelFirstLiBorder;
               padding-top: 10px;
             }
 
@@ -415,7 +416,7 @@ ul.large-list{
             font-size: 0.87em;
             line-height: 22px;
             padding-left: 10px;
-            color:  @color3;
+            color:  @menuLargeListContainerNormalLinkColor;
             position: relative;
             text-transform: none;
             font-weight: 400;
@@ -424,8 +425,8 @@ ul.large-list{
 
         
             &:hover{
-              color:@color3;
-              background: fade(@black, 10%);
+              color:@menuLargeListContainerNormalLinkColor;
+              background: @menuLargeListContainerNormalLinkBackgroundOnhover;
             }
 
           }
@@ -436,14 +437,16 @@ ul.large-list{
   }
 }
 
+//:::: Traitement différent du style du menu sur la home en mode écran large (transparence etc.)//
+
 .homebody .main-header .newmenu{
 
   nav ul li ul, nav ul li ul li ul,{
-    background: fade(darken(@colorCouleur1, 20%), 50%);
+    background: @menuHomeStartSecondLevelUlBackground;
   }
 
   .nm-large-list-container{
-    background: fade(darken(@colorCouleur1,30%), 70%);
+    background: @menuHomeStartLargeListContainerBackground;
   }
 
 }
@@ -451,7 +454,7 @@ ul.large-list{
 .main-header.scrollhead .newmenu, .homebody .main-header.scrollhead .newmenu{
   
   nav ul li ul, nav ul li ul li ul{
-    background:darken(@color1, 20%);
+    background:@menuSubMenuUlBackgroundColor;
   }
 
 }
@@ -459,7 +462,7 @@ ul.large-list{
 .main-header.scrollhead .newmenu, .homebody .main-header.scrollhead .newmenu{
   
   .nm-large-list-container{
-    background: darken(@color1, 30%);
+    background: @menuLargeListContainerBackgroundColor;
   }
 
 }
@@ -467,11 +470,11 @@ ul.large-list{
 .homebody .main-header .mobilemenu{
 
   nav ul li ul, nav ul li ul li ul,{
-    background: @color3 !important;
+    background: @menuMobileUlbackgroundColor !important;
   }
 
   .nm-large-list-container{
-    background: @color3;
+    background: @menuMobileUlbackgroundColor;
   }
 
 }
@@ -484,7 +487,7 @@ ul.large-list{
   //border-right: 1px solid fade(@color3, 10%);
   margin: 0px;
   padding: 5px;
-  text-align: center;
+  text-align: left;
   max-width: 14%;
 
   &:last-child{
@@ -503,8 +506,8 @@ ul.large-list{
 
 ul.large-button-list{
   width: 12.5%;
-  text-align: center;
-  border-right: 1px solid fade(@color3, 10%);
+  text-align: left;
+  border-right: @menuLargeListSubListBorder;
   margin-top: 10px;
   margin-left: 0;
   padding-bottom: 10px;
@@ -554,7 +557,7 @@ ul.main-social-list{
     overflow: hidden;
     text-align: center;
     font-size:0;
-    margin-top: 60px;
+    padding-top: 30px;
     
     li{
       display: inline-block;
@@ -612,8 +615,8 @@ ul.main-social-list{
 .deployer{
   display: none;
   width: 100%;
-  background: @color1;
-  color: @color3;
+  background: @menuMobileMainDeployerBackground;
+  color: @menuMobileMainDeployerIconColor;
   position: fixed;
   top:0;
   left:0;
@@ -678,6 +681,151 @@ li.social a{
   min-width: 30px !important;
 }
 
+
+////// barre de recherche
+
+.navbar-search-link{
+  position: relative;
+  margin-left: 5px;
+}
+
+.navbar-search-link a{
+	padding:2px;  
+}
+
+.navbar-search-link:hover a, .navbar-search-link.active a, .navbar-search-link a.active, .navbar-search-link a:hover, .navbar-search-link.active, li.navbar-search-link.active{
+	border: none !important;
+}
+
+.navbar-search-panel{
+  	position: absolute;
+  	z-index: 10000;
+	float: right;
+  	transition: all 200ms linear;
+  	top: 5px;
+  	right:0;
+  	overflow: hidden;
+  	height: 40px;
+}
+
+.homebody .navbar-search-panel{
+	top: 17px;
+}
+
+.homebody .scrollhead .navbar-search-panel{
+	top:5px;
+}
+
+.navbar-search-panel form{
+	padding:0;
+  	margin:0;
+  	background: transparent;
+  	width:0;
+  	transition: all 200ms linear;
+}
+
+
+.navbar-search-link:hover .navbar-search-panel form, .navbar-search-panel form.focused{
+	width: 250px;
+}
+
+.navbar-search-panel .navbar-form input{
+	width: 210px!important;
+	height: 35px;
+	line-height: 35px;
+  	float: right;
+    margin-top:0;
+    margin-right:0;
+  	border: none;
+    transition: all 200ms linear;
+}
+
+.navbar-search-panel .navbar-form .btn{
+  padding: 0;
+  width: 40px;
+  height: 35px;
+  float: left;
+  display: block;
+  margin:0;
+  border-radius: 0;
+  background: @menuSerachBarButtonBackground;
+  color: @menuSearchBarButtonIconColor;
+
+  &:hover, &:focus, &:active{
+    background: @menuSerachBarButtonBackgroundOnHover;
+    border-color: @menuSerachBarButtonBorderColorOnHover;
+  }
+}
+
+
+/////// Style pour éccran tactile
+.touch-screen{
+		.navbar-search-panel{
+		  	position: static;
+			width: 95%;
+			height: auto;
+			display: block;
+		  	float: none;
+		  	transition: all 200ms linear;
+		  	overflow: hidden;
+			float: none;
+		}
+
+		.navbar-search-panel form, .navbar-search-panel form.focused{
+			padding: 0px;
+			background: none repeat scroll 0% 0% transparent;
+			margin: 5px auto;
+			transition: all 200ms linear 0s;
+			width: 100% !important;
+
+		}
+
+		.navbar-search-panel .navbar-form{
+		  	input{
+				border: 1px solid @grayLighter;
+				transition: all 200ms linear 0s;
+				float: left;
+				width: 210px !important;
+				margin: 0px;
+				margin-left: 15px;
+				margin-bottom: 20px;	
+		  	}
+
+		}
+		.page_main_root .mobilemenu .menu-inner nav > ul > li.navbar-search-link, .page_main_root .mobilemenu .menu-inner nav > ul > li.navbar-search-link.active{
+			width: 100% !important;
+			display: block !important;
+			clear: both !important;
+			height: auto;
+			line-height: 30px;
+			padding: 0px;
+			position: static;
+
+			a, a.active{
+				height: 0px;
+				line-height: 0;
+				padding: 0px;
+				display: none;
+			}
+
+			i{
+				display: none;
+			}
+
+			.navbar-search-panel{
+
+				i{
+					display: block;
+				}
+			}
+		}
+
+
+}
+
+
+////// fin de la barre de recherche
+
 .newmenu.mobilemenu{
     position: fixed;
     max-width: 300px;
@@ -693,7 +841,7 @@ li.social a{
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
-    background: @color3;
+    background: @menuMobileBackgroundColor;
     -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
@@ -702,7 +850,7 @@ li.social a{
     z-index: 9999;
 
     ul{
-       background: @color3;
+       background: @menuMobileUlbackgroundColor;
     }
 
  nav ul, nav ul li ul, nav ul li, nav ul li a, nav ul li ul li ul{
@@ -725,7 +873,7 @@ li.social a{
     border-bottom: @widgetImageMenuMobileViewBorderLight !important;
     //box-shadow: inset 0px 0px 30px 0px fade(darken(@color1, 70%), 10%);
     line-height: 1.7em;
-    background: @color3;
+    background: @menuMobileLibackgroundColor;
     margin: 0 !important;
     position: relative;
     -webkit-transition: all 300ms ease;
@@ -736,7 +884,7 @@ li.social a{
     
    
     &.active{
-      background: darken(@color3,5%);
+      background: darken(@menuMobileLibackgroundColor,5%);
     }
 
 
@@ -756,14 +904,14 @@ li.social a{
         top:0;
         width: 4px;
         height: 100%;
-        background: lighten(@color1, 30%);
+        background: lighten(@colorCouleur1, 30%);
        }
 
     }  
 
     a:hover{
       background: @color3;
-      color: saturate(@color1,20%);
+      color: saturate(@colorCouleur1,20%);
     }
 
     a.active{
@@ -772,7 +920,7 @@ li.social a{
       font-weight: bold;
 
       &:hover{
-        color: saturate(@color1,20%);
+        color: saturate(@colorCouleur1,20%);
       }
     }
     
@@ -783,7 +931,7 @@ li.social a{
   
    nav ul li ul{
     //border-top: @widgetImageMenuMobileViewBorderLight;
-    background: @color3;
+    background: @menuMobileUlbackgroundColor;
    }
 
 
@@ -799,7 +947,7 @@ li.social a{
 
   nav ul li ul li{
        position: relative;
-       background: darken(@color3, 4%);
+       background: darken(@menuMobileLibackgroundColor, 4%);
      
     &::before{
       content:'';
@@ -808,7 +956,7 @@ li.social a{
       top:0;
       width: 4px;
       height: 100%;
-      background: lighten(@color1, 10%);
+      background: lighten(@colorCouleur1, 10%);
     }
 
     &::after{
@@ -819,7 +967,7 @@ li.social a{
       height: 100%;
       line-height: 55px;
       font-size: 0.8em;
-      color: lighten(@color1, 10%);
+      color: lighten(@colorCouleur1, 10%);
     }
     
     &:first-child{
@@ -843,7 +991,7 @@ li.social a{
 
         &:hover{
           background: transparent;
-          color: saturate(darken(@color1, 10%), 20%);
+          color: saturate(darken(@colorCouleur1, 10%), 20%);
         }
      }
   }
@@ -853,7 +1001,7 @@ li.social a{
  nav ul li ul li ul li{
     position: relative;
    
-    background: darken(@color3, 5%);
+    background: darken(@menuMobileLibackgroundColor, 5%);
     &::before{
       content:'';
       position: absolute;
@@ -861,7 +1009,7 @@ li.social a{
       top:0;
       width: 4px;
       height: 100%;
-      background: darken(@color1, 10%);
+      background: darken(@colorCouleur1, 10%);
     }
     &::after{
       content:'>';
@@ -871,7 +1019,7 @@ li.social a{
       height: 100%;
       line-height: 50px;
       font-size: 0.8em;
-      color: darken(@color1, 10%);
+      color: darken(@colorCouleur1, 10%);
     }
 
     &:hover{
@@ -894,9 +1042,9 @@ li.social a{
 }
 
   .page_main_root .mobilemenu .menu-inner nav > ul > li.active{
-    background: @color3;
+    background: @menuMobileLibackgroundColor;
     a.active{
-      background: @color3; 
+      background: @menuMobileLibackgroundColor; 
       font-weight: 400;
     }
   }
@@ -958,7 +1106,7 @@ li.social a{
   visibility:visible;
   z-index: 2;
   max-height: none;
-  min-height: 350px;
+  min-height: 1px;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
@@ -1007,13 +1155,13 @@ li.social a{
 
 @media all and (max-width:1200px){
   .newmenu nav ul li a{
-    min-width: 100px;
+    min-width: 1px;
   }
 }
 
 @media all and (max-width:980px){
   .newmenu nav ul li a{
-    min-width: 70px;
+    min-width: 1px;
     font-size: 0.8em;
     padding-left: 10px;
     padding-right: 10px;
@@ -1091,6 +1239,67 @@ li.social a{
       }  
     }    
   }
+
+.navbar-search-panel{
+  	position: static;
+	width: 95%;
+	height: auto;
+	display: block;
+  	float: none;
+  	transition: all 200ms linear;
+  	overflow: hidden;
+	float: none;
+}
+
+.navbar-search-panel form, .navbar-search-panel form.focused{
+	padding: 0px;
+	background: none repeat scroll 0% 0% transparent;
+	margin: 5px auto;
+	transition: all 200ms linear 0s;
+	width: 100% !important;
+
+}
+
+.navbar-search-panel .navbar-form{
+  	input{
+		border: 1px solid @grayLighter;
+		transition: all 200ms linear 0s;
+		float: left;
+		width: 210px !important;
+		margin: 0px;
+		margin-left: 15px;
+		margin-bottom: 20px;	
+  	}
+
+}
+.page_main_root .mobilemenu .menu-inner nav > ul > li.navbar-search-link, .page_main_root .mobilemenu .menu-inner nav > ul > li.navbar-search-link.active{
+	width: 100% !important;
+	display: block !important;
+	clear: both !important;
+	height: auto;
+	line-height: 30px;
+	padding: 0px;
+	position: static;
+
+	a, a.active{
+		height: 0px;
+		line-height: 0;
+		padding: 0px;
+		display: none;
+	}
+
+	i{
+		display: none;
+	}
+
+	.navbar-search-panel{
+
+		i{
+			display: block;
+		}
+	}
+}
+
 
 
 }

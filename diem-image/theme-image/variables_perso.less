@@ -70,18 +70,6 @@
 @white:                 #fff;
 
 
-// Accent colors
-// -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
-@green:                 #46a546;
-@red:                   #9d261d;
-@yellow:                #ffc40d;
-@orange:                #f89406;
-@pink:                  #c3325f;
-@purple:                #7a43b6;
-
-
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
@@ -160,7 +148,7 @@
 // Widgets
 
 
-///Simulateurs
+///::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::Simulateurs
 
 ////hauteur du container des simulateurs
 @widgetSimulateurMinHeight: 1000px;
@@ -203,3 +191,203 @@
 //GRID
 
 //@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns + 29));
+
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Menu principal
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+//::: Couleurs de base
+@menuBgBaseColor : @colorCouleur1;
+@menuBgPrintColor : @colorCouleur1;
+
+//:: Élément de liste <li> et liens
+
+//: Couleur de bordure des <li> au survol
+@menuLiBorderColorOnHover: @colorCouleur2;
+
+//: Couleur des liens de menu par défaut
+@menuLinkBaseColor : lighten(saturate(@colorCouleur1, 30%), 30%);
+
+//: Couleur des liens au survol :
+@menuLinkOnHover : @white;
+
+//: Couleur du lien actif :
+@menuLinkActive : @white;
+
+//: Couleur du background des panneaux (<ul>) de second niveau du menu (panneaux qui se déplient)// :
+
+@menuSubMenuUlBackgroundColor: darken(@colorCouleur1, 20%);
+
+//: Couleur du background des li au survol dans les sub-menus
+
+@menuSecondUlLiBackgroundHover : fade(@black, 10%);
+
+//: Couleur de background du panneau mega menu
+@menuLargeListContainerBackgroundColor : darken(@colorCouleur1, 30%);
+
+//: Couleur des liens de premier niveau dans le panneau mega menu (grandes catégories) //
+@menuLargeListFirstLevelLInkColor :  lighten(@colorCouleur2, 25%);
+
+//: Couleur des mêmes liens au survol
+@menuLargeListFirstLevelLInkColorOnHover : @white;
+
+//: Border top de chaque premier <li> des sous listes du mega menu (Les enfants des grandes catégories s'il y'en a (social, fiscal etc.))//
+@menuLargeListContainerSecondLevelFirstLiBorder: 1px solid fade(@white, 10%);
+
+//: Border à droite des la liste de liens à gauche dans le méga menu
+@menuLargeListSubListBorder : 1px solid fade(@white, 10%);
+
+//: Couleur des liens "normaux" (de dernier niveau) dans les listes de liens contenues dans le mega menu (par défaut : blanc (@white))//
+@menuLargeListContainerNormalLinkColor : @white;
+
+//: Background au survol de ces liens de dernier niveau dans le mega menu
+@menuLargeListContainerNormalLinkBackgroundOnhover : fade(@black, 10%);
+
+//: Font size taille de la police des liens de base :
+@menuBaseFontSize : .85em;
+
+//:Border des ul ou li si besoin (par défaut : "none") //
+@widgetImageMenuMobileViewBorderLight : none ;
+
+
+//::::::: La barre de recherche dans le menu principal
+
+//:: Couleurs du bouton
+
+//: Le fond du bouton
+@menuSerachBarButtonBackground: @colorCouleur2;
+@menuSerachBarButtonBorderColor : @colorCouleur2;
+
+@menuSerachBarButtonBackgroundOnHover: lighten(@colorCouleur2, 10%);
+@menuSerachBarButtonBorderColorOnHover : lighten(@colorCouleur2, 10%);
+
+//: La couleur de l'icone
+@menuSearchBarButtonIconColor : @white;
+
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Traitement différent du style du menu sur la home (page d'accueil) en mode écran large (transparence etc.)//
+
+//:: Couleur de background des panneaux qui se déplient au survol uniquement sur l'accueil avant le scroll
+@menuHomeStartSecondLevelUlBackground:  fade(@menuSubMenuUlBackgroundColor, 50%);
+
+//:: Couleur de background du mega menu au survol uniquement sur l'accueil avant le scroll
+@menuHomeStartLargeListContainerBackground: fade(@menuLargeListContainerBackgroundColor, 70%);
+
+
+//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Version mobile du menu principal
+
+//::::: Le Bouton qui déplie le menu
+
+//:: background du bouton
+@menuMobileMainDeployerBackground : @colorCouleur1;
+
+//:: Couleur de l'icone menu
+@menuMobileMainDeployerIconColor : @white;
+
+
+
+//::: Boutons qui déplient les listes dans la version mobile du menu (".mobile-deployer")//
+
+//: background des boutons .mobile-deployer
+@menuMobileDeployerBackgroundColor : @white;
+
+//: Couleur des icones 'chevron-down' au survol / touch (@colorCouleur1 par défaut)//
+
+@menuMobileDeployerColorOnHover : @colorCouleur1;
+
+
+//:::: Couleurs du menu en mode mobile 
+
+//::: Couleur du background du menu
+@menuMobileBackgroundColor : @white;
+
+//:: Les <ul>
+
+@menuMobileUlbackgroundColor : @white;
+
+//:: Les <li>
+@menuMobileLibackgroundColor : @white;
+
+//::: Gestion du logo dans le menu
+
+//:: padding-right du logo => gère l'espace entre le logo et le premier lien du menu mais plus la valuer est grande plus la taille du logo réduit
+
+@headerLogoPaddingRight: 10px; // 10px par défaut
+
+
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Fin du Menu principal
+
+
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Grande image sur la home
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+///::: Variable à changer pour régler l'effet de parallaxe sur la page d'accueil (par défaut scale(1.05))
+///::: => Mettre à scale(1) si jamais le scale pose problème, déforme l'image ou pixelise celle-ci
+@homeImageTransformScale : scale(1.05);
+
+//:::: !!!!! ATTENTION !!!! Il si ceci est mofifié il faut aussi changer la valeur du scale du logo sur l'image d'accueil car celui-ci est contenu dans la div que l'on agrandit
+//:::: Pour ce faire changer la valeur : " @homeLogoResetScale : @homeLogoMaxWidth /504;  // changer le 504 par la valeur du logo " (mettre simplement "1" si le scale de l'image est régler à 1)
+//:::: Si le scale de l'image est changé pour une autre valeur que 1 ou 1.05 alors voici le calcul à faire :
+
+//::: Taille du logo (<div> ".brand") après le scale (à mesurer dans la console du navigateur) divisée par taille du logo souhaitée = valeur du scale à rentrer dans " @homeLogoResetScale : @homeLogoMaxWidth /504; "
+
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Fin de la grande image sur la home
+
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Le logo sur la page d'accueil (home)//
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+//:: Ces valeurs sont à changer en fonction de la maquette ou de l'image de fond utilisée :
+//::(si l'image présente une zone claire sur laquelle le logo se voit mal, ne pas hésiter à changer son positionnement vers une zone plus claire de l'image)//
+
+//:: Positions Top et Left du logo (par défaut le logo est centré sur la largeur de son contenant et à peu près à 1 tiers de la hauteur de ce même contenant)//
+@homeLogoPositionTop : 35%; //par défaut : 35%
+@homeLogoPositionLeft : 50%; //par défaut : 50%
+
+//:: Margin left et top du logo pour des réglages supplémentaires en cas de besoin
+
+@homeLogoMarginLeft : -240px;
+@homelogoMarginTop : -45px;
+
+
+//:: Taille par défaut du logo
+@homeLogoMaxWidth : 480px;
+@homeLogoHeight : 90px;
+
+//:: Au cas ou le logo serait du texte html
+@homeLogoLineHeight : 90px;
+
+@homeLogoResetScale : 480 / 504;  // changer le 504 par la valeur du logo après le scale de son parent (mesurer la div ".brand" dans le navigateur)//
+
+
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Le boxmenu
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+//:: Couleur de fond de base
+@boxOverlayBaseColor: fade(saturate(@couleur1Dark, 10%), 60%);
+
+//:: Couleur de fond au survol
+@boxOverlayHoverColor : fade(darken(@colorCouleur2, 10%), 80%);
+
+//:: Bordure (le cadre) autour du texte au survol => mettre jsute "none" pour l'elever si besoin
+@boxLegendBorder : 1px solid transparent;
+
+
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+///
+//  _      ______  _____   ______ _____ _    _  ____   _____   _____  _    _ ____  _      _____  _____ _    _ _____ _   _  _____ 
+// | |    |  ____|/ ____| |  ____/ ____| |  | |/ __ \ / ____| |  __ \| |  | |  _ \| |    |_   _|/ ____| |  | |_   _| \ | |/ ____|
+// | |    | |__  | (___   | |__ | |    | |__| | |  | | (___   | |__) | |  | | |_) | |      | | | (___ | |__| | | | |  \| | |  __ 
+// | |    |  __|  \___ \  |  __|| |    |  __  | |  | |\___ \  |  ___/| |  | |  _ <| |      | |  \___ \|  __  | | | | . ` | | |_ |
+// | |____| |____ ____) | | |___| |____| |  | | |__| |____) | | |    | |__| | |_) | |____ _| |_ ____) | |  | |_| |_| |\  | |__| |
+// |______|______|_____/  |______\_____|_|  |_|\____/|_____/  |_|     \____/|____/|______|_____|_____/|_|  |_|_____|_| \_|\_____|
+//
+//     \  |   _ \   __ \   ____|  |      ____|     _ _|   \  |     \      ___|  ____| 
+//    |\/ |  |   |  |   |  __|    |      __|         |   |\/ |    _ \    |      __|   
+//    |   |  |   |  |   |  |      |      |           |   |   |   ___ \   |   |  |     
+//   _|  _| \___/  ____/  _____| _____| _____|     ___| _|  _| _/    _\ \____| _____|
+//
+///                                                                                      
+///:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::           

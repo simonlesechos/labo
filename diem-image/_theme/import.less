@@ -1,0 +1,22 @@
+//
+// Bootstrap import assets
+// v2.0 | 2013-01-16 10:30
+// --------------------------------------------------
+
+// Attention ! Les chemins sont spécifiés depuis le fichier LESS compilé
+// sauf pour le variables.less qui est également présent dans ce dossier
+
+// CSS Reset
+@import "bootstrap/less/reset.less";
+
+// Core variables 
+@import "bootstrap/less/variables.less";
+@import "bootstrap/less/extend/variables.less"; // Extension of global variables
+@import "_themes/image/variables.less";		// Modify this for custom colors in bootstrap theme, font-sizes, etc
+@import "../../variables.less";					// Modify this for custom colors in site, font-sizes, etc
+
+// Core less files
+@import "bootstrap/less/import-extend.less";
+
+// the theme tenor less file
+@import "_themes/image/theme.less";  		// to overide all
